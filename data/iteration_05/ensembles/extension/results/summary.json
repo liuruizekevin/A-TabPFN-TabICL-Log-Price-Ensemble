@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "experiment_id": "R5E08_noY_domain20",
+  "weights": {
+    "R5TP_log_noYtransform_s42": 0.8,
+    "R4T_v2_log_n32_s42_domain": 0.2
+  },
+  "expanded_weights": {
+    "R5TP_log_noYtransform_s42": 0.8,
+    "R4T_v2_log_n32_s42_domain": 0.2
+  },
+  "cv_mean": 0.11536111566869837,
+  "cv_std": 0.020551755413127166,
+  "pooled_oof_log_rmse": 0.11681646600019883,
+  "fold_scores": [
+    0.11768503899090144,
+    0.102458596244511,
+    0.14983318165515191,
+    0.10809683148491123,
+    0.09873192996801634
+  ],
+  "public_score": null,
+  "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+  "submission_path": "models/round5_ensembles/extension/submissions/R5E08_noY_domain20.csv",
+  "submission_sha256": "ba6bd95069cea3697e3af58c9c07e377ee3e4d06b48617030dd879d1a75f3d44",
+  "anchor_pooled_oof_log_rmse": 0.11890652351461724,
+  "noY_pooled_oof_log_rmse": 0.11753374929418399,
+  "folds_improved_vs_original_winner": 5,
+  "original_primary_recipes_preserved": 7,
+  "combined_primary_recipe_count": 8,
+  "training_rows_removed": 0
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "fold_seed": 42,
+  "all1460_validation_rows": true,
+  "all_folds_disjoint": true,
+  "source_input_anchor_and_artifact_hashes": true,
+  "metrics_recomputed": true,
+  "fixed_blend_arithmetic": true,
+  "submission_schema_and_id_order": true,
+  "validation_layer": "Saved-artifact integrity and metric checks",
+  "validator_sha256": "6a5d57d23ba8af33937acde04069a994d0d46e248cdce292ca415fb8b6fbdf27"
+}

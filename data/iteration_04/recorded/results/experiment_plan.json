@@ -1,0 +1,1032 @@
+{
+  "phase1": {
+    "experiments": [
+      {
+        "id": "E01_raw_ridge",
+        "family": "Ridge",
+        "target": "raw",
+        "semantic": false,
+        "groups": [],
+        "skew": false,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "baseline"
+      },
+      {
+        "id": "E02_log_ridge",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": false,
+        "groups": [],
+        "skew": false,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "pathway"
+      },
+      {
+        "id": "E03_semantic",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [],
+        "skew": false,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "pathway"
+      },
+      {
+        "id": "E04_domain",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": false,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "pathway"
+      },
+      {
+        "id": "E05_skew",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "pathway"
+      },
+      {
+        "id": "E06_ridge_alpha5",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 5.0
+        },
+        "stage": "tuning"
+      },
+      {
+        "id": "E06_ridge_alpha50",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 50.0
+        },
+        "stage": "tuning"
+      },
+      {
+        "id": "E06_ridge_alpha100",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 100.0
+        },
+        "stage": "tuning"
+      },
+      {
+        "id": "E07_elastic_0.0005",
+        "family": "ElasticNet",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 0.0005,
+          "l1_ratio": 0.5,
+          "max_iter": 30000,
+          "tol": 1e-05
+        },
+        "stage": "model_comparison"
+      },
+      {
+        "id": "E07_elastic_0.001",
+        "family": "ElasticNet",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 0.001,
+          "l1_ratio": 0.5,
+          "max_iter": 30000,
+          "tol": 1e-05
+        },
+        "stage": "model_comparison"
+      },
+      {
+        "id": "E08_decision_tree",
+        "family": "DecisionTree",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": false,
+        "params": {
+          "max_depth": 8,
+          "min_samples_leaf": 5,
+          "random_state": 42
+        },
+        "stage": "model_comparison"
+      },
+      {
+        "id": "E08_random_forest",
+        "family": "RandomForest",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": false,
+        "params": {
+          "n_estimators": 350,
+          "min_samples_leaf": 2,
+          "max_features": 0.8,
+          "random_state": 42,
+          "n_jobs": 4
+        },
+        "stage": "model_comparison"
+      },
+      {
+        "id": "E09_gradient_boosting",
+        "family": "GradientBoosting",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": false,
+        "params": {
+          "n_estimators": 650,
+          "learning_rate": 0.035,
+          "max_depth": 3,
+          "min_samples_leaf": 5,
+          "loss": "huber",
+          "random_state": 42
+        },
+        "stage": "model_comparison"
+      },
+      {
+        "id": "E10_catboost_depth4",
+        "family": "CatBoost",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": false,
+        "params": {
+          "iterations": 1100,
+          "depth": 4,
+          "learning_rate": 0.035,
+          "l2_leaf_reg": 5.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "stage": "model_comparison"
+      },
+      {
+        "id": "E11_catboost_depth5",
+        "family": "CatBoost",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": false,
+        "params": {
+          "iterations": 1100,
+          "depth": 5,
+          "learning_rate": 0.035,
+          "l2_leaf_reg": 5.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "stage": "tuning"
+      },
+      {
+        "id": "A_without_area",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "age",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "group_ablation"
+      },
+      {
+        "id": "A_without_age",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "baths",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "group_ablation"
+      },
+      {
+        "id": "A_without_baths",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "porch",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "group_ablation"
+      },
+      {
+        "id": "A_without_porch",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "quality"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "group_ablation"
+      },
+      {
+        "id": "A_without_quality",
+        "family": "Ridge",
+        "target": "log",
+        "semantic": true,
+        "groups": [
+          "area",
+          "age",
+          "baths",
+          "porch"
+        ],
+        "skew": true,
+        "params": {
+          "alpha": 20.0
+        },
+        "stage": "group_ablation"
+      }
+    ],
+    "blend": {
+      "id": "E12_equal_log_blend",
+      "components": [
+        "E06_ridge_alpha50",
+        "E07_elastic_0.0005",
+        "E10_catboost_depth4"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "fixed_before_first_run": true
+  },
+  "phase2": {
+    "phase": 2,
+    "specifications": [
+      {
+        "id": "O01_native_base",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": false,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O02_native_d4",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O03_native_d5",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 5,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O04_native_d3",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 3000,
+          "depth": 3,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O05_native_d6",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2200,
+          "depth": 6,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O06_native_d4_l2",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 20.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false,
+          "rsm": 0.8
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O07_native_d5_l2",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 5,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 20.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false,
+          "rsm": 0.8
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O08_native_huber",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "Huber:delta=0.15",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O09_native_mae",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 3000,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "MAE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O10_onehot_d4",
+        "family": "CatBoostOHE",
+        "params": {
+          "iterations": 2400,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O11_onehot_d5",
+        "family": "CatBoostOHE",
+        "params": {
+          "iterations": 2400,
+          "depth": 5,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O12_svr_c10",
+        "family": "SVR",
+        "params": {
+          "C": 10.0,
+          "gamma": 0.001,
+          "epsilon": 0.008,
+          "kernel": "rbf",
+          "cache_size": 512
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": false
+      },
+      {
+        "id": "O13_svr_c20_g5",
+        "family": "SVR",
+        "params": {
+          "C": 20.0,
+          "gamma": 0.0005,
+          "epsilon": 0.008,
+          "kernel": "rbf",
+          "cache_size": 512
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": false
+      },
+      {
+        "id": "O14_svr_c20_g10",
+        "family": "SVR",
+        "params": {
+          "C": 20.0,
+          "gamma": 0.001,
+          "epsilon": 0.008,
+          "kernel": "rbf",
+          "cache_size": 512
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": false
+      },
+      {
+        "id": "O15_svr_c30_g3",
+        "family": "SVR",
+        "params": {
+          "C": 30.0,
+          "gamma": 0.0003,
+          "epsilon": 0.008,
+          "kernel": "rbf",
+          "cache_size": 512
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": false
+      },
+      {
+        "id": "O16_svr_c50_g5",
+        "family": "SVR",
+        "params": {
+          "C": 50.0,
+          "gamma": 0.0005,
+          "epsilon": 0.008,
+          "kernel": "rbf",
+          "cache_size": 512
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": false
+      },
+      {
+        "id": "O17_kernel_ridge",
+        "family": "KernelRidge",
+        "params": {
+          "alpha": 0.6,
+          "kernel": "polynomial",
+          "degree": 2,
+          "gamma": 0.001,
+          "coef0": 2.5
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": false
+      },
+      {
+        "id": "O18_lightgbm_leaf8",
+        "family": "LightGBM",
+        "params": {
+          "n_estimators": 2600,
+          "learning_rate": 0.015,
+          "num_leaves": 8,
+          "max_depth": -1,
+          "min_child_samples": 15,
+          "colsample_bytree": 0.8,
+          "subsample": 0.8,
+          "subsample_freq": 1,
+          "reg_alpha": 0.05,
+          "reg_lambda": 2.0,
+          "random_state": 42,
+          "n_jobs": 4,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O19_lightgbm_leaf15",
+        "family": "LightGBM",
+        "params": {
+          "n_estimators": 2600,
+          "learning_rate": 0.015,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "colsample_bytree": 0.8,
+          "subsample": 0.8,
+          "subsample_freq": 1,
+          "reg_alpha": 0.05,
+          "reg_lambda": 2.0,
+          "random_state": 42,
+          "n_jobs": 4,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O20_lightgbm_huber",
+        "family": "LightGBM",
+        "params": {
+          "n_estimators": 2600,
+          "learning_rate": 0.015,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 15,
+          "colsample_bytree": 0.8,
+          "subsample": 0.8,
+          "subsample_freq": 1,
+          "reg_alpha": 0.05,
+          "reg_lambda": 2.0,
+          "random_state": 42,
+          "n_jobs": 4,
+          "verbosity": -1,
+          "deterministic": true,
+          "force_col_wise": true,
+          "objective": "huber",
+          "alpha": 0.9
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O21_xgboost_d2",
+        "family": "XGBoost",
+        "params": {
+          "n_estimators": 2200,
+          "learning_rate": 0.02,
+          "max_depth": 2,
+          "min_child_weight": 1,
+          "subsample": 0.8,
+          "colsample_bytree": 0.7,
+          "reg_alpha": 0.01,
+          "reg_lambda": 1.0,
+          "objective": "reg:squarederror",
+          "random_state": 42,
+          "n_jobs": 4,
+          "tree_method": "hist"
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O22_xgboost_d3",
+        "family": "XGBoost",
+        "params": {
+          "n_estimators": 2200,
+          "learning_rate": 0.02,
+          "max_depth": 3,
+          "min_child_weight": 2,
+          "subsample": 0.8,
+          "colsample_bytree": 0.7,
+          "reg_alpha": 0.01,
+          "reg_lambda": 1.0,
+          "objective": "reg:squarederror",
+          "random_state": 42,
+          "n_jobs": 4,
+          "tree_method": "hist"
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": false
+      },
+      {
+        "id": "O23_native_train_filter",
+        "family": "CatBoostNative",
+        "params": {
+          "iterations": 2400,
+          "depth": 4,
+          "learning_rate": 0.025,
+          "l2_leaf_reg": 8.0,
+          "loss_function": "RMSE",
+          "random_seed": 42,
+          "thread_count": 4,
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "enhanced": true,
+        "skew": false,
+        "filter_train": true
+      },
+      {
+        "id": "O24_svr_train_filter",
+        "family": "SVR",
+        "params": {
+          "C": 20.0,
+          "gamma": 0.0005,
+          "epsilon": 0.008,
+          "kernel": "rbf",
+          "cache_size": 512
+        },
+        "enhanced": true,
+        "skew": true,
+        "filter_train": true
+      }
+    ],
+    "all_1460_validation_rows_retained": true,
+    "filter_rule": "Only candidates O23/O24 remove training-fold rows with GrLivArea>4000 and training SalePrice<300000. Validation rows never filtered.",
+    "blend_rule": "Select lowest mean-fold score within eligible native-CatBoost, SVR, XGBoost and LightGBM families, excluding filtered variants. Use predeclared equal or 40/40/20 or 60/40 weights.",
+    "blend_weights": {
+      "O25_cat_svr_equal": [
+        0.5,
+        0.5
+      ],
+      "O26_cat_svr_xgb": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "O27_conservative_phase1_svr": [
+        0.6,
+        0.4
+      ],
+      "O28_cat_svr_lgb": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "O29_cat_svr_elastic": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "selection_limitation": "All search decisions reuse development folds; no unbiased final generalization estimate."
+  },
+  "planning_scope": "Phase two was designed after reviewing phase-one results. Each phase has its recorded bounded plan; blend family components are selected using development CV and weights are fixed. This is adaptive development, not a single untouched confirmatory experiment.",
+  "phase3": {
+    "phase": 3,
+    "motivation": "Bounded adaptive follow-up requested after phase-two CV and actual Kaggle leaderboard feedback; not part of the original two-phase plan.",
+    "specifications": [
+      {
+        "id": "F01_robust_c10_g001",
+        "scaler": "RobustScaler",
+        "C": 10.0,
+        "gamma": 0.001
+      },
+      {
+        "id": "F02_robust_c10_scale",
+        "scaler": "RobustScaler",
+        "C": 10.0,
+        "gamma": "scale"
+      },
+      {
+        "id": "F03_robust_c20_g0003",
+        "scaler": "RobustScaler",
+        "C": 20.0,
+        "gamma": 0.0003
+      },
+      {
+        "id": "F04_standard_c10_scale",
+        "scaler": "StandardScaler",
+        "C": 10.0,
+        "gamma": "scale"
+      }
+    ],
+    "common_parameters": {
+      "epsilon": 0.008,
+      "kernel": "rbf",
+      "enhanced_features": true,
+      "skew_transform": true
+    },
+    "blends": {
+      "components": [
+        "O09_native_mae",
+        "one new SVR",
+        "O22_xgboost_d3"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    "validation": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42,
+      "all_1460_rows_retained": true
+    },
+    "scope": "Same-data adaptive development. Scores are not unbiased confirmation and do not replace leaderboard evidence."
+  },
+  "round4": {
+    "catalog": [
+      {
+        "directory": "models/round4_linear",
+        "experiments": 98,
+        "results_sha256": "868105bc612d90b25da31b9eb90d06d4413513e222bedc1d563b5ecee42cf347"
+      },
+      {
+        "directory": "models/round4_linear/extension",
+        "experiments": 40,
+        "results_sha256": "7d6186ee8fb56d8f2f281f3da86e65496caed647fbbffe6ede7c23cce916bc03"
+      },
+      {
+        "directory": "models/round4_boosting",
+        "experiments": 46,
+        "results_sha256": "1b3e7428da46bb31ee5291fd41d694fef6a1305d74b7b3d0ad438d14175f7a00"
+      },
+      {
+        "directory": "models/round4_boosting/gbr_recipe",
+        "experiments": 4,
+        "results_sha256": "f79868f81f28b180de10fd85567952406525e9b97740130364913e9d94bcc033"
+      },
+      {
+        "directory": "models/round4_boosting/deep_extension",
+        "experiments": 2,
+        "results_sha256": "41f558b7e071310e90c6971976b1eaf71ce44cefd4374cc0c25cddd02e655a22"
+      },
+      {
+        "directory": "models/round4_boosting/pfn_blends",
+        "experiments": 60,
+        "results_sha256": "187f4aa7464ccc3bd7d010f22626834218a562bd448b683149c78f2125614389"
+      },
+      {
+        "directory": "models/round4_stacking",
+        "experiments": 2,
+        "results_sha256": "45f5372f953a4d51208912ec6731f409721c8f2038a77928ddc79303267656d1"
+      },
+      {
+        "directory": "models/round4_tabpfn",
+        "format": "TabPFN per-candidate summaries"
+      },
+      {
+        "directory": "models/round4_tabpfn_checkpoints",
+        "format": "TabPFN per-candidate summaries"
+      }
+    ],
+    "selected_experiment": "R4TC_v2_three_log_n16_s42",
+    "selected_online_score": 0.11074,
+    "source_manifest": {
+      "selected_experiment": "R4TC_v2_three_log_n16_s42",
+      "selected_csv": "models/round4_tabpfn_checkpoints/submissions/R4TC_v2_three_log_n16_s42.csv",
+      "selected_model": null,
+      "run_dirs": [
+        "models/round4_linear",
+        "models/round4_linear/extension",
+        "models/round4_boosting",
+        "models/round4_boosting/gbr_recipe",
+        "models/round4_boosting/deep_extension",
+        "models/round4_boosting/pfn_blends",
+        "models/round4_stacking"
+      ],
+      "tabpfn_dirs": [
+        "models/round4_tabpfn",
+        "models/round4_tabpfn_checkpoints"
+      ],
+      "extra_candidates": [],
+      "final_parameters": {
+        "id": "R4TC_v2_three_log_n16_s42",
+        "model": "TabPFN-v2 multi-checkpoint ensemble",
+        "target": "log",
+        "n_estimators": 16,
+        "random_state": 42,
+        "device": "mps",
+        "fold_seed": 42,
+        "n_splits": 5,
+        "rows": 1460,
+        "features": 79,
+        "feature_recipe": "raw",
+        "filter_train": false,
+        "checkpoint_manifest": [
+          {
+            "filename": "tabpfn-v2-regressor.ckpt",
+            "bytes": 44390977,
+            "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+            "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor.ckpt"
+          },
+          {
+            "filename": "tabpfn-v2-regressor-09gpqh39.ckpt",
+            "bytes": 44398487,
+            "sha256": "86a5b6832fdaeae3bb50eb2fbc349198b43baa965dcda9ef3b8e10fb809c1551",
+            "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-09gpqh39.ckpt"
+          },
+          {
+            "filename": "tabpfn-v2-regressor-2noar4o2.ckpt",
+            "bytes": 44398487,
+            "sha256": "e2d4a06eeb4521dee71fc68d819e277ffb97614cc3695dc9ac3030dd9da36c21",
+            "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-2noar4o2.ckpt"
+          }
+        ],
+        "library_version": "9.2.0",
+        "torch_version": "2.14.1",
+        "source_sha256": "7b9791e70e771fe6e32c333166ec93dc2f36b94314cfb4d47531777f4cfabfc8",
+        "source": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+        "selection_limitation": "Adaptive development; same frozen folds; no external test targets.",
+        "preprocessing": "Fresh TabPFN instance fits internal preprocessing separately within each training fold.",
+        "status": "complete",
+        "submission_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2",
+        "torch_num_threads": 12
+      },
+      "catalog_notes": [
+        "Final selection locked after 18 actual submissions, including 10 in the final submission group; best score 0.11074.",
+        "Every primary validation record retains all1,460 rows and uses the original five folds with seed42.",
+        "Reference fold-bagging deployment variants are excluded from counts of new CV evaluations.",
+        "The longer depth6 extension B29 was interrupted without a score; the completed depth7 trial is included.",
+        "Nested inner metrics are supplementary evidence, not duplicate primary experiment rows.",
+        "All completed primary summaries included. Final catalogue contains 321 evaluations, including 263 new phase-four evaluations."
+      ]
+    },
+    "historical_snapshot": "models/phase3_snapshot"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "experiment_id": "R4TC_v2_three_log_n16_s42",
+  "submission_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2",
+  "artifact_type": "script_and_checkpoint",
+  "model_source": null,
+  "serialization_max_absolute_difference": null
+}

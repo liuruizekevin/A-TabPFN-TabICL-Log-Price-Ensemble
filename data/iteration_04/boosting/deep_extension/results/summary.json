@@ -1,0 +1,23 @@
+{
+  "phase": "adaptive_depth_extension",
+  "experiment_count": 2,
+  "completed_base_ids": [
+    "B28_cat_mae_d7"
+  ],
+  "stopped_before_completion": [
+    "B29_cat_mae_d6_long"
+  ],
+  "stop_reason": "Parent-requested approximate five-minute cap reached by depth7 trial; preserve completed checkpoints and cancel longer-depth6 trial.",
+  "best": {
+    "experiment_id": "B28_cat_mae_d7_blend",
+    "model": "Fixed log blend",
+    "stage": "round4_boosting",
+    "target": "log",
+    "cv_mean": 0.118348042387539,
+    "cv_std": 0.0122300177227835,
+    "pooled_oof_log_rmse": 0.1188525044067748,
+    "runtime_seconds": 0.0,
+    "params_json": "{\"components\": [\"B28_cat_mae_d7\", \"F03_robust_c20_g0003\", \"O22_xgboost_d3\"], \"weights\": [0.4, 0.4, 0.2]}"
+  },
+  "promoted": false
+}

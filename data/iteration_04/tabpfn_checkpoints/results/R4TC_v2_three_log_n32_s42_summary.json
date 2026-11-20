@@ -1,0 +1,88 @@
+{
+  "id": "R4TC_v2_three_log_n32_s42",
+  "model": "TabPFN-v2 multi-checkpoint ensemble",
+  "target": "log",
+  "n_estimators": 32,
+  "random_state": 42,
+  "device": "mps",
+  "fold_seed": 42,
+  "n_splits": 5,
+  "rows": 1460,
+  "features": 79,
+  "feature_recipe": "raw",
+  "filter_train": false,
+  "checkpoint_manifest": [
+    {
+      "filename": "tabpfn-v2-regressor.ckpt",
+      "bytes": 44390977,
+      "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-09gpqh39.ckpt",
+      "bytes": 44398487,
+      "sha256": "86a5b6832fdaeae3bb50eb2fbc349198b43baa965dcda9ef3b8e10fb809c1551",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-09gpqh39.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-2noar4o2.ckpt",
+      "bytes": 44398487,
+      "sha256": "e2d4a06eeb4521dee71fc68d819e277ffb97614cc3695dc9ac3030dd9da36c21",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-2noar4o2.ckpt"
+    }
+  ],
+  "library_version": "9.2.0",
+  "torch_version": "2.14.1",
+  "source_sha256": "7b9791e70e771fe6e32c333166ec93dc2f36b94314cfb4d47531777f4cfabfc8",
+  "source": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+  "selection_limitation": "Adaptive development; same frozen folds; no external test targets.",
+  "preprocessing": "Fresh TabPFN instance fits internal preprocessing separately within each training fold.",
+  "status": "complete",
+  "fold_scores": [
+    {
+      "fold": 1,
+      "log_rmse": 0.1169670060167326,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 21.580128166999202
+    },
+    {
+      "fold": 2,
+      "log_rmse": 0.10281072016106041,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 35.18971495801816
+    },
+    {
+      "fold": 3,
+      "log_rmse": 0.1558386547987392,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 31.674680916999932
+    },
+    {
+      "fold": 4,
+      "log_rmse": 0.1084736451270597,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 23.633230709005147
+    },
+    {
+      "fold": 5,
+      "log_rmse": 0.0979014690303994,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 24.12448925001081
+    }
+  ],
+  "cv_mean": 0.11639829902679825,
+  "cv_std": 0.02315934071728211,
+  "pooled_oof_log_rmse": 0.11822710377193241,
+  "runtime_seconds": 186.3080186250154,
+  "submission_sha256": "25ccb2306bb9669d36319126677342073ec01601f746c107c0bfc258fae5b096"
+}

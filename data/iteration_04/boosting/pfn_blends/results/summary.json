@@ -1,0 +1,23 @@
+{
+  "experiment_count": 60,
+  "weights": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "selection": "Adaptive fixed-weight convex combinations after standalone base-model development; all1460OOF rows retained; not a new holdout.",
+  "best": {
+    "experiment_id": "BP_R4T_v2_log_n8_s42_domain_B14_cat_mae_d6_blend_w25",
+    "model": "Weighted log-space blend",
+    "stage": "round4_fixed_PFN_boost_blend",
+    "target": "log",
+    "cv_mean": 0.1129308987189374,
+    "cv_std": 0.016649189243757287,
+    "params_json": "{\"combination_space\": \"natural logarithm of price\", \"components\": [\"R4T_v2_log_n8_s42_domain\", \"B14_cat_mae_d6\", \"F03_robust_c20_g0003\", \"O22_xgboost_d3\"], \"weights\": [0.75, 0.1, 0.1, 0.05]}",
+    "runtime_seconds": 0.0,
+    "pooled_oof_log_rmse": 0.11390849084877935,
+    "pfn_id": "R4T_v2_log_n8_s42_domain",
+    "boost_id": "B14_cat_mae_d6_blend",
+    "boost_weight": 0.25
+  }
+}

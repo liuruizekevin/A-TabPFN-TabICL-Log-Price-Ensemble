@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "candidate_reload_checks": [
+    {
+      "experiment_id": "R4L12_svr_C5_gscale_e0p008_blend",
+      "max_reload_csv_difference": 5.820766091346741e-11,
+      "csv_sha256": "d82ec2dcbbf371d08c5d3a8c1fcda32288915c4deb1a71b86879e0b1a968b02f",
+      "model_path": "models/round4_linear/candidate_models/R4L12_svr_C5_gscale_e0p008_blend.joblib"
+    },
+    {
+      "experiment_id": "R4L20_poweryeo-johnson_gscale_blend",
+      "max_reload_csv_difference": 5.820766091346741e-11,
+      "csv_sha256": "7af89fe2425b6e083dfcba3a526d645abeea14b06c8e6e13f60986869f4a8141",
+      "model_path": "models/round4_linear/candidate_models/R4L20_poweryeo-johnson_gscale_blend.joblib"
+    },
+    {
+      "experiment_id": "R4L23_catweight2p0_blend",
+      "max_reload_csv_difference": 5.820766091346741e-11,
+      "csv_sha256": "fb91b0e7dc10a0ba85b3e57bea09cb18e162aea899aebc2c333eb20ab306dd9f",
+      "model_path": "models/round4_linear/candidate_models/R4L23_catweight2p0_blend.joblib"
+    },
+    {
+      "experiment_id": "R4L24_quantile10_blend",
+      "max_reload_csv_difference": 5.820766091346741e-11,
+      "csv_sha256": "a43ae01a905a241f66a308921fe86a534360dfb9d515b0b2460d1c1580a03c36",
+      "model_path": "models/round4_linear/candidate_models/R4L24_quantile10_blend.joblib"
+    },
+    {
+      "experiment_id": "R4L46_svr_trainfilter_blend",
+      "max_reload_csv_difference": 5.820766091346741e-11,
+      "csv_sha256": "a0a41047f935c38c2575272b15b402756286daa1a87040376a9779623ce158ab",
+      "model_path": "models/round4_linear/candidate_models/R4L46_svr_trainfilter_blend.joblib"
+    }
+  ],
+  "counts": [
+    {
+      "directory": "models/round4_linear",
+      "configurations": 98,
+      "base_models": 49,
+      "validated_oof_rows": 1460
+    },
+    {
+      "directory": "models/round4_linear/extension",
+      "configurations": 40,
+      "base_models": 20,
+      "validated_oof_rows": 1460
+    }
+  ],
+  "total_configurations": 138,
+  "primary_fold_seed": 42,
+  "secondary_fold_seed": 2026,
+  "all_validation_rows_retained": true,
+  "limitation": "Same data adapted research; secondary split is not independent test set"
+}

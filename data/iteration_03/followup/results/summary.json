@@ -1,0 +1,34 @@
+{
+  "phase": 3,
+  "experiment_count": 8,
+  "best_experiment": "F06_blend_robust_c10_scale",
+  "best_cv_mean": 0.11767094394194544,
+  "best_cv_std": 0.01511031810094399,
+  "best_pooled_oof_log_rmse": 0.1184445373104131,
+  "best_parameters": {
+    "components": [
+      "O09_native_mae",
+      "F02_robust_c10_scale",
+      "O22_xgboost_d3"
+    ],
+    "weights": [
+      0.4,
+      0.4,
+      0.2
+    ]
+  },
+  "phase2_reference_cv_mean": 0.1208546522107258,
+  "reload_prediction_checks": {
+    "F01_robust_c10_g001": 0.0,
+    "F05_blend_robust_c10_g001": 0.0,
+    "F02_robust_c10_scale": 0.0,
+    "F06_blend_robust_c10_scale": 0.0,
+    "F03_robust_c20_g0003": 0.0,
+    "F07_blend_robust_c20_g0003": 0.0,
+    "F04_standard_c10_scale": 0.0,
+    "F08_blend_standard_c10_scale": 0.0
+  },
+  "runtime_seconds": 19.528468500007875,
+  "promoted": true,
+  "limitation": "Same-data adaptive development. Scores are not unbiased confirmation and do not replace leaderboard evidence."
+}

@@ -1,0 +1,9 @@
+{
+  "all_1460_training_rows_have_oof_predictions": true,
+  "same_five_folds_for_all_experiments": true,
+  "metrics_recomputed_from_oof": true,
+  "train_test_disjoint_ids": true,
+  "submissions_valid": true,
+  "experiment_count": 338,
+  "artifact_checks_status": "passed"
+}

@@ -1,0 +1,384 @@
+[
+  {
+    "experiment_id": "R5E05_bagged_classical15",
+    "weights": {
+      "R4TC_v2_three_log_n16_s42": 0.425,
+      "R4TC_v2_three_log_n32_s42": 0.425,
+      "B14_cat_mae_d6_blend": 0.15
+    },
+    "expanded_weights": {
+      "R4TC_v2_three_log_n16_s42": 0.425,
+      "R4TC_v2_three_log_n32_s42": 0.425,
+      "B14_cat_mae_d6": 0.06,
+      "F03_robust_c20_g0003": 0.06,
+      "O22_xgboost_d3": 0.03
+    },
+    "cv_mean": 0.1156900731975659,
+    "cv_std": 0.021644644822669864,
+    "pooled_oof_log_rmse": 0.11729870227780774,
+    "fold_scores": [
+      0.11743121669355557,
+      0.10275668539681983,
+      0.15218001895899,
+      0.10814786060762542,
+      0.0979345843308387
+    ],
+    "public_score": null,
+    "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+    "largest_squared_error_reductions": [
+      {
+        "Id": 1299,
+        "squared_error_reduction": 0.2177135291237453
+      },
+      {
+        "Id": 524,
+        "squared_error_reduction": 0.1482162625740231
+      },
+      {
+        "Id": 1424,
+        "squared_error_reduction": 0.021406572494663545
+      },
+      {
+        "Id": 969,
+        "squared_error_reduction": 0.017434434666619536
+      },
+      {
+        "Id": 589,
+        "squared_error_reduction": 0.015199980256235313
+      }
+    ],
+    "largest_squared_error_increases": [
+      {
+        "Id": 1183,
+        "squared_error_increase": 0.04459062732460842
+      },
+      {
+        "Id": 496,
+        "squared_error_increase": 0.03282378742475145
+      },
+      {
+        "Id": 917,
+        "squared_error_increase": 0.02577747233980704
+      },
+      {
+        "Id": 1387,
+        "squared_error_increase": 0.01587451749030114
+      },
+      {
+        "Id": 198,
+        "squared_error_increase": 0.012606195221183959
+      }
+    ],
+    "submission_path": "models/round5_ensembles/submissions/R5E05_bagged_classical15.csv",
+    "submission_sha256": "bd7c7810c3b677946e7d8ceb64f0b2ec98a6e740ef393970a3156ee10d09c9de"
+  },
+  {
+    "experiment_id": "R5E03_anchor_classical15",
+    "weights": {
+      "R4TC_v2_three_log_n16_s42": 0.85,
+      "B14_cat_mae_d6_blend": 0.15
+    },
+    "expanded_weights": {
+      "R4TC_v2_three_log_n16_s42": 0.85,
+      "B14_cat_mae_d6": 0.06,
+      "F03_robust_c20_g0003": 0.06,
+      "O22_xgboost_d3": 0.03
+    },
+    "cv_mean": 0.11598072602019242,
+    "cv_std": 0.021737142938182616,
+    "pooled_oof_log_rmse": 0.1175990285447245,
+    "fold_scores": [
+      0.11777279132262722,
+      0.10272463800889699,
+      0.152672383909057,
+      0.10819306725618064,
+      0.09854074960420031
+    ],
+    "public_score": null,
+    "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+    "largest_squared_error_reductions": [
+      {
+        "Id": 1299,
+        "squared_error_reduction": 0.18312616165528506
+      },
+      {
+        "Id": 524,
+        "squared_error_reduction": 0.13983738210047303
+      },
+      {
+        "Id": 1424,
+        "squared_error_reduction": 0.019019574602788525
+      },
+      {
+        "Id": 589,
+        "squared_error_reduction": 0.017886982551180652
+      },
+      {
+        "Id": 969,
+        "squared_error_reduction": 0.017060951871684438
+      }
+    ],
+    "largest_squared_error_increases": [
+      {
+        "Id": 1183,
+        "squared_error_increase": 0.051494475956262414
+      },
+      {
+        "Id": 496,
+        "squared_error_increase": 0.02830473713137832
+      },
+      {
+        "Id": 917,
+        "squared_error_increase": 0.025161490447898588
+      },
+      {
+        "Id": 1387,
+        "squared_error_increase": 0.015736271692727753
+      },
+      {
+        "Id": 198,
+        "squared_error_increase": 0.012599647513183645
+      }
+    ],
+    "submission_path": "models/round5_ensembles/submissions/R5E03_anchor_classical15.csv",
+    "submission_sha256": "1203d91347de8f59b770bf1c2708ee1dbb7d58e135364cb019ace5c38cdf6bd9"
+  },
+  {
+    "experiment_id": "R5E04_anchor_domain20",
+    "weights": {
+      "R4TC_v2_three_log_n16_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "expanded_weights": {
+      "R4TC_v2_three_log_n16_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "cv_mean": 0.11617553435517361,
+    "cv_std": 0.02240018177007423,
+    "pooled_oof_log_rmse": 0.11789049706136628,
+    "fold_scores": [
+      0.11762147135517767,
+      0.10228026335942843,
+      0.15415634662738775,
+      0.10806989130650997,
+      0.09874969912736417
+    ],
+    "public_score": null,
+    "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+    "largest_squared_error_reductions": [
+      {
+        "Id": 1299,
+        "squared_error_reduction": 0.13010390299330443
+      },
+      {
+        "Id": 524,
+        "squared_error_reduction": 0.11182494768340856
+      },
+      {
+        "Id": 411,
+        "squared_error_reduction": 0.012382571040144286
+      },
+      {
+        "Id": 992,
+        "squared_error_reduction": 0.009607344664668498
+      },
+      {
+        "Id": 329,
+        "squared_error_reduction": 0.008292710315217541
+      }
+    ],
+    "largest_squared_error_increases": [
+      {
+        "Id": 496,
+        "squared_error_increase": 0.024481268819945334
+      },
+      {
+        "Id": 89,
+        "squared_error_increase": 0.009260623855786382
+      },
+      {
+        "Id": 667,
+        "squared_error_increase": 0.005334673802164389
+      },
+      {
+        "Id": 1183,
+        "squared_error_increase": 0.0049810409097749975
+      },
+      {
+        "Id": 917,
+        "squared_error_increase": 0.0045733670429512485
+      }
+    ],
+    "submission_path": "models/round5_ensembles/submissions/R5E04_anchor_domain20.csv",
+    "submission_sha256": "2f60e267643188dcc7f528e7a368dfcbf80178a553c7738fb5530e5887288f6b"
+  },
+  {
+    "experiment_id": "R5E06_seed42_17_2026_equal",
+    "weights": {
+      "R4TC_v2_three_log_n16_s42": 0.3333333333333333,
+      "R5TP_log_s17": 0.3333333333333333,
+      "R5TP_log_s2026": 0.3333333333333333
+    },
+    "expanded_weights": {
+      "R4TC_v2_three_log_n16_s42": 0.3333333333333333,
+      "R5TP_log_s17": 0.3333333333333333,
+      "R5TP_log_s2026": 0.3333333333333333
+    },
+    "cv_mean": 0.11671864268154339,
+    "cv_std": 0.02309112734737614,
+    "pooled_oof_log_rmse": 0.11853185934237258,
+    "fold_scores": [
+      0.11773568212937151,
+      0.10309919277951364,
+      0.15603230060014375,
+      0.10805171782673696,
+      0.09867432007195114
+    ],
+    "public_score": null,
+    "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+    "largest_squared_error_reductions": [
+      {
+        "Id": 1299,
+        "squared_error_reduction": 0.056399634873419924
+      },
+      {
+        "Id": 524,
+        "squared_error_reduction": 0.01987404120957237
+      },
+      {
+        "Id": 682,
+        "squared_error_reduction": 0.009162801728508002
+      },
+      {
+        "Id": 329,
+        "squared_error_reduction": 0.007177399993511205
+      },
+      {
+        "Id": 1183,
+        "squared_error_reduction": 0.006923798272516185
+      }
+    ],
+    "largest_squared_error_increases": [
+      {
+        "Id": 89,
+        "squared_error_increase": 0.02429733947486712
+      },
+      {
+        "Id": 31,
+        "squared_error_increase": 0.007883075082556479
+      },
+      {
+        "Id": 917,
+        "squared_error_increase": 0.007871695746056367
+      },
+      {
+        "Id": 463,
+        "squared_error_increase": 0.006198486876520193
+      },
+      {
+        "Id": 49,
+        "squared_error_increase": 0.005587184854864872
+      }
+    ],
+    "submission_path": "models/round5_ensembles/submissions/R5E06_seed42_17_2026_equal.csv",
+    "submission_sha256": "e6c64a7f847e8f47123f73338ce74f3e1fc11158694a0f72b096aa56bff3ec31"
+  },
+  {
+    "experiment_id": "R5E07_seedbag_domain20",
+    "weights": {
+      "R4TC_v2_three_log_n16_s42": 0.26666666666666666,
+      "R5TP_log_s17": 0.26666666666666666,
+      "R5TP_log_s2026": 0.26666666666666666,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "expanded_weights": {
+      "R4TC_v2_three_log_n16_s42": 0.26666666666666666,
+      "R5TP_log_s17": 0.26666666666666666,
+      "R5TP_log_s2026": 0.26666666666666666,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "cv_mean": 0.1159248871896053,
+    "cv_std": 0.02216453412227584,
+    "pooled_oof_log_rmse": 0.1176077919536318,
+    "fold_scores": [
+      0.11765154145357,
+      0.10267015237858454,
+      0.15340704418370352,
+      0.10767425492265885,
+      0.09822144300950962
+    ],
+    "public_score": null,
+    "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+    "largest_squared_error_reductions": [
+      {
+        "Id": 1299,
+        "squared_error_reduction": 0.17336053108907912
+      },
+      {
+        "Id": 524,
+        "squared_error_reduction": 0.12735891395338017
+      },
+      {
+        "Id": 411,
+        "squared_error_reduction": 0.015505592289935755
+      },
+      {
+        "Id": 329,
+        "squared_error_reduction": 0.013730805395702796
+      },
+      {
+        "Id": 992,
+        "squared_error_reduction": 0.013020146469194693
+      }
+    ],
+    "largest_squared_error_increases": [
+      {
+        "Id": 89,
+        "squared_error_increase": 0.029054744673189692
+      },
+      {
+        "Id": 496,
+        "squared_error_increase": 0.02671486104792481
+      },
+      {
+        "Id": 917,
+        "squared_error_increase": 0.010954521521744198
+      },
+      {
+        "Id": 31,
+        "squared_error_increase": 0.009514427450222795
+      },
+      {
+        "Id": 463,
+        "squared_error_increase": 0.008257756314446474
+      }
+    ],
+    "submission_path": "models/round5_ensembles/submissions/R5E07_seedbag_domain20.csv",
+    "submission_sha256": "b00fa5f54466f5525bd9d88c97b4157639ff086e3ae6a36d17a8e36d9efd84f8"
+  },
+  {
+    "experiment_id": "R5E08_noY_domain20",
+    "weights": {
+      "R5TP_log_noYtransform_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "expanded_weights": {
+      "R5TP_log_noYtransform_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "cv_mean": 0.11536111566869837,
+    "cv_std": 0.020551755413127166,
+    "pooled_oof_log_rmse": 0.11681646600019883,
+    "fold_scores": [
+      0.11768503899090144,
+      0.102458596244511,
+      0.14983318165515191,
+      0.10809683148491123,
+      0.09873192996801634
+    ],
+    "public_score": null,
+    "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+    "submission_path": "models/round5_ensembles/extension/submissions/R5E08_noY_domain20.csv",
+    "submission_sha256": "ba6bd95069cea3697e3af58c9c07e377ee3e4d06b48617030dd879d1a75f3d44"
+  }
+]

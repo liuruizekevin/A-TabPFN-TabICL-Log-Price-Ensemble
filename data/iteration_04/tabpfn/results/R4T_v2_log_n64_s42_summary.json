@@ -1,0 +1,66 @@
+{
+  "id": "R4T_v2_log_n64_s42",
+  "model": "TabPFN-v2",
+  "target": "log",
+  "n_estimators": 64,
+  "random_state": 42,
+  "device": "mps",
+  "fold_seed": 42,
+  "n_splits": 5,
+  "rows": 1460,
+  "features": 79,
+  "feature_recipe": "raw",
+  "filter_train": false,
+  "filter_rule": null,
+  "source": "https://www.kaggle.com/code/carlmcbrideellis/house-prices-using-tabpfn",
+  "weight_license": "Prior Labs License (Apache 2.0 with additional attribution)",
+  "library_version": "9.2.0",
+  "torch_version": "2.14.1",
+  "selection_limitation": "Adaptive development CV; no external test targets used.",
+  "fold_scores": [
+    {
+      "fold": 1,
+      "log_rmse": 0.11785171516071137,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 37.269958707969636
+    },
+    {
+      "fold": 2,
+      "log_rmse": 0.10273594505402403,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 37.15174624999054
+    },
+    {
+      "fold": 3,
+      "log_rmse": 0.1490439480813682,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 37.07238320802571
+    },
+    {
+      "fold": 4,
+      "log_rmse": 0.1083566641215959,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 38.07774545904249
+    },
+    {
+      "fold": 5,
+      "log_rmse": 0.09769941316751482,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 38.01844524999615
+    }
+  ],
+  "cv_mean": 0.11513753711704286,
+  "cv_std": 0.020376943821949052,
+  "pooled_oof_log_rmse": 0.11657112989499895,
+  "runtime_seconds": 274.60186762496596
+}

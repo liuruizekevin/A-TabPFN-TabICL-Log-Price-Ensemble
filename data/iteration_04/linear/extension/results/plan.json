@@ -1,0 +1,259 @@
+{
+  "specifications": [
+    {
+      "id": "R4LE01_yj_C2",
+      "family": "SVR",
+      "params": {
+        "C": 2.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE02_yj_C5",
+      "family": "SVR",
+      "params": {
+        "C": 5.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE03_yj_C10",
+      "family": "SVR",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE04_yj_C30",
+      "family": "SVR",
+      "params": {
+        "C": 30.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE05_yj_C50",
+      "family": "SVR",
+      "params": {
+        "C": 50.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE06_yj_C5_g0p001",
+      "family": "SVR",
+      "params": {
+        "C": 5,
+        "gamma": 0.001,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE07_yj_C10_g0p001",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "gamma": 0.001,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE08_yj_C20_g0p001",
+      "family": "SVR",
+      "params": {
+        "C": 20,
+        "gamma": 0.001,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE09_yj_C10_g0p0005",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "gamma": 0.0005,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE10_yj_C20_g0p0005",
+      "family": "SVR",
+      "params": {
+        "C": 20,
+        "gamma": 0.0005,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE11_yj_w1p5",
+      "family": "SVR",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson",
+      "cat_weight": 1.5
+    },
+    {
+      "id": "R4LE12_yj_w2p0",
+      "family": "SVR",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson",
+      "cat_weight": 2.0
+    },
+    {
+      "id": "R4LE13_yj_w3p0",
+      "family": "SVR",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson",
+      "cat_weight": 3.0
+    },
+    {
+      "id": "R4LE14_log_C1",
+      "family": "SVR",
+      "params": {
+        "C": 1.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4LE15_log_C2",
+      "family": "SVR",
+      "params": {
+        "C": 2.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4LE16_log_C3",
+      "family": "SVR",
+      "params": {
+        "C": 3.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4LE17_yj_e02",
+      "family": "SVR",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "epsilon": 0.02,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4LE18_yj_extra",
+      "family": "SVR",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson",
+      "extra": true
+    },
+    {
+      "id": "R4LE19_krr_defaultgamma",
+      "family": "KernelRidge",
+      "params": {
+        "alpha": 0.6,
+        "kernel": "polynomial",
+        "degree": 2,
+        "coef0": 2.5
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4LE20_krr_d3_defaultgamma",
+      "family": "KernelRidge",
+      "params": {
+        "alpha": 0.2,
+        "kernel": "polynomial",
+        "degree": 3,
+        "coef0": 0.8
+      },
+      "power": 0.15,
+      "ordinal": true
+    }
+  ],
+  "validation": "KFold5 shuffle True seed42; all1460 validation rows retained; preprocessing fit within each training fold; exact natural log RMSE",
+  "filter_rule": "Training-only GrLivArea >4000 and SalePrice <300000 when requested; no validation deletion",
+  "blends": "Fixed0.4O09Cat+0.4newcandidate+0.2O22XGB; alltested candidates retained",
+  "selection_limitation": "Adaptive development comparisons, not unbiased generalization estimates",
+  "sources": [
+    {
+      "url": "https://github.com/massquantity/Kaggle-HousePrices",
+      "inspiration": "Ordinal qualities, extra sums, PCA, SVR/KRR/linear diversity; original full-data preprocessing replaced with fold-only fitting"
+    },
+    {
+      "url": "https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard",
+      "inspiration": "BoxCox0.15 and robust linear models; official notebook page text unavailable via web, matching details seen in attributed public transcription; independently implemented"
+    }
+  ]
+}

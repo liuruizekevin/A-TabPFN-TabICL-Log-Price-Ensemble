@@ -1,0 +1,40 @@
+{
+  "id": "R4TC_v2_three_log_n32_s42",
+  "model": "TabPFN-v2 multi-checkpoint ensemble",
+  "target": "log",
+  "n_estimators": 32,
+  "random_state": 42,
+  "device": "mps",
+  "fold_seed": 42,
+  "n_splits": 5,
+  "rows": 1460,
+  "features": 79,
+  "feature_recipe": "raw",
+  "filter_train": false,
+  "checkpoint_manifest": [
+    {
+      "filename": "tabpfn-v2-regressor.ckpt",
+      "bytes": 44390977,
+      "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-09gpqh39.ckpt",
+      "bytes": 44398487,
+      "sha256": "86a5b6832fdaeae3bb50eb2fbc349198b43baa965dcda9ef3b8e10fb809c1551",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-09gpqh39.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-2noar4o2.ckpt",
+      "bytes": 44398487,
+      "sha256": "e2d4a06eeb4521dee71fc68d819e277ffb97614cc3695dc9ac3030dd9da36c21",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-2noar4o2.ckpt"
+    }
+  ],
+  "library_version": "9.2.0",
+  "torch_version": "2.14.1",
+  "source_sha256": "7b9791e70e771fe6e32c333166ec93dc2f36b94314cfb4d47531777f4cfabfc8",
+  "source": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+  "selection_limitation": "Adaptive development; same frozen folds; no external test targets.",
+  "preprocessing": "Fresh TabPFN instance fits internal preprocessing separately within each training fold."
+}

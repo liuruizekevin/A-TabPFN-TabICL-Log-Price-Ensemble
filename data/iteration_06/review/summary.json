@@ -1,0 +1,118 @@
+{
+  "round": 6,
+  "baseline": "R5E08_noY_domain20",
+  "prior_score": 0.11064,
+  "selected_experiment": "R6ICL_anchor80_tabicl20",
+  "best_observed_score": 0.1097,
+  "absolute_score_reduction": 0.0009399999999999964,
+  "relative_score_reduction_percent": 0.8496023138105535,
+  "round_primary_evaluations": 12,
+  "prior_primary_evaluations": 338,
+  "combined_primary_evaluations": 350,
+  "round_completed_uploads": 8,
+  "prior_completed_uploads": 28,
+  "total_completed_uploads": 36,
+  "online_best": {
+    "role": "online_best",
+    "experiment_id": "R6ICL_anchor80_tabicl20",
+    "public_score": 0.1097,
+    "prior_score": 0.11064,
+    "absolute_score_reduction": 0.0009399999999999964,
+    "relative_score_reduction_percent": 0.8496023138105535,
+    "seed42_development_cv": {
+      "cv_mean": 0.11530821221058023,
+      "cv_std": 0.021422483771774158,
+      "pooled_oof_log_rmse": 0.11688935816387112
+    },
+    "recipe": {
+      "R5E08_noY_domain20": 0.8,
+      "R6ICL_v2_raw79_log_n8_s42": 0.2
+    },
+    "original_path": "models/round6_tabicl/seed42/submissions/R6ICL_anchor80_tabicl20.csv",
+    "delivered_path": "submissions/round6_optimization/online_best_submission.csv",
+    "submission_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "online_evidence": {
+      "round_submission_order": 7,
+      "experiment_id": "R6ICL_anchor80_tabicl20",
+      "local_artifact": "models/round6_tabicl/seed42/submissions/R6ICL_anchor80_tabicl20.csv",
+      "uploaded_filename": "R6ICL_anchor80_tabicl20.csv",
+      "file_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+      "rows": 1459,
+      "public_score": 0.1097,
+      "status": "complete",
+      "rank_at_observation": null,
+      "screenshot": "submissions/round6_optimization/kaggle_evidence/07_R6ICL_improvement.png",
+      "screenshot_sha256": "507195ecf2457e986acf6f0146668869bfc3ca51c594bfe4140d7067beef4134",
+      "kaggle_submission_id": null
+    }
+  },
+  "validated_alternative": {
+    "role": "validated_alternative",
+    "experiment_id": "R6E05_joint_noFP_domain20",
+    "public_score": 0.1106,
+    "prior_score": 0.11064,
+    "absolute_score_reduction": 3.999999999999837e-05,
+    "relative_score_reduction_percent": 0.03615328994938392,
+    "seed42_development_cv": {
+      "cv_mean": 0.11511408465115928,
+      "cv_std": 0.02008701223231444,
+      "pooled_oof_log_rmse": 0.11650769473906515
+    },
+    "recipe": {
+      "R6TP_noY_nofingerprint_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "original_path": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+    "delivered_path": "submissions/round6_optimization/reproducible_improvement_submission.csv",
+    "submission_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+    "online_evidence": {
+      "round_submission_order": 4,
+      "experiment_id": "R6E05_joint_noFP_domain20",
+      "local_artifact": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+      "uploaded_filename": "R6E05_joint_noFP_domain20.csv",
+      "file_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+      "rows": 1459,
+      "public_score": 0.1106,
+      "status": "complete",
+      "rank_at_observation": null,
+      "screenshot": "submissions/round6_optimization/kaggle_evidence/04_R6E05_improvement.png",
+      "screenshot_sha256": "226030e2a54868dc42546c4063e574f8ba870c92753fd8f3ec6ca363045c5452",
+      "kaggle_submission_id": null
+    }
+  },
+  "selected_cv": {
+    "experiment_id": "R6ICL_anchor80_tabicl20",
+    "kind": "Fixed cross-family blend",
+    "cv_mean": 0.11530821221058023,
+    "cv_std": 0.021422483771774158,
+    "pooled_oof_log_rmse": 0.11688935816387112,
+    "recipe": {
+      "R5E08_noY_domain20": 0.8,
+      "R6ICL_v2_raw79_log_n8_s42": 0.2
+    },
+    "original_submission_path": "models/round6_tabicl/seed42/submissions/R6ICL_anchor80_tabicl20.csv",
+    "kaggle_score": 0.1097,
+    "online_status": "complete",
+    "validation_status": "executed_with_explicit_scope"
+  },
+  "selected_submission_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+  "selected_original_path": "models/round6_tabicl/seed42/submissions/R6ICL_anchor80_tabicl20.csv",
+  "selected_delivered_path": "submissions/round6_optimization/final_submission.csv",
+  "recipe": {
+    "R5E08_noY_domain20": 0.8,
+    "R6ICL_v2_raw79_log_n8_s42": 0.2
+  },
+  "final_leaderboard": {
+    "rank": 84,
+    "best_score": 0.1097,
+    "entries": 36,
+    "teams_shown": 4338,
+    "screenshot": "submissions/round6_optimization/kaggle_evidence/09_final_leaderboard.png",
+    "screenshot_sha256": "78bf34123a85c98c391337a9f6e2cc888789ca50e95c40ba71bfb81e2be4d2b1",
+    "scope": "Time-sensitive authenticated Kaggle leaderboard. Score calculated with all test data according to page notice."
+  },
+  "limitations": [
+    "Model choices reuse development folds and online feedback; no independent holdout or significance claim.",
+    "At the initial optimization publication the course package was a Round 5 snapshot; scripts/round6_delivery.py separately promotes these exact results into the updated course documents."
+  ]
+}

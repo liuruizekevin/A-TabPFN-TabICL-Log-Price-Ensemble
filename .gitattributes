@@ -1,0 +1,6 @@
+# Keep data and code bytes unchanged; treat PDFs and model files as binary.
+data/** -text -whitespace
+code/** -text
+*.pdf binary
+*.joblib binary
+*.npz binary

@@ -1,0 +1,18 @@
+{
+  "all1460_oof_rows_retained": true,
+  "all1459_test_rows_retained": true,
+  "Id_targets_folds_and_data_hashes_checked": true,
+  "subsample_source_artifact_hashes_checked": true,
+  "original_subsample_test_logs_used": true,
+  "finite_positive_prices": true,
+  "source_sha256": "f58b579fe5adfcb8df37ea035e099214760a9188ff1c1824a84a4d182c6091e7",
+  "output_sha256": {
+    "submissions/R6E06_subsample_domain20.csv": "6ca524590594ba74fb2c2e7420e31ef63067d314ff0e6e16ded3c2243054cd29",
+    "results/oof_predictions.csv": "c6ec3646a2a0ff1b6dbbdf394bc2518f97ae2995c91a545503a79eb10984f675",
+    "results/test_log_predictions.csv": "432934e88a2e1a67e96a53046a4d45dda2277b6609cd6dc98eb1b831cef67bf5",
+    "results/fold_scores.csv": "0dd345e3d2df6c8ecc34c63c0363c71d3fd712a9e74926b2f2a80933fff3d8c2",
+    "results/summary.json": "cc428c41f3d0437dd0bd01337568d5ad034b323bfa85069e50c0474428748b64",
+    "results/source_manifest.json": "f9e2ba8dd65c55ff6de73591bc5223c4ff61e0553b6aec19f95ce85aa2c14244",
+    "results/plan.json": "43ad3033e8a7c95a6f18db405cd9ce715dad4f5fada668a782eeb865044fb591"
+  }
+}

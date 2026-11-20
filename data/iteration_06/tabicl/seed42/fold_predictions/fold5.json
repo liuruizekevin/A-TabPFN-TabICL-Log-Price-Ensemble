@@ -1,0 +1,12 @@
+{
+  "plan_sha256": "e9abd0a70cec162185f45403e029fe4ba2601ef3a987bf3fecd6d730a14613ce",
+  "sha256": "b144d2032a5f89e11b6d012494271a56fe546bc52e8e27b84c61b23976784bac",
+  "fold_metrics": {
+    "fold": 5,
+    "n_train": 1168,
+    "n_valid": 292,
+    "train_validation_disjoint": true,
+    "log_rmse": 0.10125691404293614,
+    "seconds": 3.165608874987811
+  }
+}

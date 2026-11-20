@@ -1,0 +1,242 @@
+{
+  "selected_experiment": "R5E08_noY_domain20",
+  "selected_csv": "submissions/optional_candidates/R5E08_noY_domain20.csv",
+  "selected_model": null,
+  "run_dirs": [],
+  "tabpfn_dirs": [
+    "models/round5_tabpfn"
+  ],
+  "extra_candidates": [
+    {
+      "experiment_id": "R5E01_n16_n32_equal",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": false,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "R4TC_v2_three_log_n32_s42"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E01_n16_n32_equal__log_prediction",
+      "target": "log",
+      "cv_mean": 0.11670457680906174,
+      "cv_std": 0.023279571341976977,
+      "pooled_oof_log_rmse": 0.11854749681741555,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E02_anchor_raw20",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": false,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "R4T_v2_raw_n32_s42"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E02_anchor_raw20__log_prediction",
+      "target": "log",
+      "cv_mean": 0.11766582761555375,
+      "cv_std": 0.024446411833349044,
+      "pooled_oof_log_rmse": 0.11968019313852137,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E03_anchor_classical15",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.85,
+          0.15
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": true,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "B14_cat_mae_d6_blend"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E03_anchor_classical15__log_prediction",
+      "target": "log",
+      "cv_mean": 0.11598072602019242,
+      "cv_std": 0.021737142938182616,
+      "pooled_oof_log_rmse": 0.1175990285447245,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E04_anchor_domain20",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": true,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "R4T_v2_log_n32_s42_domain"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E04_anchor_domain20__log_prediction",
+      "target": "log",
+      "cv_mean": 0.11617553435517361,
+      "cv_std": 0.02240018177007423,
+      "pooled_oof_log_rmse": 0.11789049706136628,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E05_bagged_classical15",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.425,
+          0.425,
+          0.15
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": true,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "R4TC_v2_three_log_n32_s42",
+          "B14_cat_mae_d6_blend"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E05_bagged_classical15__log_prediction",
+      "target": "log",
+      "cv_mean": 0.1156900731975659,
+      "cv_std": 0.021644644822669864,
+      "pooled_oof_log_rmse": 0.11729870227780774,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E06_seed42_17_2026_equal",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": true,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "R5TP_log_s17",
+          "R5TP_log_s2026"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E06_seed42_17_2026_equal__log_prediction",
+      "target": "log",
+      "cv_mean": 0.11671864268154339,
+      "cv_std": 0.02309112734737614,
+      "pooled_oof_log_rmse": 0.11853185934237258,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E07_seedbag_domain20",
+      "model": "Weighted log-space blend",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.26666666666666666,
+          0.26666666666666666,
+          0.26666666666666666,
+          0.2
+        ],
+        "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+        "submission_candidate": true,
+        "components": [
+          "R4TC_v2_three_log_n16_s42",
+          "R5TP_log_s17",
+          "R5TP_log_s2026",
+          "R4T_v2_log_n32_s42_domain"
+        ]
+      },
+      "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+      "oof_column": "R5E07_seedbag_domain20__log_prediction",
+      "target": "log",
+      "cv_mean": 0.1159248871896053,
+      "cv_std": 0.02216453412227584,
+      "pooled_oof_log_rmse": 0.1176077919536318,
+      "stage": "round5",
+      "phase": 5
+    },
+    {
+      "experiment_id": "R5E08_noY_domain20",
+      "model": "Weighted log-space blend",
+      "target": "log",
+      "params": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+        "additional_weight_search": false,
+        "submission_candidate": true,
+        "components": [
+          "R5TP_log_noYtransform_s42",
+          "R4T_v2_log_n32_s42_domain"
+        ]
+      },
+      "cv_mean": 0.11536111566869837,
+      "cv_std": 0.020551755413127166,
+      "pooled_oof_log_rmse": 0.11681646600019883,
+      "oof_path": "models/round5_ensembles/extension/results/oof_predictions.csv",
+      "oof_column": "R5E08_noY_domain20__log_prediction",
+      "stage": "round5",
+      "phase": 5
+    }
+  ],
+  "final_parameters": {
+    "combination_space": "natural logarithm of price",
+    "weights": [
+      0.8,
+      0.2
+    ],
+    "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+    "additional_weight_search": false,
+    "submission_candidate": true,
+    "components": [
+      "R5TP_log_noYtransform_s42",
+      "R4T_v2_log_n32_s42_domain"
+    ],
+    "model": "Weighted log-space blend",
+    "prediction_type": "round5_blend",
+    "manifest": "models/round5_ensembles/extension/results/candidate_manifests.json"
+  },
+  "catalog_notes": [
+    "Five adaptive development phases; official training targets only.",
+    "Fixed-weight primary blends and the recorded fold-isolated model configurations are counted; calibration and median diagnostics remain supplementary.",
+    "All primary validation rows and original seed-42 folds are retained."
+  ]
+}

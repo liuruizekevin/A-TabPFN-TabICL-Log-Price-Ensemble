@@ -1,0 +1,55 @@
+{
+  "phase": 3,
+  "motivation": "Bounded adaptive follow-up requested after phase-two CV and actual Kaggle leaderboard feedback; not part of the original two-phase plan.",
+  "specifications": [
+    {
+      "id": "F01_robust_c10_g001",
+      "scaler": "RobustScaler",
+      "C": 10.0,
+      "gamma": 0.001
+    },
+    {
+      "id": "F02_robust_c10_scale",
+      "scaler": "RobustScaler",
+      "C": 10.0,
+      "gamma": "scale"
+    },
+    {
+      "id": "F03_robust_c20_g0003",
+      "scaler": "RobustScaler",
+      "C": 20.0,
+      "gamma": 0.0003
+    },
+    {
+      "id": "F04_standard_c10_scale",
+      "scaler": "StandardScaler",
+      "C": 10.0,
+      "gamma": "scale"
+    }
+  ],
+  "common_parameters": {
+    "epsilon": 0.008,
+    "kernel": "rbf",
+    "enhanced_features": true,
+    "skew_transform": true
+  },
+  "blends": {
+    "components": [
+      "O09_native_mae",
+      "one new SVR",
+      "O22_xgboost_d3"
+    ],
+    "weights": [
+      0.4,
+      0.4,
+      0.2
+    ]
+  },
+  "validation": {
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "all_1460_rows_retained": true
+  },
+  "scope": "Same-data adaptive development. Scores are not unbiased confirmation and do not replace leaderboard evidence."
+}

@@ -1,0 +1,20 @@
+{
+  "all1460_oof_rows_retained": true,
+  "all1459_test_rows_retained": true,
+  "input_data_hashes_match_preserved_source_manifest": true,
+  "Id_order_targets_and_fold_assignments_verified": true,
+  "finite_positive_submission_prices": true,
+  "source_sha256": "c79dc69efafc60ba7cee980818ae216a2634d42577614d3b8ca3e12620e6968a",
+  "output_sha256": {
+    "submissions/R6E01_e08_classical15.csv": "5cf1d03d2a3ebefc7fe160ec83cc305a8ca9eb45ce7d0b2dd598a4721b6ed8b1",
+    "submissions/R6E02_noY_domain50.csv": "71eb8b5004e054ce98ef453eef437bb8b1e608c9dd0be386ccd1162985f2c374",
+    "results/experiment_results.csv": "60ac7ba60962f3588376cc13e1c5759a7a6ddfaf383507d0d764507395a5382a",
+    "results/fold_scores.csv": "3441699d0c9b2abcbc5cf6bc3b36a25759fed8571ab12d2540e39765838ef15a",
+    "results/oof_predictions.csv": "8ae453e539cc9f271dea4fbd24c160ffec6ddcf596a3426f0bfdfa318dec917a",
+    "results/test_log_predictions.csv": "d65c46c740eb395eed3aa8d8720b5e7dcfb099b75513bb4d1da1c0056d6befb5",
+    "results/candidate_manifests.json": "8fc86913509b14c828276f81fc907c5c37d4dd97833ce761b06e108e4c19eeb7",
+    "results/source_manifest.json": "d253545738d11c78525b6f022d5907f309fc751feca6722de6fcea6e3fe0ce69",
+    "results/residual_diagnostics.json": "538e192b767f9eed9e3599004f8b0e22c062e8ff9b5fe6a7820a825815a8024d",
+    "results/plan.json": "1e0747789878421939baa6b268dd8927e1183710724806fc176737cc4d820136"
+  }
+}

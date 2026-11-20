@@ -1,0 +1,148 @@
+{
+  "metric": "sqrt(mean((log(y_true) - log(y_pred))**2)); natural logarithm, not log1p",
+  "validation": {
+    "type": "KFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "train_rows_per_fold": 1168,
+    "validation_rows_per_fold": 292,
+    "reported_cv_std_ddof": 1,
+    "all_training_rows_retained": true,
+    "selection_limitation": "Two adaptive development phases reused the same five seed-42 folds for features, hyperparameters, family selection and fixed-weight blend selection. The selected estimate may be optimistic. The optional seed-2026 check uses the same labeled data and is a sensitivity check, not an independent test. No Kaggle score has been measured."
+  },
+  "data": {
+    "training_rows": 1460,
+    "competition_test_rows": 1459,
+    "raw_predictors_excluding_id": 79,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "read_csv": {
+      "keep_default_na": false,
+      "na_values": [
+        "NA",
+        ""
+      ]
+    }
+  },
+  "experiment_count": 50,
+  "best_experiment": "O26_cat_svr_xgb",
+  "best_model": "Weighted log-space blend",
+  "best_cv_mean": 0.12085465221072575,
+  "best_cv_std": 0.021859587838354032,
+  "best_pooled_oof_log_rmse": 0.12242597855580184,
+  "best_components": [
+    "O09_native_mae",
+    "O12_svr_c10",
+    "O22_xgboost_d3"
+  ],
+  "best_parameters": {
+    "components": [
+      "O09_native_mae",
+      "O12_svr_c10",
+      "O22_xgboost_d3"
+    ],
+    "weights": [
+      0.4,
+      0.4,
+      0.2
+    ]
+  },
+  "baseline": {
+    "experiment_id": "E01_raw_ridge",
+    "cv_mean": 0.1517986380654999,
+    "cv_std": 0.020890753898866025,
+    "pooled_oof_log_rmse": 0.15294432123263363,
+    "raw_predictions_clipped": 0
+  },
+  "absolute_improvement_over_baseline": 0.030943985854774148,
+  "relative_improvement_over_baseline_pct": 20.384890305420306,
+  "largest_pathway_improvement": {
+    "to_experiment": "E05_skew",
+    "from_cv_mean": 0.14494061396450872,
+    "to_cv_mean": 0.1316554580622657,
+    "absolute_improvement": 0.013285155902243023,
+    "scope": "Largest consecutive local CV decrease within E01-E05; not a Kaggle submission improvement."
+  },
+  "most_helpful_group": {
+    "group": "area",
+    "full_cv_mean": 0.1316554580622657,
+    "without_group_cv_mean": 0.13313343866412364,
+    "removal_penalty": 0.0014779806018579422,
+    "folds_helped": 5,
+    "scope": "Largest positive paired removal penalty among five predefined groups with E05 Ridge alpha20; model-specific development evidence, not causal or statistical proof."
+  },
+  "serialization_max_absolute_prediction_difference": 5.820766091346741e-11,
+  "test_prediction_summary": {
+    "min": 48046.37516504504,
+    "median": 157624.89013665228,
+    "max": 536325.7263519664
+  },
+  "kaggle": {
+    "submitted": false,
+    "team_name": "",
+    "baseline_score": null,
+    "final_score": null,
+    "rank": null
+  },
+  "runtime_seconds": 877.335661207966,
+  "environment": {
+    "python": "3.12.7",
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "joblib": "1.6.0",
+      "lightgbm": "4.7.0",
+      "xgboost": "3.4.1"
+    }
+  },
+  "phase1_experiment_count": 21,
+  "optimization_experiment_count": 29,
+  "phase1_best_experiment": "E11_catboost_depth5",
+  "phase1_best_cv_mean": 0.12354188616262751,
+  "optimization": {
+    "phase": 2,
+    "best_experiment": "O26_cat_svr_xgb",
+    "best_model": "Weighted log-space blend",
+    "best_cv_mean": 0.12085465221072575,
+    "best_cv_std": 0.021859587838354032,
+    "best_pooled_oof_log_rmse": 0.12242597855580184,
+    "best_parameters": {
+      "components": [
+        "O09_native_mae",
+        "O12_svr_c10",
+        "O22_xgboost_d3"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    "best_components": [
+      "O09_native_mae",
+      "O12_svr_c10",
+      "O22_xgboost_d3"
+    ],
+    "experiment_count": 29,
+    "failed_experiment_count": 0,
+    "phase1_best_experiment": "E11_catboost_depth5",
+    "phase1_best_cv_mean": 0.12354188616262751,
+    "absolute_improvement_over_phase1": 0.002687233951901763,
+    "relative_improvement_over_phase1_pct": 2.1751602111403368,
+    "all_1460_validation_rows_retained": true,
+    "selection_limitation": "All search decisions reuse development folds; no unbiased final generalization estimate.",
+    "runtime_seconds": 821.7299095419585,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "promoted": true,
+    "conservative_submission_experiment": "O27_conservative_phase1_svr",
+    "sensitivity_submission_experiment": "O23_native_train_filter"
+  },
+  "absolute_improvement_over_phase1": 0.002687233951901763,
+  "serialization_check_reference": "Reloaded final model versus final_submission.csv predictions; includes CSV floating-point roundoff."
+}

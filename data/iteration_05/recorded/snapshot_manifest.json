@@ -1,0 +1,21 @@
+{
+  "scope": "Unmodified current Round 5 records before Round 6 course-document promotion.",
+  "files": {
+    "results/largest_oof_errors.csv": "4ee7016a243b6b0144c85d3b009b5a4b2bb2471c46ae1b13e251dbdd68c3a123",
+    "results/experiment_plan.json": "c32435d574f4b446de3e496bc795c9e8e2f8d7997757fb6e3fea8758f5c57427",
+    "results/summary.json": "7e7b10a6d1c0ad7159f7a686b6397bab9fc1aecfd650ffcf72b001727d7cb134",
+    "results/ablation_results.csv": "bd200b0f2176745f93c0fe4c183f819ea0c05e37f9aa695fbfce7bf64ed300cb",
+    "results/kaggle_submissions.csv": "5de9e915f1e1daeb1965d096695f7cf1064e1bc3e44762068a137c8ff7e94ac7",
+    "results/fold_scores.csv": "b0393ceb6f594a3e4def5151fb439b6e8adef99e453c7d2d05e03d1f5ee1403d",
+    "results/oof_predictions.csv": "826236eedb70ffdfc36f80ffb6b399373cabbbd49eadc148b56645bb98344b92",
+    "results/preprocessing_audit.json": "f8c380f21d74b4e43cf809708669fb5768c1b986d1e747b245fa50c9abce6b0b",
+    "results/fold_assignments.csv": "839303b5ca3272eec75083c18c8a11a44db95f64a797d8e17b52a47e4c0dbcec",
+    "results/pathway_improvements.csv": "9d34aab3f1e23d026ef58e7402587f89c801d57b262c22bd411709daf3a2461a",
+    "results/experiment_results.csv": "8c4dbff99b967afa14661865655fdd1f110896eafcdb5df02d9128fd09106447",
+    "results/validation.json": "865ebf4a6a55c323f376757db8a045c4bb7261ceffbdb7eafd02868f3be12f3e",
+    "model_results.csv": "8c4dbff99b967afa14661865655fdd1f110896eafcdb5df02d9128fd09106447",
+    "final_submission.csv": "ba6bd95069cea3697e3af58c9c07e377ee3e4d06b48617030dd879d1a75f3d44",
+    "model_explanation.md": "1dc6f39512c8a961f1f003a42d0ef51f88fc66ac3ca43e98190dc15c582b824b",
+    "kaggle_submissions.json": "597c67f5fee19d3f3f95f5ffef63eb5aa52c4cc7fe02704ddd1db1d2e01c1d48"
+  }
+}

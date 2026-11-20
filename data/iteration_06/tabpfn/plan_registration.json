@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "a1e39595c861fa5de2f6553ee02675f52dc37833013cc67864aa0eee95827264",
+  "fold_manifest_sha256": "d4c67df921c83fd8c7db2c1e50e5b4814abfebffc4619fc903735c20ccbe4402",
+  "dependency_manifest_sha256": "b39f5526197bad19235e50e1d8e34594a23b5534369c5558802546b3cd9dea26",
+  "candidate_ids": [
+    "R6TP_noY_nofingerprint_s42",
+    "R6TP_noY_subsample090_s42",
+    "R6TP_noY_domain_s42",
+    "R6TP_noY_poly50_s42"
+  ],
+  "candidate_count": 4,
+  "fold_seed": 42,
+  "all_1460_rows_validated_once": true,
+  "no_test_labels": true,
+  "no_id_predictor": true
+}

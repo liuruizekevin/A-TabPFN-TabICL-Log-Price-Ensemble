@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "directory": "models/round4_boosting",
+      "experiments": 46,
+      "submission_files": 92,
+      "fold_fit_audits": 115,
+      "maximum_metric_absolute_difference": 1.249000902703301e-16,
+      "results_sha256": "1b3e7428da46bb31ee5291fd41d694fef6a1305d74b7b3d0ad438d14175f7a00"
+    },
+    {
+      "directory": "models/round4_boosting/gbr_recipe",
+      "experiments": 4,
+      "submission_files": 8,
+      "fold_fit_audits": 10,
+      "maximum_metric_absolute_difference": 9.194034422677078e-17,
+      "results_sha256": "f79868f81f28b180de10fd85567952406525e9b97740130364913e9d94bcc033"
+    },
+    {
+      "directory": "models/round4_boosting/deep_extension",
+      "experiments": 2,
+      "submission_files": 4,
+      "fold_fit_audits": 5,
+      "maximum_metric_absolute_difference": 9.71445146547012e-17,
+      "results_sha256": "41f558b7e071310e90c6971976b1eaf71ce44cefd4374cc0c25cddd02e655a22"
+    },
+    {
+      "directory": "models/round4_boosting/pfn_blends",
+      "experiments": 60,
+      "submission_files": 60,
+      "fold_fit_audits": 0,
+      "maximum_metric_absolute_difference": 1.5265566588595902e-16,
+      "results_sha256": "187f4aa7464ccc3bd7d010f22626834218a562bd448b683149c78f2125614389"
+    }
+  ],
+  "all_1460_rows_retained": true,
+  "folds_match_seed42": true,
+  "validation_scope": "Recomputed saved OOF metrics, schema checks and saved fold fit audits.",
+  "selected_boosting_model_reload": {
+    "experiment_id": "B14_cat_mae_d6_blend",
+    "model_path": "models/round4_boosting/candidate_models/B14_cat_mae_d6_blend.joblib",
+    "model_sha256": "82ce90e2bd42f09e212630a29b5e9bef2d996cc1faf3dfb707dd43d3a21512af",
+    "components": [
+      "models/round4_boosting/candidate_models/B14_cat_mae_d6.joblib",
+      "models/followup/candidate_models/F03_robust_c20_g0003.joblib",
+      "models/optimization/candidate_models/O22_xgboost_d3.joblib"
+    ],
+    "weights": [
+      0.4,
+      0.4,
+      0.2
+    ],
+    "arithmetic": "Termwise scalar multiplication, then left-to-right addition, preserving the exported arithmetic dtypes.",
+    "reload_max_absolute_price_difference": 5.820766091346741e-11
+  },
+  "reference_bagging": {
+    "components": {
+      "O09_native_mae": {
+        "weight": 0.4,
+        "fold_train_rows": 1168,
+        "validation_rows": 292,
+        "oof_max_abs_difference": 1.7763568394002505e-15
+      },
+      "F03_robust_c20_g0003": {
+        "weight": 0.4,
+        "fold_train_rows": 1168,
+        "validation_rows": 292,
+        "oof_max_abs_difference": 1.7763568394002505e-15
+      },
+      "O22_xgboost_d3": {
+        "weight": 0.2,
+        "fold_train_rows": 1168,
+        "validation_rows": 292,
+        "oof_max_abs_difference": 1.7763568394002505e-15
+      }
+    },
+    "oof_checks": {
+      "O09_native_mae": 1.7763568394002505e-15,
+      "F03_robust_c20_g0003": 1.7763568394002505e-15,
+      "O22_xgboost_d3": 1.7763568394002505e-15
+    },
+    "cv_mean": 0.11833420818530145,
+    "cv_std": 0.013082031420171579,
+    "pooled_oof_log_rmse": 0.11891129661939168,
+    "deployment_variants": {
+      "B26_F07_fold_bag": "Mean log predictions of each component's five fold models",
+      "B27_F07_half_full_half_bag": "Equal-weight average of F07 full fit and B26 log predictions"
+    },
+    "limitation": "OOF predictions reproduce the original F07 score. They do not independently estimate the performance of either deployment averaging variant; Kaggle submission is required.",
+    "reused_fold_model_cache": true,
+    "runtime_seconds": 17.539745249960106
+  },
+  "interrupted_extension": {
+    "phase": "adaptive_depth_extension",
+    "experiment_count": 2,
+    "completed_base_ids": [
+      "B28_cat_mae_d7"
+    ],
+    "stopped_before_completion": [
+      "B29_cat_mae_d6_long"
+    ],
+    "stop_reason": "Parent-requested approximate five-minute cap reached by depth7 trial; preserve completed checkpoints and cancel longer-depth6 trial.",
+    "best": {
+      "experiment_id": "B28_cat_mae_d7_blend",
+      "model": "Fixed log blend",
+      "stage": "round4_boosting",
+      "target": "log",
+      "cv_mean": 0.118348042387539,
+      "cv_std": 0.0122300177227835,
+      "pooled_oof_log_rmse": 0.1188525044067748,
+      "runtime_seconds": 0.0,
+      "params_json": "{\"components\": [\"B28_cat_mae_d7\", \"F03_robust_c20_g0003\", \"O22_xgboost_d3\"], \"weights\": [0.4, 0.4, 0.2]}"
+    },
+    "promoted": false
+  }
+}

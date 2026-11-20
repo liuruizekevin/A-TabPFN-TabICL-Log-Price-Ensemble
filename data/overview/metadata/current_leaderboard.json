@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "source_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/leaderboard?search=kkkkeviiiinnnn",
+  "submissions_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/submissions",
+  "evidence_method": "User-provided screenshot of the Kaggle leaderboard. Visible rank, best score, entry count and latest-submission banner were inspected.",
+  "account_display_name": "kkkkeviiiinnnn",
+  "leaderboard_team_display_name": "kkkkeviiiinnnn",
+  "rank": 104,
+  "teams_shown": null,
+  "best_score": 0.1097,
+  "completed_entries": 36,
+  "best_submission_filename": "R6ICL_anchor80_tabicl20.csv",
+  "best_experiment_id": "R6ICL_anchor80_tabicl20",
+  "best_submission_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+  "latest_submission_filename": "R6E06_subsample_domain20.csv",
+  "latest_submission_score": 0.11048,
+  "visible_leaderboard_text": [
+    "104 kkkkeviiiinnnn",
+    "0.10970 36",
+    "Your latest submission scored 0.11048. Your best score remains 0.10970."
+  ],
+  "historical_observation": {
+    "rank": 84,
+    "teams_shown": 4338,
+    "record": "docs/kaggle_submissions.json",
+    "screenshot": "submissions/round6_optimization/kaggle_evidence/09_final_leaderboard.png"
+  },
+  "scope": "A newer screenshot of the same leaderboard entry. Rank, best score, entry count and latest-submission score come from the screenshot. Scored-file identity and hash remain backed by the prior submission observation. Historical experiment records remain unchanged.",
+  "screenshot_path": "submissions/report_assets/final_leaderboard.png",
+  "screenshot_sha256": "d6edbd90a191f9c415fbecf098d1d5a75c7255089ea846575394841849fffe02",
+  "screenshot_dimensions": [
+    3372,
+    1248
+  ],
+  "previous_observation": {
+    "schema_version": 1,
+    "source_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/leaderboard?search=kkkkeviiiinnnn",
+    "submissions_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/submissions",
+    "evidence_method": "Read-only inspection of the authenticated Kaggle leaderboard and submissions UI in Google Chrome; leaderboard refreshed before reading. Visible screenshot and accessibility text were inspected in the audit conversation.",
+    "account_display_name": "kkkkeviiiinnnn",
+    "leaderboard_team_display_name": "kkkkeviiiinnnn",
+    "rank": 106,
+    "teams_shown": null,
+    "best_score": 0.1097,
+    "completed_entries": 36,
+    "best_submission_filename": "R6ICL_anchor80_tabicl20.csv",
+    "best_experiment_id": "R6ICL_anchor80_tabicl20",
+    "best_submission_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "latest_submission_filename": "R6E06_subsample_domain20.csv",
+    "latest_submission_score": 0.11048,
+    "visible_leaderboard_text": [
+      "106 kkkkeviiiinnnn",
+      "0.10970 36",
+      "Your latest submission scored 0.11048. Your best score remains 0.10970.",
+      "This leaderboard is calculated with all of the test data."
+    ],
+    "visible_best_submission_text": "Success R6ICL_anchor80_tabicl20.csv Complete; R6ICL fixed architecture-diversity test: .80 priorE08 + .20 TabICLv2 in log space; public score: 0.10970",
+    "historical_observation": {
+      "rank": 84,
+      "teams_shown": 4338,
+      "record": "docs/kaggle_submissions.json",
+      "screenshot": "submissions/round6_optimization/kaggle_evidence/09_final_leaderboard.png"
+    },
+    "scope": "A new leaderboard observation of the same scored file, not a new model or upload. The current total team count was not observed. Historical experiment records and screenshots remain unchanged. This observation does not verify the three students' Kaggle-team membership; the user handles team evidence."
+  }
+}

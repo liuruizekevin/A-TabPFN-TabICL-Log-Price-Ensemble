@@ -1,0 +1,15 @@
+# Local environments, generated files and caches.
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+.venv-*/
+node_modules/
+/outputs/
+*.aux
+*.toc
+*.synctex.gz
+*.log
+~$*

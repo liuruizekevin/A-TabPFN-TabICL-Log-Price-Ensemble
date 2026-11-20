@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "commands": {
+    "1": {
+      "train": "scripts/run_pipeline.py",
+      "eda": "scripts/generate_eda.py",
+      "features": "features/preprocessing.py"
+    },
+    "2": {
+      "train": "scripts/optimize_models.py",
+      "select": "scripts/promote_optimization.py"
+    },
+    "3": {
+      "train": "scripts/run_followup.py",
+      "select": "scripts/promote_followup.py"
+    },
+    "4": {
+      "linear": "scripts/round4_linear.py",
+      "boosting": "scripts/round4_boosting.py",
+      "stacking": "scripts/round4_stacking.py",
+      "tabpfn": "scripts/round4_tabpfn.py",
+      "checkpoints": "scripts/round4_tabpfn_checkpoints.py"
+    },
+    "5": {
+      "tabpfn": "scripts/round5_tabpfn.py",
+      "ensembles": "scripts/round5_ensembles.py",
+      "extension": "scripts/round5_ensemble_extension.py",
+      "selection": "scripts/prepare_round5_manifest.py",
+      "n24": "models/round5_tabpfn/run_n24_extension.py"
+    },
+    "6": {
+      "tabpfn": "scripts/round6_tabpfn.py",
+      "tabicl": "scripts/round6_tabicl.py",
+      "saved-blends": "scripts/round6_saved_blends.py",
+      "joint-blend": "scripts/round6_joint_blend.py",
+      "subsample-blend": "scripts/round6_subsample_blend.py",
+      "record-online": "scripts/round6_record_online.py"
+    }
+  },
+  "files": [
+    {
+      "path": "code/iteration_01/train.py",
+      "projection": "scripts/run_pipeline.py",
+      "sha256": "d6bc79650a1c0aa8c4e310d06a2c6dce389080e94e4b6d7a22865ce654c2bb3a",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/run_pipeline.py",
+        "sha256": "0c9978254587c7f8b166ff3b979246c6147a420154cd4a26481499e4dc9bcec6"
+      }
+    },
+    {
+      "path": "code/iteration_01/generate_eda.py",
+      "projection": "scripts/generate_eda.py",
+      "sha256": "bdee05fddd21ced83a18d421ba679176b54cd11537e549e2bfae123d66a4875c",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/generate_eda.py",
+        "sha256": "f75dda73d5a676b7ed7e3956deff6efdf0b18c084ed65518fba9e98f095109b5"
+      }
+    },
+    {
+      "path": "code/iteration_01/preprocessing.py",
+      "projection": "features/preprocessing.py",
+      "sha256": "a6abdb390fa3c780c59a3232f58c98f11d09ad9777b10b76c1f5144d41b3b899",
+      "historical_source": {
+        "sha256": "d6c38f25c15ca6f29f1c531e0709ab35d46809d32053a3ec8a37a161049aa901"
+      }
+    },
+    {
+      "path": "code/iteration_02/train.py",
+      "projection": "scripts/optimize_models.py",
+      "sha256": "68c892728e8563a9d7f8a508b11a67e3a1f7e1d3d5117588f9b1ee8c301ebd75",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/optimize_models.py",
+        "sha256": "9a644dc081e1f3a75fae8f66426daf35377df8767d8e9970ea5762a8a5d9355d"
+      }
+    },
+    {
+      "path": "code/iteration_02/promote_optimization.py",
+      "projection": "scripts/promote_optimization.py",
+      "sha256": "da2aa194f98fe5d384908aec06d0642a4323a33eaa017402e229027ec136a578",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/promote_optimization.py",
+        "sha256": "51e9636066e3f57475c7f19db5aeec5a5ff6f1d5f04a0ee02ce6489259da417b"
+      }
+    },
+    {
+      "path": "code/iteration_03/train.py",
+      "projection": "scripts/run_followup.py",
+      "sha256": "bcba30e7f125f1039a33711edc0d46cc2b04b2e347b4318975c3fd0b2e11594b",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/run_followup.py",
+        "sha256": "60328d10f46b34068c6afb339eb7e3a43ca633035879178f99c72a22c2a82591"
+      }
+    },
+    {
+      "path": "code/iteration_03/promote_followup.py",
+      "projection": "scripts/promote_followup.py",
+      "sha256": "9da19e5136a21073b21d73990fd923b1cb4e389d1c425f614b055ec08b4ab867",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/promote_followup.py",
+        "sha256": "59b962e255e7636166b64416f2c7d9a5bf3adf8c15a2d84ee68177e175fc38b3"
+      }
+    },
+    {
+      "path": "code/iteration_04/round4_linear.py",
+      "projection": "scripts/round4_linear.py",
+      "sha256": "eb99b1a379450b214cb42d9ef5dfa22b47ed58bcf38bda23fda8bea3d82d574c",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round4_linear.py",
+        "sha256": "9f459984c6b6573a3af1d1c06dad20013e4c76a06eace1d8e7ad6c212eb58bf6"
+      }
+    },
+    {
+      "path": "code/iteration_04/round4_boosting.py",
+      "projection": "scripts/round4_boosting.py",
+      "sha256": "cc914b8e1899dd57e4240a45ecd4544a720297526a7fe18a0169db10c1051225",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round4_boosting.py",
+        "sha256": "e53e8360960a79d5b3659dc3f219ff738cb67ea88ffeab20879c7c1206c9475f"
+      }
+    },
+    {
+      "path": "code/iteration_04/round4_stacking.py",
+      "projection": "scripts/round4_stacking.py",
+      "sha256": "e4e4e77cedea1a40f64c5d1c24688ebc166e273d926c24ca0de1097ef476adea",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round4_stacking.py",
+        "sha256": "391cb1b0bdae5fd70e2320c810103ab206e2c835a19d2d16a1c080e9840cb098"
+      }
+    },
+    {
+      "path": "code/iteration_04/round4_tabpfn.py",
+      "projection": "scripts/round4_tabpfn.py",
+      "sha256": "881bfba4459ec49f32cf385a7b109c64a52751f77452ae6e508096a2d03c8375",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round4_tabpfn.py",
+        "sha256": "5f3d02f0e9c67cef1952b442367876d1941b796ae5d5e40f5532b54f79c45542"
+      }
+    },
+    {
+      "path": "code/iteration_04/round4_tabpfn_checkpoints.py",
+      "projection": "scripts/round4_tabpfn_checkpoints.py",
+      "sha256": "78cb4ef2ae1433f0c690d8b85f4e02bc823b333cf16474b145bdfe9ed023c53c",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round4_tabpfn_checkpoints.py",
+        "sha256": "7732401ee484f7d6f07212f7b9e5feef43abf36e276a178252529c55c1f73e5f"
+      }
+    },
+    {
+      "path": "code/iteration_05/round5_tabpfn.py",
+      "projection": "scripts/round5_tabpfn.py",
+      "sha256": "d5bef97f5bf142902bb766ff8e9b8a7179f867d09095aac7b2bc5f73a6bc1c36",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round5_tabpfn.py",
+        "sha256": "4aca59057f19fb525bd4a7d27e6a81a271a01aed379bee7d110bf9b1e8fbc74d"
+      }
+    },
+    {
+      "path": "code/iteration_05/round5_ensembles.py",
+      "projection": "scripts/round5_ensembles.py",
+      "sha256": "4256847ae8527189e5fb6da746bbf51030f04d2b53bb33fb38524f9b63347981",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round5_ensembles.py",
+        "sha256": "aece885daee44ead11464b4e2e74f7e9714176e17e43311527009e9b28b2773f"
+      }
+    },
+    {
+      "path": "code/iteration_05/round5_ensemble_extension.py",
+      "projection": "scripts/round5_ensemble_extension.py",
+      "sha256": "ed05776dbe82893a00fb8e9bdfd0b336d92beaaa000b7e8f7011933be1dfb929",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round5_ensemble_extension.py",
+        "sha256": "8e4f60255e8b3c0118c57c0872767b788bbf4eff1d0346fcfe3c0b2022e6c62e"
+      }
+    },
+    {
+      "path": "code/iteration_05/selection.py",
+      "projection": "scripts/prepare_round5_manifest.py",
+      "sha256": "a7ac6ccce1c4712e339d965bf0a8f7248d7ac7cef4082bad0bebb0d8ee354676",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/prepare_round5_manifest.py",
+        "sha256": "680096c0455f2b43b9038075a22bc9d032d0b2fd70bde3c0d73141e515326b7a"
+      }
+    },
+    {
+      "path": "code/iteration_05/run_n24_extension.py",
+      "projection": "models/round5_tabpfn/run_n24_extension.py",
+      "sha256": "0704961e3299285c502bb30721b79369e8ab1e91553a0fa9fd8e535dd589a9cc",
+      "historical_source": {
+        "sha256": "700f5714d4d91c98dbeb510b4a746e49091a0feeb9328d5822d31c0ee0fcfe95"
+      }
+    },
+    {
+      "path": "code/iteration_06/round6_tabpfn.py",
+      "projection": "scripts/round6_tabpfn.py",
+      "sha256": "8d8bd05b193d9dac7da62fac188c308b3c28d8838abd1b4d7604bbcf73fbff8f",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round6_tabpfn.py",
+        "sha256": "16f070de8f165cbf47aa27c5da85a328ddc03a57356128c9c181dfb94bbed1c8"
+      }
+    },
+    {
+      "path": "code/iteration_06/round6_tabicl.py",
+      "projection": "scripts/round6_tabicl.py",
+      "sha256": "d87c35a413f4103f496c8fc41a07499223d82fe1f7ead2aece25f02f4dd43b55",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round6_tabicl.py",
+        "sha256": "8af0cc406ce5c79f06c51671c9e8a1159a9bcf2dcb4b326167f8386c6e63489d"
+      }
+    },
+    {
+      "path": "code/iteration_06/round6_saved_blends.py",
+      "projection": "scripts/round6_saved_blends.py",
+      "sha256": "85d58711f2c85ae0e8a3332f6142321df64d6671169fdebd483ae9aae516b89f",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round6_saved_blends.py",
+        "sha256": "c79dc69efafc60ba7cee980818ae216a2634d42577614d3b8ca3e12620e6968a"
+      }
+    },
+    {
+      "path": "code/iteration_06/round6_joint_blend.py",
+      "projection": "scripts/round6_joint_blend.py",
+      "sha256": "c01dd35ec2300b38ee4c8b2cdd5fe3ead86e04f1764bd33285e6ee2fe83be15b",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round6_joint_blend.py",
+        "sha256": "abde7a39533cc0ab73f15d20333f5c9103b872bd0ccaf328cf7c047856dccf95"
+      }
+    },
+    {
+      "path": "code/iteration_06/round6_subsample_blend.py",
+      "projection": "scripts/round6_subsample_blend.py",
+      "sha256": "fb1123be69c7078f0df7fd765802dbde081037f0e04f2b87b64104505ab78cb7",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round6_subsample_blend.py",
+        "sha256": "f58b579fe5adfcb8df37ea035e099214760a9188ff1c1824a84a4d182c6091e7"
+      }
+    },
+    {
+      "path": "code/iteration_06/round6_record_online.py",
+      "projection": "scripts/round6_record_online.py",
+      "sha256": "4a8a67f17024ce3cf1a9783a95236094874b8aa184ab559a27fc71132b47f0ba",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/round6_record_online.py",
+        "sha256": "aeeb516635b87d522231ee2f5bc4e076f774edd2584c6a584a32664ee90d07ff"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/__init__.py",
+      "projection": "src/house_prices/__init__.py",
+      "sha256": "99fb8decbe9990d7854000d48888d2fe7b346fd809fffa69f91668fbb663347e",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/__init__.py",
+        "sha256": "99fb8decbe9990d7854000d48888d2fe7b346fd809fffa69f91668fbb663347e"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/experiment.py",
+      "projection": "src/house_prices/experiment.py",
+      "sha256": "48b8a102d511d1879bb7516822efb2633a6531c18d9bafee314f970588dbb74b",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/experiment.py",
+        "sha256": "f4d06d25a2acb0cdb5f15bf3935f9bd86aa4b414d67ca161975cb62c64aa30aa"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/followup.py",
+      "projection": "src/house_prices/followup.py",
+      "sha256": "cc6c45278c4a3149466c8468ef7874f3d449d1de4b40bfc7ba7af327869da44d",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/followup.py",
+        "sha256": "cc6c45278c4a3149466c8468ef7874f3d449d1de4b40bfc7ba7af327869da44d"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/followup_promotion.py",
+      "projection": "src/house_prices/followup_promotion.py",
+      "sha256": "788e04f9135f4212d583731181671b6fb54e2e029d86e6fd47a3ce19b16c7780",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/followup_promotion.py",
+        "sha256": "a3a2393c01dafab81bdf33e8c2a2f4aedc72c0b752c6f1e17934b5df403d9c2e"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/models.py",
+      "projection": "src/house_prices/models.py",
+      "sha256": "e6fe2df7d628b817542be57955e8e40ada35e3e87f3947531f549b18b50fc6fd",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/models.py",
+        "sha256": "e6fe2df7d628b817542be57955e8e40ada35e3e87f3947531f549b18b50fc6fd"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/optimization.py",
+      "projection": "src/house_prices/optimization.py",
+      "sha256": "f5aa2e000c15b153a493b677c0bd3edfa7822ddbf77dfe9b28eb5d217c38f641",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/optimization.py",
+        "sha256": "7cc15ec1f6995a660280434bc986d73d89654837a6079dca9c623b6e273aabda"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/preprocessing.py",
+      "projection": "src/house_prices/preprocessing.py",
+      "sha256": "0fcb956b1394497d8a2bd4357bd6a9abe482087db4c398ca6b110a8358ec9688",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/preprocessing.py",
+        "sha256": "0fcb956b1394497d8a2bd4357bd6a9abe482087db4c398ca6b110a8358ec9688"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/promotion.py",
+      "projection": "src/house_prices/promotion.py",
+      "sha256": "21c7c41060675b9a9d0fa8ce94105de9e0f1e428b0bd8f14b664c7cd1fe600b8",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/promotion.py",
+        "sha256": "ec29eedb5324a87e20c3d988ec5088831c07f086011d5cbfa9d51ae05031f260"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/round4_boosting.py",
+      "projection": "src/house_prices/round4_boosting.py",
+      "sha256": "80beea8dd1cd5a2b484b851b008a5b9ed779c7a0aae08b1ade4a48e07dfa1bb0",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/round4_boosting.py",
+        "sha256": "c3d0e5ee62138e2022c5f84281d970e0dd947f18533279dbb901e69ce893838e"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/round4_linear.py",
+      "projection": "src/house_prices/round4_linear.py",
+      "sha256": "a8ddd4406289780fc001eed1e80a4960928b9c6598db1473696ccd2d62ffbccb",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/round4_linear.py",
+        "sha256": "c34de62f0d00cc60307c9cf3728173848fe7b8239580420c8d8cc4fce50dbc54"
+      }
+    },
+    {
+      "path": "code/shared/house_prices/round4_stacking.py",
+      "projection": "src/house_prices/round4_stacking.py",
+      "sha256": "f6e769598e4db2256a53a24ceb11d046060d55a4363a757810e30610ed00e51d",
+      "historical_source": {
+        "git_path": "source/experiments/src/house_prices/round4_stacking.py",
+        "sha256": "f6e769598e4db2256a53a24ceb11d046060d55a4363a757810e30610ed00e51d"
+      }
+    },
+    {
+      "path": "code/shared/predict.py",
+      "projection": "scripts/predict.py",
+      "sha256": "a3b98b9a04d16b88e697196b2c19fdaad0b34bd7bbf75b95eca640cf27f2ab98",
+      "historical_source": {
+        "git_path": "source/experiments/scripts/predict.py",
+        "sha256": "0390ae804932656905d86ae608ea8a87a36ec2d96c1f8a46e20ef155950463b2"
+      }
+    },
+    {
+      "path": "code/shared/provenance.py",
+      "projection": "scripts/provenance.py",
+      "sha256": "5c647a888cf4cf5e5f11371f6db651fd44a6a5f47da30cd567eb71a9dce4082f"
+    }
+  ]
+}

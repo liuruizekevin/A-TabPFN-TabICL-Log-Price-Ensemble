@@ -1,0 +1,34 @@
+{
+  "round": 4,
+  "base_experiments": [
+    "O09_native_mae",
+    "F03_robust_c20_g0003",
+    "O22_xgboost_d3",
+    "E07_elastic_0.0005"
+  ],
+  "outer_cv": {
+    "folds": 5,
+    "shuffle": true,
+    "seed": 42
+  },
+  "inner_cv": {
+    "folds": 3,
+    "shuffle": true,
+    "seed": 2026
+  },
+  "final_meta_training_cv": {
+    "folds": 3,
+    "shuffle": true,
+    "seed": 2026
+  },
+  "meta_rules": {
+    "S01_nested_convex": "Nonnegative weights summing to one; minimize inner OOF log MSE",
+    "S02_nested_ridge10": "Ridge alpha=10 with intercept, trained on inner OOF log predictions"
+  },
+  "all_1460_outer_validation_rows_retained": true,
+  "preprocessing": "Every base model is a full pipeline fitted inside its own training subset.",
+  "limitations": "Outer-fold targets are never used to fit their meta model. Base families and hyperparameters were chosen adaptively in earlier development on this same dataset, so this is not an untouched generalization test.",
+  "source_sha256": "f6e769598e4db2256a53a24ceb11d046060d55a4363a757810e30610ed00e51d",
+  "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+  "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e"
+}

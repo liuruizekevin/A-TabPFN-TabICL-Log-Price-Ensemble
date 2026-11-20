@@ -1,0 +1,39 @@
+{
+  "phase": 2,
+  "best_experiment": "O26_cat_svr_xgb",
+  "best_model": "Weighted log-space blend",
+  "best_cv_mean": 0.12085465221072575,
+  "best_cv_std": 0.021859587838354032,
+  "best_pooled_oof_log_rmse": 0.12242597855580184,
+  "best_parameters": {
+    "components": [
+      "O09_native_mae",
+      "O12_svr_c10",
+      "O22_xgboost_d3"
+    ],
+    "weights": [
+      0.4,
+      0.4,
+      0.2
+    ]
+  },
+  "best_components": [
+    "O09_native_mae",
+    "O12_svr_c10",
+    "O22_xgboost_d3"
+  ],
+  "experiment_count": 29,
+  "failed_experiment_count": 0,
+  "phase1_best_experiment": "E11_catboost_depth5",
+  "phase1_best_cv_mean": 0.12354188616262751,
+  "absolute_improvement_over_phase1": 0.002687233951901763,
+  "relative_improvement_over_phase1_pct": 2.1751602111403368,
+  "all_1460_validation_rows_retained": true,
+  "selection_limitation": "All search decisions reuse development folds; no unbiased final generalization estimate.",
+  "runtime_seconds": 821.7299095419585,
+  "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+  "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+  "promoted": true,
+  "conservative_submission_experiment": "O27_conservative_phase1_svr",
+  "sensitivity_submission_experiment": "O23_native_train_filter"
+}

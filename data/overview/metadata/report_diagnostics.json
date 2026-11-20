@@ -1,0 +1,109 @@
+{
+  "scope": "Descriptive recalculation of retained Group K seed-42 OOF predictions.",
+  "source_sha256": {
+    "models/round6_tabicl/seed42/results/R6ICL_anchor80_tabicl20_oof.csv": "a4e1d9f38f6fc64f81db901259395e0d39813c7e917336157833572639bce552",
+    "data/raw/train.csv": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "features/eda_summary.json": "b15eb5ccedc3f0cae87fc5aa2a6af453c702decf63eebb5379285f3a90d9ba00",
+    "models/results/fold_scores.csv": "145cc0bff116db74cef90ccb6dbedc1d2326aa10ea8c77e8cad0ce843d817e78",
+    "docs/experiment_groups.json": "25469d1f977ee401012912bebe1f3ccaee0dc8455fdbcc483cdca27907a3b32e"
+  },
+  "n": 1460,
+  "residual_definition": "log_prediction - log_SalePrice",
+  "relative_price_error_definition": "expm1(log_prediction - log_SalePrice)",
+  "quantile_method": "pandas Series.quantile, linear interpolation",
+  "mean_log_residual": 0.001785492382936509,
+  "median_log_residual": -0.004546801646856835,
+  "median_absolute_log_error": 0.04712671150830694,
+  "p90_absolute_log_error": 0.14887049353466647,
+  "p95_absolute_log_error": 0.21218175529955355,
+  "within_10pct_count": 1154,
+  "within_20pct_count": 1382,
+  "within_10pct_percent": 79.04109589041096,
+  "within_20pct_percent": 94.65753424657535,
+  "top5_ids": [
+    524,
+    1299,
+    31,
+    633,
+    463
+  ],
+  "top5_squared_log_error_share_percent": 26.221865496706343,
+  "pooled_oof_log_rmse": 0.1168893581638711,
+  "fold_errors": {
+    "1": 0.11820414525844995,
+    "2": 0.10121076448466454,
+    "3": 0.15106423940544547,
+    "4": 0.10796102998689744,
+    "5": 0.09810088191744361
+  },
+  "numeric_associations": {
+    "OverallQual": {
+      "r": 0.8171844179216833,
+      "n": 1460
+    },
+    "GrLivArea": {
+      "r": 0.7009266525441297,
+      "n": 1460
+    },
+    "GarageCars": {
+      "r": 0.6806248074360467,
+      "n": 1460
+    },
+    "TotalBsmtSF": {
+      "r": 0.6121339753697863,
+      "n": 1460
+    }
+  },
+  "ridge_skew_fold_comparison": [
+    {
+      "fold": 1,
+      "D": 0.136075978845528,
+      "E": 0.1301860350735502,
+      "decrease": 0.005889943771977796
+    },
+    {
+      "fold": 2,
+      "D": 0.1254362491560659,
+      "E": 0.1162113870204138,
+      "decrease": 0.009224862135652115
+    },
+    {
+      "fold": 3,
+      "D": 0.2303081579694679,
+      "E": 0.1823776118074559,
+      "decrease": 0.047930546162012005
+    },
+    {
+      "fold": 4,
+      "D": 0.123159854711184,
+      "E": 0.1193275999777357,
+      "decrease": 0.0038322547334482954
+    },
+    {
+      "fold": 5,
+      "D": 0.1097228291402975,
+      "E": 0.1101746564321727,
+      "decrease": -0.00045182729187519255
+    }
+  ],
+  "skew_folds_improved": 4,
+  "fold3_share_of_sum_skew_decreases_percent": 72.15654300890762,
+  "area_removal_penalty_range": [
+    0.0003251158482773103,
+    0.003660171662202588
+  ],
+  "selected_pair_deltas": {
+    "H to I": {
+      "cv_mean": -0.0008674916672937877,
+      "kaggle_score": 0.0003000000000000086
+    },
+    "I to J": {
+      "cv_mean": 0.0013536851601096966,
+      "kaggle_score": -0.0008900000000000019
+    },
+    "J to K": {
+      "cv_mean": -5.290345811817532e-05,
+      "kaggle_score": -0.0009399999999999964
+    }
+  }
+}

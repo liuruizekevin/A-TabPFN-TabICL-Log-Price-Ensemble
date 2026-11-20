@@ -1,0 +1,12 @@
+{
+  "model": "TabPFN-v2 regressor",
+  "filename": "tabpfn-v2-regressor.ckpt",
+  "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+  "bytes": 44390977,
+  "official_model_url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+  "official_code_url": "https://github.com/PriorLabs/TabPFN",
+  "library": "tabpfn==9.2.0",
+  "torch": "2.14.1",
+  "execution": "Local Apple Silicon MPS",
+  "note": "Explicit ModelVersion.V2; library default newer version is NOT used. Model weights downloaded automatically by the official package. No remote inference or test targets."
+}

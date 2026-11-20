@@ -1,0 +1,86 @@
+{
+  "id": "R6ICL_v2_raw79_log_n8_s42",
+  "model": "TabICLv2",
+  "target": "natural-log SalePrice",
+  "prediction_summary": "mean",
+  "feature_recipe": "79 original predictors, excluding Id",
+  "model_parameters": {
+    "n_estimators": 8,
+    "norm_methods": [
+      "none",
+      "power"
+    ],
+    "feat_shuffle_method": "latin",
+    "outlier_threshold": 4.0,
+    "batch_size": 8,
+    "kv_cache": false,
+    "model_path": "build/tabicl-checkpoints/tabicl-regressor-v2-20260212.ckpt",
+    "allow_auto_download": false,
+    "checkpoint_version": "tabicl-regressor-v2-20260212.ckpt",
+    "device": "mps",
+    "use_amp": false,
+    "use_fa3": false,
+    "offload_mode": "auto",
+    "random_state": 42,
+    "n_jobs": 12,
+    "verbose": false
+  },
+  "torch_num_threads": 12,
+  "training_rows": 1460,
+  "n_splits": 5,
+  "fold_seed": 42,
+  "checkpoint": {
+    "local_path": "build/tabicl-checkpoints/tabicl-regressor-v2-20260212.ckpt",
+    "filename": "tabicl-regressor-v2-20260212.ckpt",
+    "repository": "jingang/TabICL",
+    "revision": "4dcd344ece2c00be9e831fdd35bed57b5ad83e19",
+    "url": "https://huggingface.co/jingang/TabICL/resolve/4dcd344ece2c00be9e831fdd35bed57b5ad83e19/tabicl-regressor-v2-20260212.ckpt",
+    "sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+    "bytes": 114324594,
+    "license": "BSD-3-Clause",
+    "license_source": "https://huggingface.co/jingang/TabICL"
+  },
+  "versions": {
+    "tabicl": "2.2.0",
+    "psutil": "7.2.2",
+    "torch": "2.14.1",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "einops": "0.8.2",
+    "tqdm": "4.70.1",
+    "huggingface-hub": "2.2.0",
+    "pandas": "3.0.6"
+  },
+  "python_version": "3.12.7",
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "source_sha256": "8af0cc406ce5c79f06c51671c9e8a1159a9bcf2dcb4b326167f8386c6e63489d",
+  "input_sha256": {
+    "data/raw/train.csv": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "data/raw/test.csv": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+  },
+  "external_labels_used": false,
+  "preprocessing_fit_within_fold": true,
+  "validation_rows_removed": false,
+  "training_rows_removed": false,
+  "fixed_blend": {
+    "id": "R6ICL_anchor80_tabicl20",
+    "space": "natural-log price",
+    "weights": {
+      "R5E08_noY_domain20": 0.8,
+      "R6ICL_v2_raw79_log_n8_s42": 0.2
+    },
+    "anchor_sources": {
+      "models/round5_ensembles/extension/results/R5E08_noY_domain20_oof.csv": "077297a3099677f77add277d981b7fed514460cbc344de983a746a3ce0d0f285",
+      "models/round5_ensembles/extension/results/R5E08_noY_domain20_test_logs.csv": "77e70164bc453deb25f97c6f378783fd3390c1b3b05eddd691fa0d63a789f2b0"
+    }
+  },
+  "selection_limitation": "Reused development folds and a fixed alternative split are sensitivity evidence on the same houses, not untouched holdout evaluation.",
+  "source_notebook": "https://www.kaggle.com/code/carlmcbrideellis/house-prices-using-tabicl-v2",
+  "implementation_source": "https://github.com/soda-inria/tabicl"
+}

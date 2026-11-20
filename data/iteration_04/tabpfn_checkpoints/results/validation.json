@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "rows": 1459,
+  "all_1460_oof_rows": true,
+  "folds_match_historical_seed42": true,
+  "test_ID_order_matches_official_sample": true,
+  "all_predictions_positive_finite": true,
+  "max_submission_log_difference": 1.7763568394002505e-15,
+  "checkpoint_SHA256_checked_before_loading": true,
+  "distinct_checkpoint_count": 3,
+  "candidate_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2"
+}

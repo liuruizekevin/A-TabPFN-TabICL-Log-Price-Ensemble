@@ -1,0 +1,18 @@
+{
+  "all1460_oof_rows_retained": true,
+  "all1459_test_rows_retained": true,
+  "Id_targets_folds_and_data_hashes_checked": true,
+  "joint_source_artifact_hashes_checked": true,
+  "original_joint_test_logs_used": true,
+  "finite_positive_prices": true,
+  "source_sha256": "abde7a39533cc0ab73f15d20333f5c9103b872bd0ccaf328cf7c047856dccf95",
+  "output_sha256": {
+    "submissions/R6E05_joint_noFP_domain20.csv": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+    "results/oof_predictions.csv": "5be5a2269864f3f8aa856298f22164424bc89c5cc4432627ba67b6d24ee7d15b",
+    "results/test_log_predictions.csv": "a51e9b70bb502698c953ce913c3b1a1b40448a3d087903a4888f3118a13f8a78",
+    "results/fold_scores.csv": "7574e42795f74855af430c8c5de69bf290829b5165654cee526f9d3e643889a9",
+    "results/summary.json": "9f59332e5fc5cd5ee571dd5db44b98ca02a26ee7883200ff8076f49d7ea91a9c",
+    "results/source_manifest.json": "fae6802f15d08e828879bec8eed22fb292d7d28500df2401f32282bd4a865114",
+    "results/plan.json": "25100dc4fd2947645380d30da173f25297dec60f1fcfc54e6a1e76538ea79739"
+  }
+}

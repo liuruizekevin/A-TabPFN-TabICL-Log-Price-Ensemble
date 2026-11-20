@@ -1,0 +1,11 @@
+{
+  "selected_experiment": "R4T_v2_log_n8_s42",
+  "selected_csv": "models/round4_tabpfn/submissions/R4T_v2_log_n8_s42.csv",
+  "run_dirs": [
+    "models/round4_linear",
+    "models/round4_linear/extension"
+  ],
+  "tabpfn_dirs": [
+    "models/round4_tabpfn"
+  ]
+}

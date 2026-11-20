@@ -1,0 +1,23 @@
+{
+  "status": "passed_project_code_review",
+  "scope": "Review of project-controlled fit/predict boundaries, official input usage, and the final replay guard. The pretrained weight training data was not independently audited.",
+  "sources": {
+    "scripts/round4_tabpfn.py": "5f3d02f0e9c67cef1952b442367876d1941b796ae5d5e40f5532b54f79c45542",
+    "scripts/round4_tabpfn_checkpoints.py": "7b9791e70e771fe6e32c333166ec93dc2f36b94314cfb4d47531777f4cfabfc8",
+    "scripts/tabpfn_predict.py": "bdeaa582c16bdfb5686fb0c6d51e07845b76b5b2736b575639fce4e31bb3a9d1",
+    "scripts/validate_project.py": "33a5e1cb4051cdf4e112d022996b44e0da090f1d0e1e5ecf948363d94b5120df",
+    "scripts/round4_delivery.py": "faab3e066dd505af5fe8a3712949f03ac03e2db438d69441eeb4915805babdf5"
+  },
+  "checks": {
+    "Id_and_SalePrice_excluded_from_predictors": true,
+    "domain_features_row_local_no_target_statistics": true,
+    "new_estimator_per_validation_fold": true,
+    "fit_receives_only_training_fold_features_and_targets": true,
+    "validation_targets_used_only_for_metric": true,
+    "training_outlier_filter_does_not_remove_validation_rows": true,
+    "test_rows_passed_to_predict_only": true,
+    "final_refit_uses_official_training_labels_only": true,
+    "multi_checkpoint_official_hashes_verified_before_fit": true
+  },
+  "statistical_limitation": "Hyperparameters and the final candidate are selected adaptively using development CV and public feedback. These results are not an untouched holdout estimate."
+}

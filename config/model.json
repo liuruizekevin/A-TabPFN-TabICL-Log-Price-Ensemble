@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "name": "House Prices - Advanced Regression Techniques",
+    "url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques",
+    "source": "Official competition files supplied by the project team; bytes unchanged.",
+    "train_rows": 1460,
+    "test_rows": 1459,
+    "predictors": 79
+  },
+  "inputs": {
+    "train": {
+      "path": "data/raw/train.csv",
+      "sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41"
+    },
+    "test": {
+      "path": "data/raw/test.csv",
+      "sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e"
+    },
+    "dictionary": {
+      "path": "data/raw/data_description.txt",
+      "sha256": "356a4670aa688afa8ba44b1365b633fbbac2dae535fe4638532630607d64070d"
+    },
+    "oof": {
+      "path": "data/iteration_06/selected/oof.csv",
+      "sha256": "a4e1d9f38f6fc64f81db901259395e0d39813c7e917336157833572639bce552"
+    },
+    "scored": {
+      "path": "data/iteration_06/selected/submission.csv",
+      "sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8"
+    }
+  },
+  "components": [
+    {
+      "key": "raw_tabpfn",
+      "original_id": "R5TP_log_noYtransform_s42",
+      "weight": 0.64,
+      "path": "data/iteration_06/selected/raw_tabpfn.csv",
+      "sha256": "8e52f32b6cfe32c765d6080057c8f894a402568f110603091811c00ae30664d4"
+    },
+    {
+      "key": "domain_tabpfn",
+      "original_id": "R4T_v2_log_n32_s42_domain",
+      "weight": 0.16,
+      "path": "data/iteration_06/selected/domain_tabpfn.csv",
+      "sha256": "63a16581d29ced3f88a753a30d2de45491ef4a06d86441114a4fb10ea0a60e2d"
+    },
+    {
+      "key": "tabicl",
+      "original_id": "R6ICL_v2_raw79_log_n8_s42",
+      "weight": 0.2,
+      "path": "data/iteration_06/selected/tabicl.csv",
+      "sha256": "34bb984df9a87ea01327829c6900f09992686458da6b20f86e831ec6f394e4fc"
+    }
+  ],
+  "submission": {
+    "experiment_id": "R6ICL_anchor80_tabicl20",
+    "sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "rows": 1459,
+    "public_score": 0.1097,
+    "score_scope": "Kaggle score of the preserved original submitted CSV."
+  },
+  "validation": {
+    "fold_seed": 42,
+    "folds": 5,
+    "mean_fold_rmse": 0.11530821221058025,
+    "sample_fold_sd": 0.02142248377177416,
+    "pooled_oof_rmse": 0.11688935816387115,
+    "scope": "Saved selected-model out-of-fold predictions on all 1460 training rows. Model selection reused these development folds."
+  }
+}

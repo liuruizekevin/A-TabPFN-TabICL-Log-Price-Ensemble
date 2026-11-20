@@ -1,0 +1,89 @@
+{
+  "scope": "Static code review and saved-artifact checks of the Round 5 model exploration.",
+  "reviewer_role": "Review of the TabPFN runner and ensemble implementation.",
+  "reviewed_file_sha256": {
+    "scripts/round5_tabpfn.py": "4aca59057f19fb525bd4a7d27e6a81a271a01aed379bee7d110bf9b1e8fbc74d",
+    "scripts/round5_ensembles.py": "aece885daee44ead11464b4e2e74f7e9714176e17e43311527009e9b28b2773f",
+    "scripts/round5_blend_predict.py": "98d713c28c92a010965b27720294f020146f670941dfafbffde5ddfc3eeaa3fc"
+  },
+  "overall_finding": "No blocking leakage, target-inverse, or component-path issue identified in the reviewed source and executed checks.",
+  "static_checks": [
+    {
+      "area": "Fold isolation",
+      "result": "pass",
+      "evidence": "run_candidate creates a fresh model per fold, fits X.iloc[tr]/target[tr], and predicts X.iloc[va]. Each fit uses only its training partition."
+    },
+    {
+      "area": "Preprocessing",
+      "result": "pass",
+      "evidence": "load_data only normalizes object/null representations globally; learned internal preprocessing is fitted through each model.fit on its training subset."
+    },
+    {
+      "area": "Target transform",
+      "result": "pass",
+      "evidence": "Box-Cox power and $100000 scale are fixed constants; computing the rowwise transform before splitting learns no target statistics. The inverse returns natural-log prices."
+    },
+    {
+      "area": "Test labels",
+      "result": "pass",
+      "evidence": "Official test file has no SalePrice. Training labels come only from data/raw/train.csv; checkpoint hashes are checked against the retained public model manifest."
+    },
+    {
+      "area": "Prediction mean vs median",
+      "result": "pass with interpretation limit",
+      "evidence": "Means, medians and equal log-space mixtures are distinct predictive summaries. Inverting the mean in Box-Cox space need not equal the mean in log space; this is an ablation, not an algebraic equivalence claim."
+    },
+    {
+      "area": "Thread control",
+      "result": "pass",
+      "evidence": "Round5 runner rejects the three overriding thread environment variables and sets torch threads to12. Replay wrapper removes those variables in each child; legacy helper uses recorded/default12."
+    },
+    {
+      "area": "Adaptive validation",
+      "result": "explicitly limited",
+      "evidence": "Repeated seed42 development folds and public-score-guided selection are disclosed. Six calibrator-only crossfits use saved base OOF predictions and remain supplementary to the primary experiment integration."
+    }
+  ],
+  "executed_checks": {
+    "transform_inverse_source_execution": "Exact AST-extracted transform_y and to_log_prices functions; no Torch import or model fit.",
+    "roundtrip_prices": [
+      1.0,
+      10000.0,
+      34900.0,
+      100000.0,
+      755000.0,
+      10000000.0
+    ],
+    "maximum_absolute_log_roundtrip_errors": {
+      "log_None": 0.0,
+      "raw_None": 0.0,
+      "boxcox_0.15": 1.7763568394002505e-15,
+      "boxcox_0.5": 1.9539925233402755e-14
+    },
+    "invalid_inverse_domains_rejected": [
+      "raw",
+      "boxcox"
+    ],
+    "fold_disjointness_and_exact_coverage": {
+      "folds": 5,
+      "train_per_fold": 1168,
+      "validation_per_fold": 292,
+      "unique_validation_rows": 1460,
+      "pass": true
+    },
+    "completed_candidates_checked": [
+      "R5TP_log_s17",
+      "R5TP_log_s2026",
+      "R5TP_raw_s42"
+    ],
+    "completed_primary_secondary_predictions_finite": true,
+    "completed_saved_artifact_hashes_match": true,
+    "ensemble_generation_and_replay_of_cached_arithmetic": "27 output files byte-identical under scripts/round5_ensembles.py --include-seeds --verify."
+  },
+  "nonblocking_limitations": [
+    "comparison.csv contains only the candidates selected in the latest invocation; use the per-candidate summary JSON files for the complete experiment inventory.",
+    "The runner explicitly asserts finite primary vectors, while secondary median vectors rely on subsequent computations. This audit separately verified all currently completed secondary OOF and test vectors are finite; the delivery promotion script also validates integrated vectors.",
+    "Reproducibility across a different Torch/TabPFN version or hardware backend is not established; use the locked local environment and saved numerical tolerance.",
+    "Static inspection does not independently audit the internals of pretrained weights or certify their entire training corpus."
+  ]
+}

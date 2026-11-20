@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "all_1460_outer_rows_retained": true,
+  "fold_assignments_match_historical_seed42": true,
+  "all_20_outer_base_fit_ID_sets_checked": true,
+  "all_4_final_base_fit_ID_sets_checked": true,
+  "outer_saved_model_prediction_rechecks": [
+    {
+      "outer_fold": 1,
+      "experiment_id": "S01_nested_convex",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 1,
+      "experiment_id": "S02_nested_ridge10",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 2,
+      "experiment_id": "S01_nested_convex",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 2,
+      "experiment_id": "S02_nested_ridge10",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 3,
+      "experiment_id": "S01_nested_convex",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 3,
+      "experiment_id": "S02_nested_ridge10",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 4,
+      "experiment_id": "S01_nested_convex",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 4,
+      "experiment_id": "S02_nested_ridge10",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 5,
+      "experiment_id": "S01_nested_convex",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    },
+    {
+      "outer_fold": 5,
+      "experiment_id": "S02_nested_ridge10",
+      "saved_outer_model_oof_max_difference": 1.7763568394002505e-15
+    }
+  ],
+  "submission_checks": {
+    "S01_nested_convex": {
+      "rows": 1459,
+      "file_sha256": "1121a83e79218d5283b4cfc71a45c2f51b924b40f42e72119f92f7898b7fb5ae",
+      "csv_reloaded_model_max_dollar_difference": 5.820766091346741e-11
+    },
+    "S02_nested_ridge10": {
+      "rows": 1459,
+      "file_sha256": "c4b5e3f3eae200c8d34f5077e83709569a5b508c6b9909ee5de8ee2b2e35ebf5",
+      "csv_reloaded_model_max_dollar_difference": 5.820766091346741e-11
+    }
+  },
+  "convex_combiner_synthetic_recovery": "Passed exact known-weight noiseless example earlier in this run"
+}

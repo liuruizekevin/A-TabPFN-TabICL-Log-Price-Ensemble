@@ -1,0 +1,156 @@
+[
+  {
+    "stage": "outer",
+    "fold": 1,
+    "experiment_id": "S01_nested_convex",
+    "weights": [
+      0.378639517964857,
+      0.3876550025481943,
+      0.16944316529954892,
+      0.0642623141873997
+    ],
+    "intercept": 0.0,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 1,
+    "experiment_id": "S02_nested_ridge10",
+    "weights": [
+      0.27338670770802725,
+      0.290796923701192,
+      0.24250271445341404,
+      0.18893256014922416
+    ],
+    "intercept": 0.05097692406027221,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 2,
+    "experiment_id": "S01_nested_convex",
+    "weights": [
+      0.2771624032190412,
+      0.34475805445719526,
+      0.18823656635684097,
+      0.18984297596692265
+    ],
+    "intercept": 0.0,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 2,
+    "experiment_id": "S02_nested_ridge10",
+    "weights": [
+      0.25310004569368966,
+      0.273224183897357,
+      0.23678835972194553,
+      0.23851124089827624
+    ],
+    "intercept": -0.022221238003774957,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 3,
+    "experiment_id": "S01_nested_convex",
+    "weights": [
+      0.22335586880175792,
+      2.8189256484623115e-18,
+      0.3507679971913086,
+      0.4258761340069336
+    ],
+    "intercept": 0.0,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 3,
+    "experiment_id": "S02_nested_ridge10",
+    "weights": [
+      0.2665747344520935,
+      0.13311557956454367,
+      0.2962027739868307,
+      0.3041480707065549
+    ],
+    "intercept": -0.0040980355474147245,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 4,
+    "experiment_id": "S01_nested_convex",
+    "weights": [
+      0.3469421552840042,
+      0.2714333922056688,
+      0.2880900730862252,
+      0.09353437942410188
+    ],
+    "intercept": 0.0,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 4,
+    "experiment_id": "S02_nested_ridge10",
+    "weights": [
+      0.27491396240825816,
+      0.2611652403616124,
+      0.26444969207237085,
+      0.19419163968899214
+    ],
+    "intercept": 0.059825815452253295,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 5,
+    "experiment_id": "S01_nested_convex",
+    "weights": [
+      0.21776213461756924,
+      0.19637953985799136,
+      0.4544377839983917,
+      0.1314205415260476
+    ],
+    "intercept": 0.0,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "outer",
+    "fold": 5,
+    "experiment_id": "S02_nested_ridge10",
+    "weights": [
+      0.25620660285651975,
+      0.23280495050838554,
+      0.2945230556770016,
+      0.21460688671213676
+    ],
+    "intercept": 0.020232889009674793,
+    "meta_training_rows": 1168
+  },
+  {
+    "stage": "final",
+    "experiment_id": "S01_nested_convex",
+    "weights": [
+      0.337331119055426,
+      0.14993172151191825,
+      0.24659102509957753,
+      0.26614613433307827
+    ],
+    "intercept": 0.0,
+    "meta_training_rows": 1460
+  },
+  {
+    "stage": "final",
+    "experiment_id": "S02_nested_ridge10",
+    "weights": [
+      0.2797504953413687,
+      0.21128338565667346,
+      0.2627852796080511,
+      0.2557192420890323
+    ],
+    "intercept": -0.11698271036273589,
+    "meta_training_rows": 1460
+  }
+]

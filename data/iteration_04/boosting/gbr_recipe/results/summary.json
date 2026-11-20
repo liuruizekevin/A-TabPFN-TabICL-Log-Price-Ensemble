@@ -1,0 +1,19 @@
+{
+  "experiment_count": 4,
+  "base_specification_count": 2,
+  "best": {
+    "experiment_id": "B24_gbr_huber_classic_blend",
+    "model": "Fixed log blend",
+    "stage": "round4_boosting",
+    "target": "log",
+    "cv_mean": 0.11848689029232944,
+    "cv_std": 0.013493815408270084,
+    "pooled_oof_log_rmse": 0.11909999838188277,
+    "runtime_seconds": 0.0,
+    "params_json": "{\"components\": [\"O09_native_mae\", \"F03_robust_c20_g0003\", \"B24_gbr_huber_classic\"], \"weights\": [0.4, 0.4, 0.2]}"
+  },
+  "reference_F07_cv_mean": 0.11833420818530142,
+  "runtime_seconds": 52.728338541986886,
+  "failures": [],
+  "promoted": false
+}

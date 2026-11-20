@@ -1,0 +1,598 @@
+{
+  "specifications": [
+    {
+      "id": "R4L01_svr_C5_g0p001_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 5,
+        "gamma": 0.001,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L02_svr_C10_g0p0003_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L03_svr_C30_g0p0003_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 30,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L04_svr_C50_g0p0003_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 50,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L05_svr_C100_g0p0001_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 100,
+        "gamma": 0.0001,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L06_svr_C20_g0p0005_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 20,
+        "gamma": 0.0005,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L07_svr_C10_g0p001_e0p02",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "gamma": 0.001,
+        "epsilon": 0.02,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L08_svr_C20_g0p0003_e0p02",
+      "family": "SVR",
+      "params": {
+        "C": 20,
+        "gamma": 0.0003,
+        "epsilon": 0.02,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L09_svr_C20_g0p0003_e0p04",
+      "family": "SVR",
+      "params": {
+        "C": 20,
+        "gamma": 0.0003,
+        "epsilon": 0.04,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L10_svr_C10_g0p0005_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "gamma": 0.0005,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L11_svr_C13_g0p0004_e0p009",
+      "family": "SVR",
+      "params": {
+        "C": 13,
+        "gamma": 0.0004,
+        "epsilon": 0.009,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L12_svr_C5_gscale_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 5,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L13_svr_C20_gscale_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 20,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L14_svr_C30_g0p0001_e0p008",
+      "family": "SVR",
+      "params": {
+        "C": 30,
+        "gamma": 0.0001,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      }
+    },
+    {
+      "id": "R4L15_power0p15_g0p0003",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": 0.15
+    },
+    {
+      "id": "R4L16_power0p15_gscale",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": 0.15
+    },
+    {
+      "id": "R4L17_power0p3_g0p0003",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": 0.3
+    },
+    {
+      "id": "R4L18_power0p3_gscale",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": 0.3
+    },
+    {
+      "id": "R4L19_poweryeo-johnson_g0p0003",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4L20_poweryeo-johnson_gscale",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": "scale",
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": "yeo-johnson"
+    },
+    {
+      "id": "R4L21_catweight0p5",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "cat_weight": 0.5
+    },
+    {
+      "id": "R4L22_catweight1p5",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "cat_weight": 1.5
+    },
+    {
+      "id": "R4L23_catweight2p0",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "cat_weight": 2.0
+    },
+    {
+      "id": "R4L24_quantile10",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "quantiles": [
+        10.0,
+        90.0
+      ]
+    },
+    {
+      "id": "R4L25_quantile20",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "quantiles": [
+        20.0,
+        80.0
+      ]
+    },
+    {
+      "id": "R4L26_quantile35",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "quantiles": [
+        35.0,
+        65.0
+      ]
+    },
+    {
+      "id": "R4L27_ordinal_p0p0",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "ordinal": true,
+      "power": 0.0
+    },
+    {
+      "id": "R4L28_extra_p0p0",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "extra": true,
+      "power": 0.0
+    },
+    {
+      "id": "R4L29_ordinal_p0p15",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "ordinal": true,
+      "power": 0.15
+    },
+    {
+      "id": "R4L30_extra_p0p15",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "extra": true,
+      "power": 0.15
+    },
+    {
+      "id": "R4L31_simple_base",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "enhanced": false
+    },
+    {
+      "id": "R4L32_ordinal_pca99",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "ordinal": true,
+      "pca": 0.99,
+      "power": 0.15
+    },
+    {
+      "id": "R4L33_allskew_p15",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": 0.15,
+      "all_skew": true
+    },
+    {
+      "id": "R4L34_lasso0p0003",
+      "family": "Lasso",
+      "params": {
+        "alpha": 0.0003,
+        "max_iter": 30000,
+        "tol": 0.0001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L35_lasso0p0005",
+      "family": "Lasso",
+      "params": {
+        "alpha": 0.0005,
+        "max_iter": 30000,
+        "tol": 0.0001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L36_lasso0p001",
+      "family": "Lasso",
+      "params": {
+        "alpha": 0.001,
+        "max_iter": 30000,
+        "tol": 0.0001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L37_ridge5p0",
+      "family": "Ridge",
+      "params": {
+        "alpha": 5.0
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L38_ridge20p0",
+      "family": "Ridge",
+      "params": {
+        "alpha": 20.0
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L39_ridge60p0",
+      "family": "Ridge",
+      "params": {
+        "alpha": 60.0
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L40_elastic0p0005l10p9",
+      "family": "ElasticNet",
+      "params": {
+        "alpha": 0.0005,
+        "l1_ratio": 0.9,
+        "max_iter": 30000,
+        "tol": 0.0001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L41_elastic0p005l10p08",
+      "family": "ElasticNet",
+      "params": {
+        "alpha": 0.005,
+        "l1_ratio": 0.08,
+        "max_iter": 30000,
+        "tol": 0.0001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L42_elastic0p001l10p5",
+      "family": "ElasticNet",
+      "params": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5,
+        "max_iter": 30000,
+        "tol": 0.0001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L43_krr2_a0p6",
+      "family": "KernelRidge",
+      "params": {
+        "alpha": 0.6,
+        "kernel": "polynomial",
+        "degree": 2,
+        "coef0": 2.5,
+        "gamma": 0.001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L44_krr3_a0p2",
+      "family": "KernelRidge",
+      "params": {
+        "alpha": 0.2,
+        "kernel": "polynomial",
+        "degree": 3,
+        "coef0": 0.8,
+        "gamma": 0.001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L45_krr2_a0p2",
+      "family": "KernelRidge",
+      "params": {
+        "alpha": 0.2,
+        "kernel": "polynomial",
+        "degree": 2,
+        "coef0": 2.5,
+        "gamma": 0.001
+      },
+      "power": 0.15,
+      "ordinal": true
+    },
+    {
+      "id": "R4L46_svr_trainfilter",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "filter_train": true
+    },
+    {
+      "id": "R4L47_boxcox_trainfilter",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "power": 0.15,
+      "filter_train": true
+    },
+    {
+      "id": "R4L48_pca995",
+      "family": "SVR",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.0003,
+        "epsilon": 0.008,
+        "kernel": "rbf",
+        "cache_size": 512
+      },
+      "pca": 0.995,
+      "power": 0.15
+    },
+    {
+      "id": "R4L49_bayesian",
+      "family": "BayesianRidge",
+      "params": {
+        "max_iter": 500
+      },
+      "power": 0.15,
+      "ordinal": true
+    }
+  ],
+  "validation": "KFold5 shuffle True seed42; all1460 validation rows retained; preprocessing fit within each training fold; exact natural log RMSE",
+  "filter_rule": "Training-only GrLivArea >4000 and SalePrice <300000 when requested; no validation deletion",
+  "blends": "Fixed0.4O09Cat+0.4newcandidate+0.2O22XGB; alltested candidates retained",
+  "selection_limitation": "Adaptive development comparisons, not unbiased generalization estimates",
+  "sources": [
+    {
+      "url": "https://github.com/massquantity/Kaggle-HousePrices",
+      "inspiration": "Ordinal qualities, extra sums, PCA, SVR/KRR/linear diversity; original full-data preprocessing replaced with fold-only fitting"
+    },
+    {
+      "url": "https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard",
+      "inspiration": "BoxCox0.15 and robust linear models; official notebook page text unavailable via web, matching details seen in attributed public transcription; independently implemented"
+    }
+  ]
+}

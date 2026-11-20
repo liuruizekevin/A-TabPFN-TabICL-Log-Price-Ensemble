@@ -1,0 +1,272 @@
+{
+  "metric": "sqrt(mean((log(y_true) - log(y_pred))**2)); natural logarithm, not log1p",
+  "validation": {
+    "type": "KFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "train_rows_per_fold": 1168,
+    "validation_rows_per_fold": 292,
+    "reported_cv_std_ddof": 1,
+    "all_training_rows_retained": true,
+    "selection_limitation": "Three adaptive development phases reused seed-42 folds. The small final follow-up was motivated by earlier CV and actual public leaderboard feedback. Its selected score is not an unbiased final test. The preserved seed-2026 check applies to phase two, not automatically to the final follow-up model."
+  },
+  "data": {
+    "training_rows": 1460,
+    "competition_test_rows": 1459,
+    "raw_predictors_excluding_id": 79,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "read_csv": {
+      "keep_default_na": false,
+      "na_values": [
+        "NA",
+        ""
+      ]
+    }
+  },
+  "experiment_count": 58,
+  "best_experiment": "F07_blend_robust_c20_g0003",
+  "best_model": "Weighted log-space blend",
+  "best_cv_mean": 0.1183342081853014,
+  "best_cv_std": 0.0130820314201715,
+  "best_pooled_oof_log_rmse": 0.1189112966193916,
+  "best_components": [
+    "O09_native_mae",
+    "F03_robust_c20_g0003",
+    "O22_xgboost_d3"
+  ],
+  "best_parameters": {
+    "components": [
+      "O09_native_mae",
+      "F03_robust_c20_g0003",
+      "O22_xgboost_d3"
+    ],
+    "weights": [
+      0.4,
+      0.4,
+      0.2
+    ]
+  },
+  "baseline": {
+    "experiment_id": "E01_raw_ridge",
+    "cv_mean": 0.1517986380654999,
+    "cv_std": 0.020890753898866025,
+    "pooled_oof_log_rmse": 0.15294432123263363,
+    "raw_predictions_clipped": 0
+  },
+  "absolute_improvement_over_baseline": 0.0334644298801985,
+  "relative_improvement_over_baseline_pct": 22.045276760492982,
+  "largest_pathway_improvement": {
+    "to_experiment": "E05_skew",
+    "from_cv_mean": 0.14494061396450872,
+    "to_cv_mean": 0.1316554580622657,
+    "absolute_improvement": 0.013285155902243023,
+    "scope": "Largest consecutive local CV decrease within E01-E05; not a Kaggle submission improvement."
+  },
+  "most_helpful_group": {
+    "group": "area",
+    "full_cv_mean": 0.1316554580622657,
+    "without_group_cv_mean": 0.13313343866412364,
+    "removal_penalty": 0.0014779806018579422,
+    "folds_helped": 5,
+    "scope": "Largest positive paired removal penalty among five predefined groups with E05 Ridge alpha20; model-specific development evidence, not causal or statistical proof."
+  },
+  "serialization_max_absolute_prediction_difference": 5.820766091346741e-11,
+  "test_prediction_summary": {
+    "min": 48514.82318511789,
+    "median": 157534.3941892199,
+    "max": 515840.5279375322
+  },
+  "kaggle": {
+    "submitted": true,
+    "team_name": "",
+    "baseline_score": 0.14638,
+    "final_score": 0.11842,
+    "rank": 196,
+    "phase1_score": 0.12371,
+    "phase2_score": 0.11844,
+    "score_type": "public leaderboard",
+    "submitted_candidate_count": 8,
+    "selected_experiment": "F07_blend_robust_c20_g0003",
+    "observed_scores": [
+      {
+        "experiment_id": "E01_raw_ridge",
+        "public_score": 0.14638,
+        "description": "Raw-target Ridge baseline",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "E11_catboost_depth5",
+        "public_score": 0.12371,
+        "description": "Phase-one selected CatBoost",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "O26_cat_svr_xgb",
+        "public_score": 0.11844,
+        "description": "Phase-two selected blend",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "O23_native_train_filter",
+        "public_score": 0.12091,
+        "description": "Training-only outlier filter sensitivity",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "O27_conservative_phase1_svr",
+        "public_score": 0.12053,
+        "description": "Conservative phase-one/SVR blend",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "F06_blend_robust_c10_scale",
+        "public_score": 0.11872,
+        "description": "Lowest development-CV follow-up",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "F05_blend_robust_c10_g001",
+        "public_score": 0.11923,
+        "description": "RobustScaler C10 fixed-gamma blend",
+        "selected_for_delivery": false,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      },
+      {
+        "experiment_id": "F07_blend_robust_c20_g0003",
+        "public_score": 0.11842,
+        "description": "Final selected public-leaderboard candidate",
+        "selected_for_delivery": true,
+        "evidence_source": "Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+      }
+    ],
+    "absolute_improvement_over_baseline": 0.027960000000000013,
+    "relative_improvement_over_baseline_pct": 19.1009700778795,
+    "absolute_margin_over_phase2": 2.0000000000006124e-05,
+    "leaderboard_screenshot": "submissions/kaggle_evidence/09_final_leaderboard.jpg"
+  },
+  "runtime_seconds": 896.8641297079739,
+  "environment": {
+    "python": "3.12.7",
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "joblib": "1.6.0",
+      "lightgbm": "4.7.0",
+      "xgboost": "3.4.1"
+    }
+  },
+  "phase1_experiment_count": 21,
+  "optimization_experiment_count": 29,
+  "phase1_best_experiment": "E11_catboost_depth5",
+  "phase1_best_cv_mean": 0.12354188616262751,
+  "optimization": {
+    "phase": 2,
+    "best_experiment": "O26_cat_svr_xgb",
+    "best_model": "Weighted log-space blend",
+    "best_cv_mean": 0.12085465221072575,
+    "best_cv_std": 0.021859587838354032,
+    "best_pooled_oof_log_rmse": 0.12242597855580184,
+    "best_parameters": {
+      "components": [
+        "O09_native_mae",
+        "O12_svr_c10",
+        "O22_xgboost_d3"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    "best_components": [
+      "O09_native_mae",
+      "O12_svr_c10",
+      "O22_xgboost_d3"
+    ],
+    "experiment_count": 29,
+    "failed_experiment_count": 0,
+    "phase1_best_experiment": "E11_catboost_depth5",
+    "phase1_best_cv_mean": 0.12354188616262751,
+    "absolute_improvement_over_phase1": 0.002687233951901763,
+    "relative_improvement_over_phase1_pct": 2.1751602111403368,
+    "all_1460_validation_rows_retained": true,
+    "selection_limitation": "All search decisions reuse development folds; no unbiased final generalization estimate.",
+    "runtime_seconds": 821.7299095419585,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "promoted": true,
+    "conservative_submission_experiment": "O27_conservative_phase1_svr",
+    "sensitivity_submission_experiment": "O23_native_train_filter"
+  },
+  "absolute_improvement_over_phase1": 0.005207677977326117,
+  "serialization_check_reference": "Reloaded final model versus final_submission.csv predictions; includes CSV floating-point roundoff.",
+  "followup_experiment_count": 8,
+  "phase2_best_experiment": "O26_cat_svr_xgb",
+  "phase2_best_cv_mean": 0.12085465221072575,
+  "followup": {
+    "phase": 3,
+    "experiment_count": 8,
+    "best_experiment": "F06_blend_robust_c10_scale",
+    "best_cv_mean": 0.11767094394194544,
+    "best_cv_std": 0.01511031810094399,
+    "best_pooled_oof_log_rmse": 0.1184445373104131,
+    "best_parameters": {
+      "components": [
+        "O09_native_mae",
+        "F02_robust_c10_scale",
+        "O22_xgboost_d3"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    "phase2_reference_cv_mean": 0.1208546522107258,
+    "reload_prediction_checks": {
+      "F01_robust_c10_g001": 0.0,
+      "F05_blend_robust_c10_g001": 0.0,
+      "F02_robust_c10_scale": 0.0,
+      "F06_blend_robust_c10_scale": 0.0,
+      "F03_robust_c20_g0003": 0.0,
+      "F07_blend_robust_c20_g0003": 0.0,
+      "F04_standard_c10_scale": 0.0,
+      "F08_blend_standard_c10_scale": 0.0
+    },
+    "runtime_seconds": 19.528468500007875,
+    "promoted": true,
+    "limitation": "Same-data adaptive development. Scores are not unbiased confirmation and do not replace leaderboard evidence.",
+    "selected_experiment": "F07_blend_robust_c20_g0003",
+    "selection_basis": "Lowest observed Kaggle public leaderboard score among eight actual submissions: 0.11842; the lowest-CV candidate is recorded separately"
+  },
+  "absolute_improvement_over_phase2": 0.0025204440254243538,
+  "best_cv_experiment": "F06_blend_robust_c10_scale",
+  "best_cv_mean_across_experiments": 0.1176709439419454,
+  "best_cv_std_across_experiments": 0.0151103181009439,
+  "best_cv_pooled_oof_log_rmse": 0.1184445373104131,
+  "selected_experiment": "F07_blend_robust_c20_g0003",
+  "selected_cv_mean": 0.1183342081853014,
+  "selection_criterion": "Lowest observed Kaggle public leaderboard score among eight actual submissions: 0.11842; the lowest-CV candidate is recorded separately",
+  "best_experiment_field_meaning": "Legacy field naming: best_experiment and best_cv_mean describe the selected delivered model. best_cv_experiment and best_cv_mean_across_experiments separately identify the lowest development-CV candidate.",
+  "largest_observed_submission_improvement": {
+    "from_experiment": "E01_raw_ridge",
+    "to_experiment": "E11_catboost_depth5",
+    "from_public_score": 0.14638,
+    "to_public_score": 0.12371,
+    "absolute_improvement": 0.02267000000000001,
+    "scope": "Largest observed improvement between the baseline submission and the next phase-one submission; leaderboard evidence is separate from local E01-E05 preprocessing ablations."
+  },
+  "selection_caution": "F07 has the lowest observed public score among eight submitted candidates. Its margin over O26 is only 0.00002. Public leaderboard feedback was used for selection and is not an untouched final test or evidence of reliable population superiority."
+}

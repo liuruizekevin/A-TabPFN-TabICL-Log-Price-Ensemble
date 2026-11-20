@@ -1,0 +1,124 @@
+{
+  "model": "TabPFN-v2 three-checkpoint ensemble",
+  "n_estimators": 16,
+  "device": "mps",
+  "n_preprocessing_jobs": 2,
+  "torch_num_threads": 12,
+  "fold_seed": 42,
+  "n_splits": 5,
+  "rows": 1460,
+  "features": 79,
+  "feature_recipe": "raw",
+  "filter_train": false,
+  "target_scale": 100000.0,
+  "inference_config": {},
+  "checkpoint_manifest": [
+    {
+      "filename": "tabpfn-v2-regressor.ckpt",
+      "bytes": 44390977,
+      "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-09gpqh39.ckpt",
+      "bytes": 44398487,
+      "sha256": "86a5b6832fdaeae3bb50eb2fbc349198b43baa965dcda9ef3b8e10fb809c1551",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-09gpqh39.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-2noar4o2.ckpt",
+      "bytes": 44398487,
+      "sha256": "e2d4a06eeb4521dee71fc68d819e277ffb97614cc3695dc9ac3030dd9da36c21",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-2noar4o2.ckpt"
+    }
+  ],
+  "library_version": "9.2.0",
+  "torch_version": "2.14.1",
+  "python_version": "3.12.7",
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "source_sha256": "4aca59057f19fb525bd4a7d27e6a81a271a01aed379bee7d110bf9b1e8fbc74d",
+  "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+  "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+  },
+  "target_summary": "predict default mean in the chosen transformed target space",
+  "predictive_summary": "mean",
+  "secondary_summary": "Median and 50/50 mean-median log predictions are saved as diagnostic comparisons from the same forward pass.",
+  "preprocessing": "A fresh TabPFN model fits internal preprocessing on each training fold only.",
+  "selection_limitation": "Frozen development folds reused after round4; candidate selection is not an unbiased generalization estimate.",
+  "source": "https://github.com/PriorLabs/TabPFN",
+  "attribution": "Built with PriorLabs-TabPFN.",
+  "id": "R5TP_raw_s42",
+  "target": "raw",
+  "random_state": 42,
+  "hypothesis": "Raw-scale targets supply a controlled comparison to the metric-aligned log target.",
+  "status": "complete",
+  "fold_scores": [
+    {
+      "fold": 1,
+      "log_rmse": 0.123534322740713,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 15.025626957998611
+    },
+    {
+      "fold": 2,
+      "log_rmse": 0.10490306941334022,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 14.11251458292827
+    },
+    {
+      "fold": 3,
+      "log_rmse": 0.1723772622326739,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 17.484759625047445
+    },
+    {
+      "fold": 4,
+      "log_rmse": 0.1097294476184491,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 17.84243433305528
+    },
+    {
+      "fold": 5,
+      "log_rmse": 0.09802171619140179,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 20.171513458015397
+    }
+  ],
+  "cv_mean": 0.12171316363931559,
+  "cv_std": 0.029822981517960017,
+  "pooled_oof_log_rmse": 0.12460185546125421,
+  "runtime_seconds": 129.43014216702431,
+  "submission_sha256": "9705b70979e874065731df2092c4d47fdabb75f72e5b07874b27ff55d02b36c7",
+  "artifact_sha256": {
+    "results/R5TP_raw_s42_fold_scores.csv": "603acdd5260752ceea3344f57007880ecd53aba184902ab9374ffa0ca628f4e9",
+    "results/R5TP_raw_s42_oof.csv": "4ace8c890b6ce0659068b99049d8595884a00c000b6ce7cba5297acb77f9951c",
+    "results/R5TP_raw_s42_test_logs.csv": "c85f1afff19b503bf09750ce8b88080f17531d35044dce236c4318fbff5d56fb",
+    "submissions/R5TP_raw_s42.csv": "9705b70979e874065731df2092c4d47fdabb75f72e5b07874b27ff55d02b36c7"
+  },
+  "secondary_metrics": {
+    "median": {
+      "cv_mean": 0.11870570657179333,
+      "cv_std": 0.02450969215744319,
+      "pooled_oof_log_rmse": 0.12071298513594468
+    },
+    "mean_median": {
+      "cv_mean": 0.12002323167913376,
+      "cv_std": 0.026896079066486688,
+      "pooled_oof_log_rmse": 0.12241035657992172
+    }
+  }
+}

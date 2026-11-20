@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "mode": "post-promotion read-only verification; no promotion changes performed by this audit",
+  "total_experiments": 321,
+  "historical_experiments": 58,
+  "new_experiments": 263,
+  "duplicate_ids": 0,
+  "all_oof_rows": 1460,
+  "all_saved_metrics_recomputed": true,
+  "counts": [
+    {
+      "directory": "models/round4_linear",
+      "rows": 98,
+      "models": {
+        "Fixed40/40/20blend": 49,
+        "SVR": 36,
+        "Lasso": 3,
+        "Ridge": 3,
+        "ElasticNet": 3,
+        "KernelRidge": 3,
+        "BayesianRidge": 1
+      },
+      "results_sha256": "868105bc612d90b25da31b9eb90d06d4413513e222bedc1d563b5ecee42cf347"
+    },
+    {
+      "directory": "models/round4_linear/extension",
+      "rows": 40,
+      "models": {
+        "Fixed40/40/20blend": 20,
+        "SVR": 18,
+        "KernelRidge": 2
+      },
+      "results_sha256": "7d6186ee8fb56d8f2f281f3da86e65496caed647fbbffe6ede7c23cce916bc03"
+    },
+    {
+      "directory": "models/round4_boosting",
+      "rows": 46,
+      "models": {
+        "Fixed log blend": 23,
+        "CatBoostNative": 10,
+        "XGBoost": 7,
+        "LightGBM": 4,
+        "CatBoostOHE": 2
+      },
+      "results_sha256": "1b3e7428da46bb31ee5291fd41d694fef6a1305d74b7b3d0ad438d14175f7a00"
+    },
+    {
+      "directory": "models/round4_boosting/gbr_recipe",
+      "rows": 4,
+      "models": {
+        "GradientBoosting": 2,
+        "Fixed log blend": 2
+      },
+      "results_sha256": "f79868f81f28b180de10fd85567952406525e9b97740130364913e9d94bcc033"
+    },
+    {
+      "directory": "models/round4_boosting/deep_extension",
+      "rows": 2,
+      "models": {
+        "CatBoostNative": 1,
+        "Fixed log blend": 1
+      },
+      "results_sha256": "41f558b7e071310e90c6971976b1eaf71ce44cefd4374cc0c25cddd02e655a22"
+    },
+    {
+      "directory": "models/round4_boosting/pfn_blends",
+      "rows": 60,
+      "models": {
+        "Weighted log-space blend": 60
+      },
+      "results_sha256": "187f4aa7464ccc3bd7d010f22626834218a562bd448b683149c78f2125614389"
+    },
+    {
+      "directory": "models/round4_stacking",
+      "rows": 2,
+      "models": {
+        "Nested stacking": 2
+      },
+      "results_sha256": "45f5372f953a4d51208912ec6731f409721c8f2038a77928ddc79303267656d1"
+    },
+    {
+      "directory": "models/round4_tabpfn",
+      "rows": 9,
+      "ids": [
+        "R4T_v2_log_n32_s42_domain",
+        "R4T_v2_log_n32_s42",
+        "R4T_v2_log_n32_s42_trainfilter",
+        "R4T_v2_log_n64_s42",
+        "R4T_v2_log_n8_s42_domain",
+        "R4T_v2_log_n8_s42",
+        "R4T_v2_log_n8_s42_trainfilter",
+        "R4T_v2_raw_n32_s42",
+        "R4T_v2_raw_n8_s42"
+      ],
+      "summaries": {
+        "R4T_v2_log_n32_s42_domain_summary.json": "682090dfa85bd7487610facbc4e7e4719ce659791460b1ca59cbc19edde84744",
+        "R4T_v2_log_n32_s42_summary.json": "1eb72858aa637ecaf865262ef04fe9948013f9e3e5dc059cd300442501fdb0d0",
+        "R4T_v2_log_n32_s42_trainfilter_summary.json": "c705d8481825584cdb654717e32d860fc18fd716fb4aaa7d81fc36c12e4c824e",
+        "R4T_v2_log_n64_s42_summary.json": "1b7feb617a1fb909d6842e9293d83bdff48d962cc63bf61eaff0d7f38d83c7e4",
+        "R4T_v2_log_n8_s42_domain_summary.json": "dbcdf13140ad22bc931f6d0fa2dfa2d0791569e77dc832471bab38ec274814e1",
+        "R4T_v2_log_n8_s42_summary.json": "c25feb804cf6174e81eb975259a2e1457adbe5b460d9ffbbbbfe4381aca65690",
+        "R4T_v2_log_n8_s42_trainfilter_summary.json": "8869c1bd68974df65046d874058c79cd695d7d343724a9bcf03ec94251b54889",
+        "R4T_v2_raw_n32_s42_summary.json": "fd2e11e17f718c74a18dabde2995be4ede7aae4c8be0cf3a47d2bb259a0b010c",
+        "R4T_v2_raw_n8_s42_summary.json": "eb66723f01e68b2bd98d6c4ce3e76b732be64bcce17fb90447440b259f6cba73"
+      }
+    },
+    {
+      "directory": "models/round4_tabpfn_checkpoints",
+      "rows": 2,
+      "ids": [
+        "R4TC_v2_three_log_n16_s42",
+        "R4TC_v2_three_log_n32_s42"
+      ],
+      "summaries": {
+        "R4TC_v2_three_log_n16_s42_summary.json": "da42a06ad1aa0980d3bda5efd514991d8a72134ecf44344b5e826ce1bf3bbe66",
+        "R4TC_v2_three_log_n32_s42_summary.json": "d012db206e96a130bc77dc5198a06d7835548e82f920469d866bab5ebc39220c"
+      }
+    }
+  ],
+  "selected_experiment": "R4TC_v2_three_log_n16_s42",
+  "selected_online_score": 0.11074,
+  "rank": 59,
+  "selected_submission_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2",
+  "final_delivery_manifest_sha256": "be41e735d3f2ba47282a1bef64dbdd73baadd8d0d8f8f607172515db9dac7272",
+  "model_explanation_sha256": "a2eda194cf963d4c2b73b7935208853d62805bc6f87f5c42523109c5fcee9856",
+  "preserved_phase3_explanation_sha256": "224a7eff343b2b4cf60fdbf109a1428f63e51c52c73544a251322e07252b2976",
+  "pending_catalog_growth": []
+}

@@ -1,0 +1,862 @@
+{
+  "metric": "sqrt(mean((log(y_true) - log(y_pred))**2)); natural logarithm, not log1p",
+  "validation": {
+    "type": "KFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "train_rows_per_fold": 1168,
+    "validation_rows_per_fold": 292,
+    "reported_cv_std_ddof": 1,
+    "all_training_rows_retained": true,
+    "selection_limitation": "Six adaptive phases reuse development folds and online feedback; no independent holdout claim."
+  },
+  "data": {
+    "training_rows": 1460,
+    "competition_test_rows": 1459,
+    "raw_predictors_excluding_id": 79,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "read_csv": {
+      "keep_default_na": false,
+      "na_values": [
+        "NA",
+        ""
+      ]
+    }
+  },
+  "experiment_count": 350,
+  "best_experiment": "R6ICL_anchor80_tabicl20",
+  "best_model": "Fixed TabPFN and TabICL log-space blend",
+  "best_cv_mean": 0.11530821221058023,
+  "best_cv_std": 0.021422483771774158,
+  "best_pooled_oof_log_rmse": 0.11688935816387112,
+  "best_components": [
+    "R5E08_noY_domain20",
+    "R6ICL_v2_raw79_log_n8_s42"
+  ],
+  "best_parameters": {
+    "model": "Fixed TabPFN and TabICL log-space blend",
+    "prediction_type": "round6_fixed_anchor_tabicl",
+    "combination_space": "natural logarithm of price",
+    "weights": [
+      0.8,
+      0.2
+    ],
+    "components": [
+      "R5E08_noY_domain20",
+      "R6ICL_v2_raw79_log_n8_s42"
+    ],
+    "leaf_weights": {
+      "R5TP_log_noYtransform_s42": 0.64,
+      "R4T_v2_log_n32_s42_domain": 0.16,
+      "R6ICL_v2_raw79_log_n8_s42": 0.2
+    },
+    "manifest": "submissions/round6_optimization/online_best_summary.json",
+    "scope": "Selected log-price ensemble from the original component predictions."
+  },
+  "baseline": {
+    "experiment_id": "E01_raw_ridge",
+    "cv_mean": 0.1517986380654999,
+    "cv_std": 0.020890753898866025,
+    "pooled_oof_log_rmse": 0.15294432123263363,
+    "raw_predictions_clipped": 0
+  },
+  "absolute_improvement_over_baseline": 0.03649042585491967,
+  "relative_improvement_over_baseline_pct": 24.038704378345177,
+  "largest_pathway_improvement": {
+    "to_experiment": "E05_skew",
+    "from_cv_mean": 0.14494061396450872,
+    "to_cv_mean": 0.1316554580622657,
+    "absolute_improvement": 0.013285155902243023,
+    "scope": "Largest consecutive local CV decrease within E01-E05; not a Kaggle submission improvement."
+  },
+  "most_helpful_group": {
+    "group": "area",
+    "full_cv_mean": 0.1316554580622657,
+    "without_group_cv_mean": 0.13313343866412364,
+    "removal_penalty": 0.0014779806018579422,
+    "folds_helped": 5,
+    "scope": "Largest positive paired removal penalty among five predefined groups with E05 Ridge alpha20; model-specific development evidence, not causal or statistical proof."
+  },
+  "serialization_max_absolute_prediction_difference": null,
+  "test_prediction_summary": {
+    "min": 44558.36900654756,
+    "median": 157246.0406426405,
+    "max": 565835.4985653054
+  },
+  "kaggle": {
+    "submitted": true,
+    "team_name": "",
+    "baseline_score": 0.14638,
+    "final_score": 0.1097,
+    "rank": 84,
+    "phase1_score": 0.12371,
+    "phase2_score": 0.11844,
+    "score_type": "public leaderboard",
+    "submitted_candidate_count": 36,
+    "selected_experiment": "R6ICL_anchor80_tabicl20",
+    "observed_scores": [
+      {
+        "experiment_id": "E01_raw_ridge",
+        "public_score": 0.14638,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/01_baseline_submission.jpg"
+      },
+      {
+        "experiment_id": "E11_catboost_depth5",
+        "public_score": 0.12371,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/02_phase1_submission.jpg"
+      },
+      {
+        "experiment_id": "O26_cat_svr_xgb",
+        "public_score": 0.11844,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/03_phase2_blend_submission.jpg"
+      },
+      {
+        "experiment_id": "O23_native_train_filter",
+        "public_score": 0.12091,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/04_train_filter_submission.jpg"
+      },
+      {
+        "experiment_id": "F06_blend_robust_c10_scale",
+        "public_score": 0.11872,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/05_F06_submission.jpg"
+      },
+      {
+        "experiment_id": "F05_blend_robust_c10_g001",
+        "public_score": 0.11923,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/06_F05_submission.jpg"
+      },
+      {
+        "experiment_id": "F07_blend_robust_c20_g0003",
+        "public_score": 0.11842,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/07_F07_submission.jpg"
+      },
+      {
+        "experiment_id": "O27_conservative_phase1_svr",
+        "public_score": 0.12053,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/08_conservative_submission.jpg"
+      },
+      {
+        "experiment_id": "R4L20_poweryeo-johnson_gscale_blend",
+        "public_score": 0.11928,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/10_R4L20_submission.jpg"
+      },
+      {
+        "experiment_id": "R4L24_quantile10_blend",
+        "public_score": 0.11839,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/11_R4L24_submission.jpg"
+      },
+      {
+        "experiment_id": "R4T_v2_log_n8_s42",
+        "public_score": 0.11173,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/12_TabPFN_log8_submission.jpg"
+      },
+      {
+        "experiment_id": "R4T_v2_raw_n32_s42",
+        "public_score": 0.11176,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/13_TabPFN_raw32_submission.jpg"
+      },
+      {
+        "experiment_id": "R4T_v2_log_n32_s42",
+        "public_score": 0.11123,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/14_TabPFN_log32_submission.jpg"
+      },
+      {
+        "experiment_id": "BP_R4T_v2_log_n32_s42_B14_cat_mae_d6_blend_w25",
+        "public_score": 0.11139,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/15_TabPFN_boost_blend_submission.jpg"
+      },
+      {
+        "experiment_id": "R4T_v2_log_n32_s42_domain",
+        "public_score": 0.11153,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/16_TabPFN_domain32_submission.jpg"
+      },
+      {
+        "experiment_id": "R4TC_v2_three_log_n16_s42",
+        "public_score": 0.11074,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/17_TabPFN_three16_submission.jpg"
+      },
+      {
+        "experiment_id": "R4T_v2_log_n64_s42",
+        "public_score": 0.11111,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/18_TabPFN_log64_submission.jpg"
+      },
+      {
+        "experiment_id": "R4TC_v2_three_log_n32_s42",
+        "public_score": 0.11087,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/19_TabPFN_three32_submission.jpg"
+      },
+      {
+        "experiment_id": "R5E03_anchor_classical15",
+        "public_score": 0.1108,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/21_R5E03_submission.jpg"
+      },
+      {
+        "experiment_id": "R5E04_anchor_domain20",
+        "public_score": 0.11066,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/22_R5E04_submission.jpg"
+      },
+      {
+        "experiment_id": "R5TP_log_s2026",
+        "public_score": 0.11112,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/24_R5TP_s2026_submission.jpg"
+      },
+      {
+        "experiment_id": "R5E06_seed42_17_2026_equal",
+        "public_score": 0.11096,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/25_R5E06_submission.jpg"
+      },
+      {
+        "experiment_id": "R5TP_boxcox015_s42",
+        "public_score": 0.11074,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/26_R5TP_boxcox015_submission.jpg"
+      },
+      {
+        "experiment_id": "R5TP_boxcox050_s42",
+        "public_score": 0.11092,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/27_R5TP_boxcox050_submission.jpg"
+      },
+      {
+        "experiment_id": "R5TP_log_noYtransform_s42",
+        "public_score": 0.11071,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/28_R5TP_noYtransform_submission.jpg"
+      },
+      {
+        "experiment_id": "R5TP_log_nofingerprint_s42",
+        "public_score": 0.11074,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/29_R5TP_nofingerprint_submission.jpg"
+      },
+      {
+        "experiment_id": "R5E08_noY_domain20",
+        "public_score": 0.11064,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/30_R5E08_submission.jpg"
+      },
+      {
+        "experiment_id": "R5TP_log_n24_balanced_s42",
+        "public_score": 0.11072,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/kaggle_evidence/31_R5TP_n24_submission.jpg"
+      },
+      {
+        "experiment_id": "R6E01_e08_classical15",
+        "public_score": 0.11075,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/01_R6E01_score.png"
+      },
+      {
+        "experiment_id": "R6E02_noY_domain50",
+        "public_score": 0.11075,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/02_R6E02_score.png"
+      },
+      {
+        "experiment_id": "R6TP_noY_nofingerprint_s42",
+        "public_score": 0.11065,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/03_R6TP_noFP_score.png"
+      },
+      {
+        "experiment_id": "R6E05_joint_noFP_domain20",
+        "public_score": 0.1106,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/04_R6E05_improvement.png"
+      },
+      {
+        "experiment_id": "R6TP_noY_domain_s42",
+        "public_score": 0.11111,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/05_R6TP_domain_score.png"
+      },
+      {
+        "experiment_id": "R6TP_noY_subsample090_s42",
+        "public_score": 0.11054,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/06_R6TP_subsample_improvement.png"
+      },
+      {
+        "experiment_id": "R6ICL_anchor80_tabicl20",
+        "public_score": 0.1097,
+        "selected_for_delivery": true,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/07_R6ICL_improvement.png"
+      },
+      {
+        "experiment_id": "R6E06_subsample_domain20",
+        "public_score": 0.11048,
+        "selected_for_delivery": false,
+        "evidence_source": "submissions/round6_optimization/kaggle_evidence/08_R6E06_score.png"
+      }
+    ],
+    "absolute_improvement_over_baseline": 0.036680000000000004,
+    "relative_improvement_over_baseline_pct": 25.058068042082255,
+    "absolute_margin_over_phase2": 0.007800000000000001,
+    "leaderboard_screenshot": "submissions/round6_optimization/kaggle_evidence/09_final_leaderboard.png",
+    "actual_score": 0.1097,
+    "best_observed_score": 0.1097
+  },
+  "runtime_seconds": 5249.524335084774,
+  "environment": {
+    "python": "3.12.7",
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "joblib": "1.6.0",
+      "lightgbm": "4.7.0",
+      "xgboost": "3.4.1"
+    }
+  },
+  "phase1_experiment_count": 21,
+  "optimization_experiment_count": 29,
+  "phase1_best_experiment": "E11_catboost_depth5",
+  "phase1_best_cv_mean": 0.12354188616262751,
+  "optimization": {
+    "phase": 2,
+    "best_experiment": "O26_cat_svr_xgb",
+    "best_model": "Weighted log-space blend",
+    "best_cv_mean": 0.12085465221072575,
+    "best_cv_std": 0.021859587838354032,
+    "best_pooled_oof_log_rmse": 0.12242597855580184,
+    "best_parameters": {
+      "components": [
+        "O09_native_mae",
+        "O12_svr_c10",
+        "O22_xgboost_d3"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    "best_components": [
+      "O09_native_mae",
+      "O12_svr_c10",
+      "O22_xgboost_d3"
+    ],
+    "experiment_count": 29,
+    "failed_experiment_count": 0,
+    "phase1_best_experiment": "E11_catboost_depth5",
+    "phase1_best_cv_mean": 0.12354188616262751,
+    "absolute_improvement_over_phase1": 0.002687233951901763,
+    "relative_improvement_over_phase1_pct": 2.1751602111403368,
+    "all_1460_validation_rows_retained": true,
+    "selection_limitation": "All search decisions reuse development folds; no unbiased final generalization estimate.",
+    "runtime_seconds": 821.7299095419585,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "promoted": true,
+    "conservative_submission_experiment": "O27_conservative_phase1_svr",
+    "sensitivity_submission_experiment": "O23_native_train_filter"
+  },
+  "absolute_improvement_over_phase1": 0.008233673952047285,
+  "followup_experiment_count": 8,
+  "phase2_best_experiment": "O26_cat_svr_xgb",
+  "phase2_best_cv_mean": 0.12085465221072575,
+  "followup": {
+    "phase": 3,
+    "experiment_count": 8,
+    "best_experiment": "F06_blend_robust_c10_scale",
+    "best_cv_mean": 0.11767094394194544,
+    "best_cv_std": 0.01511031810094399,
+    "best_pooled_oof_log_rmse": 0.1184445373104131,
+    "best_parameters": {
+      "components": [
+        "O09_native_mae",
+        "F02_robust_c10_scale",
+        "O22_xgboost_d3"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    "phase2_reference_cv_mean": 0.1208546522107258,
+    "reload_prediction_checks": {
+      "F01_robust_c10_g001": 0.0,
+      "F05_blend_robust_c10_g001": 0.0,
+      "F02_robust_c10_scale": 0.0,
+      "F06_blend_robust_c10_scale": 0.0,
+      "F03_robust_c20_g0003": 0.0,
+      "F07_blend_robust_c20_g0003": 0.0,
+      "F04_standard_c10_scale": 0.0,
+      "F08_blend_standard_c10_scale": 0.0
+    },
+    "runtime_seconds": 19.528468500007875,
+    "promoted": true,
+    "limitation": "Same-data adaptive development. Scores are not unbiased confirmation and do not replace leaderboard evidence.",
+    "selected_experiment": "F07_blend_robust_c20_g0003",
+    "selection_basis": "Lowest observed Kaggle public leaderboard score among eight actual submissions: 0.11842; the lowest-CV candidate is recorded separately"
+  },
+  "absolute_improvement_over_phase2": 0.005546440000145522,
+  "best_cv_experiment": "BP_R4T_v2_log_n8_s42_domain_B14_cat_mae_d6_blend_w25",
+  "best_cv_mean_across_experiments": 0.1129308987189374,
+  "best_cv_std_across_experiments": 0.0166491892437572,
+  "best_cv_pooled_oof_log_rmse": 0.1139084908487793,
+  "selected_experiment": "R6ICL_anchor80_tabicl20",
+  "selected_cv_mean": 0.11530821221058023,
+  "selection_criterion": "Lowest observed Kaggle score among actually submitted candidates; adaptive online development",
+  "best_experiment_field_meaning": "Legacy field naming: best_experiment and best_cv_mean describe the selected delivered model. best_cv_experiment and best_cv_mean_across_experiments separately identify the lowest development-CV candidate.",
+  "largest_observed_submission_improvement": {
+    "from_experiment": "E01_raw_ridge",
+    "to_experiment": "E11_catboost_depth5",
+    "from_public_score": 0.14638,
+    "to_public_score": 0.12371,
+    "absolute_improvement": 0.02267000000000001,
+    "scope": "Largest observed improvement between the baseline submission and the next phase-one submission; leaderboard evidence is separate from local E01-E05 preprocessing ablations."
+  },
+  "selection_caution": "Six adaptive phases reuse development folds and online feedback; no independent holdout claim.",
+  "round4_experiment_count": 263,
+  "round4": {
+    "catalog": [
+      {
+        "directory": "models/round4_linear",
+        "experiments": 98,
+        "results_sha256": "868105bc612d90b25da31b9eb90d06d4413513e222bedc1d563b5ecee42cf347"
+      },
+      {
+        "directory": "models/round4_linear/extension",
+        "experiments": 40,
+        "results_sha256": "7d6186ee8fb56d8f2f281f3da86e65496caed647fbbffe6ede7c23cce916bc03"
+      },
+      {
+        "directory": "models/round4_boosting",
+        "experiments": 46,
+        "results_sha256": "1b3e7428da46bb31ee5291fd41d694fef6a1305d74b7b3d0ad438d14175f7a00"
+      },
+      {
+        "directory": "models/round4_boosting/gbr_recipe",
+        "experiments": 4,
+        "results_sha256": "f79868f81f28b180de10fd85567952406525e9b97740130364913e9d94bcc033"
+      },
+      {
+        "directory": "models/round4_boosting/deep_extension",
+        "experiments": 2,
+        "results_sha256": "41f558b7e071310e90c6971976b1eaf71ce44cefd4374cc0c25cddd02e655a22"
+      },
+      {
+        "directory": "models/round4_boosting/pfn_blends",
+        "experiments": 60,
+        "results_sha256": "187f4aa7464ccc3bd7d010f22626834218a562bd448b683149c78f2125614389"
+      },
+      {
+        "directory": "models/round4_stacking",
+        "experiments": 2,
+        "results_sha256": "45f5372f953a4d51208912ec6731f409721c8f2038a77928ddc79303267656d1"
+      },
+      {
+        "directory": "models/round4_tabpfn",
+        "format": "TabPFN per-candidate summaries"
+      },
+      {
+        "directory": "models/round4_tabpfn_checkpoints",
+        "format": "TabPFN per-candidate summaries"
+      }
+    ],
+    "selected_experiment": "R4TC_v2_three_log_n16_s42",
+    "selected_online_score": 0.11074,
+    "source_manifest": {
+      "selected_experiment": "R4TC_v2_three_log_n16_s42",
+      "selected_csv": "models/round4_tabpfn_checkpoints/submissions/R4TC_v2_three_log_n16_s42.csv",
+      "selected_model": null,
+      "run_dirs": [
+        "models/round4_linear",
+        "models/round4_linear/extension",
+        "models/round4_boosting",
+        "models/round4_boosting/gbr_recipe",
+        "models/round4_boosting/deep_extension",
+        "models/round4_boosting/pfn_blends",
+        "models/round4_stacking"
+      ],
+      "tabpfn_dirs": [
+        "models/round4_tabpfn",
+        "models/round4_tabpfn_checkpoints"
+      ],
+      "extra_candidates": [],
+      "final_parameters": {
+        "id": "R4TC_v2_three_log_n16_s42",
+        "model": "TabPFN-v2 multi-checkpoint ensemble",
+        "target": "log",
+        "n_estimators": 16,
+        "random_state": 42,
+        "device": "mps",
+        "fold_seed": 42,
+        "n_splits": 5,
+        "rows": 1460,
+        "features": 79,
+        "feature_recipe": "raw",
+        "filter_train": false,
+        "checkpoint_manifest": [
+          {
+            "filename": "tabpfn-v2-regressor.ckpt",
+            "bytes": 44390977,
+            "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+            "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor.ckpt"
+          },
+          {
+            "filename": "tabpfn-v2-regressor-09gpqh39.ckpt",
+            "bytes": 44398487,
+            "sha256": "86a5b6832fdaeae3bb50eb2fbc349198b43baa965dcda9ef3b8e10fb809c1551",
+            "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-09gpqh39.ckpt"
+          },
+          {
+            "filename": "tabpfn-v2-regressor-2noar4o2.ckpt",
+            "bytes": 44398487,
+            "sha256": "e2d4a06eeb4521dee71fc68d819e277ffb97614cc3695dc9ac3030dd9da36c21",
+            "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-2noar4o2.ckpt"
+          }
+        ],
+        "library_version": "9.2.0",
+        "torch_version": "2.14.1",
+        "source_sha256": "7b9791e70e771fe6e32c333166ec93dc2f36b94314cfb4d47531777f4cfabfc8",
+        "source": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+        "selection_limitation": "Adaptive development; same frozen folds; no external test targets.",
+        "preprocessing": "Fresh TabPFN instance fits internal preprocessing separately within each training fold.",
+        "status": "complete",
+        "submission_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2",
+        "torch_num_threads": 12
+      },
+      "catalog_notes": [
+        "Final selection locked after 18 actual submissions, including 10 in the final submission group; best score 0.11074.",
+        "Every primary validation record retains all1,460 rows and uses the original five folds with seed42.",
+        "Reference fold-bagging deployment variants are excluded from counts of new CV evaluations.",
+        "The longer depth6 extension B29 was interrupted without a score; the completed depth7 trial is included.",
+        "Nested inner metrics are supplementary evidence, not duplicate primary experiment rows.",
+        "All completed primary summaries included. Final catalogue contains 321 evaluations, including 263 new phase-four evaluations."
+      ]
+    },
+    "historical_snapshot": "models/phase3_snapshot"
+  },
+  "phase4_best_experiment": "R4TC_v2_three_log_n16_s42",
+  "phase4_best_cv_mean": 0.11705071861429565,
+  "round5": {
+    "catalog": [
+      {
+        "directory": "models/round5_tabpfn",
+        "format": "TabPFN per-candidate summaries"
+      }
+    ],
+    "selected_experiment": "R5E08_noY_domain20",
+    "selected_online_score": 0.11064,
+    "source_manifest": {
+      "selected_experiment": "R5E08_noY_domain20",
+      "selected_csv": "submissions/optional_candidates/R5E08_noY_domain20.csv",
+      "selected_model": null,
+      "run_dirs": [],
+      "tabpfn_dirs": [
+        "models/round5_tabpfn"
+      ],
+      "extra_candidates": [
+        {
+          "experiment_id": "R5E01_n16_n32_equal",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.5,
+              0.5
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": false,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "R4TC_v2_three_log_n32_s42"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E01_n16_n32_equal__log_prediction",
+          "target": "log",
+          "cv_mean": 0.11670457680906174,
+          "cv_std": 0.023279571341976977,
+          "pooled_oof_log_rmse": 0.11854749681741555,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E02_anchor_raw20",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.8,
+              0.2
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": false,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "R4T_v2_raw_n32_s42"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E02_anchor_raw20__log_prediction",
+          "target": "log",
+          "cv_mean": 0.11766582761555375,
+          "cv_std": 0.024446411833349044,
+          "pooled_oof_log_rmse": 0.11968019313852137,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E03_anchor_classical15",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.85,
+              0.15
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": true,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "B14_cat_mae_d6_blend"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E03_anchor_classical15__log_prediction",
+          "target": "log",
+          "cv_mean": 0.11598072602019242,
+          "cv_std": 0.021737142938182616,
+          "pooled_oof_log_rmse": 0.1175990285447245,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E04_anchor_domain20",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.8,
+              0.2
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": true,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "R4T_v2_log_n32_s42_domain"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E04_anchor_domain20__log_prediction",
+          "target": "log",
+          "cv_mean": 0.11617553435517361,
+          "cv_std": 0.02240018177007423,
+          "pooled_oof_log_rmse": 0.11789049706136628,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E05_bagged_classical15",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.425,
+              0.425,
+              0.15
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": true,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "R4TC_v2_three_log_n32_s42",
+              "B14_cat_mae_d6_blend"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E05_bagged_classical15__log_prediction",
+          "target": "log",
+          "cv_mean": 0.1156900731975659,
+          "cv_std": 0.021644644822669864,
+          "pooled_oof_log_rmse": 0.11729870227780774,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E06_seed42_17_2026_equal",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": true,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "R5TP_log_s17",
+              "R5TP_log_s2026"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E06_seed42_17_2026_equal__log_prediction",
+          "target": "log",
+          "cv_mean": 0.11671864268154339,
+          "cv_std": 0.02309112734737614,
+          "pooled_oof_log_rmse": 0.11853185934237258,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E07_seedbag_domain20",
+          "model": "Weighted log-space blend",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.26666666666666666,
+              0.26666666666666666,
+              0.26666666666666666,
+              0.2
+            ],
+            "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+            "submission_candidate": true,
+            "components": [
+              "R4TC_v2_three_log_n16_s42",
+              "R5TP_log_s17",
+              "R5TP_log_s2026",
+              "R4T_v2_log_n32_s42_domain"
+            ]
+          },
+          "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+          "oof_column": "R5E07_seedbag_domain20__log_prediction",
+          "target": "log",
+          "cv_mean": 0.1159248871896053,
+          "cv_std": 0.02216453412227584,
+          "pooled_oof_log_rmse": 0.1176077919536318,
+          "stage": "round5",
+          "phase": 5
+        },
+        {
+          "experiment_id": "R5E08_noY_domain20",
+          "model": "Weighted log-space blend",
+          "target": "log",
+          "params": {
+            "combination_space": "natural logarithm of price",
+            "weights": [
+              0.8,
+              0.2
+            ],
+            "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+            "additional_weight_search": false,
+            "submission_candidate": true,
+            "components": [
+              "R5TP_log_noYtransform_s42",
+              "R4T_v2_log_n32_s42_domain"
+            ]
+          },
+          "cv_mean": 0.11536111566869837,
+          "cv_std": 0.020551755413127166,
+          "pooled_oof_log_rmse": 0.11681646600019883,
+          "oof_path": "models/round5_ensembles/extension/results/oof_predictions.csv",
+          "oof_column": "R5E08_noY_domain20__log_prediction",
+          "stage": "round5",
+          "phase": 5
+        }
+      ],
+      "final_parameters": {
+        "combination_space": "natural logarithm of price",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+        "additional_weight_search": false,
+        "submission_candidate": true,
+        "components": [
+          "R5TP_log_noYtransform_s42",
+          "R4T_v2_log_n32_s42_domain"
+        ],
+        "model": "Weighted log-space blend",
+        "prediction_type": "round5_blend",
+        "manifest": "models/round5_ensembles/extension/results/candidate_manifests.json"
+      },
+      "catalog_notes": [
+        "Five adaptive development phases; official training targets only.",
+        "Fixed-weight primary blends and the recorded fold-isolated model configurations are counted; calibration and median diagnostics remain supplementary.",
+        "All primary validation rows and original seed-42 folds are retained."
+      ]
+    },
+    "historical_snapshot": "models/phase4_snapshot",
+    "prior_online_score": 0.11074
+  },
+  "round5_experiment_count": 17,
+  "phase_count": 6,
+  "round6_experiment_count": 12,
+  "round6": {
+    "prior_online_score": 0.11064,
+    "selected_online_score": 0.1097,
+    "new_primary_evaluations": 12,
+    "historical_snapshot": "models/phase5_snapshot",
+    "evidence": "submissions/round6_optimization/summary.json",
+    "validated_alternative": {
+      "role": "validated_alternative",
+      "experiment_id": "R6E05_joint_noFP_domain20",
+      "public_score": 0.1106,
+      "prior_score": 0.11064,
+      "absolute_score_reduction": 3.999999999999837e-05,
+      "relative_score_reduction_percent": 0.03615328994938392,
+      "seed42_development_cv": {
+        "cv_mean": 0.11511408465115928,
+        "cv_std": 0.02008701223231444,
+        "pooled_oof_log_rmse": 0.11650769473906515
+      },
+      "recipe": {
+        "R6TP_noY_nofingerprint_s42": 0.8,
+        "R4T_v2_log_n32_s42_domain": 0.2
+      },
+      "original_path": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+      "delivered_path": "submissions/round6_optimization/reproducible_improvement_submission.csv",
+      "submission_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+      "online_evidence": {
+        "round_submission_order": 4,
+        "experiment_id": "R6E05_joint_noFP_domain20",
+        "local_artifact": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+        "uploaded_filename": "R6E05_joint_noFP_domain20.csv",
+        "file_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+        "rows": 1459,
+        "public_score": 0.1106,
+        "status": "complete",
+        "rank_at_observation": null,
+        "screenshot": "submissions/round6_optimization/kaggle_evidence/04_R6E05_improvement.png",
+        "screenshot_sha256": "226030e2a54868dc42546c4063e574f8ba870c92753fd8f3ec6ca363045c5452",
+        "kaggle_submission_id": null
+      }
+    }
+  },
+  "runtime_scope": "The retained legacy runtime_seconds field records the accumulated historical run through Round 5; individual Round 6 runs record their own measured runtimes."
+}

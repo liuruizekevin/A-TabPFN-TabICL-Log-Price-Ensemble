@@ -1,0 +1,26 @@
+[
+  {
+    "id": "R6TP_noY_nofingerprint_s42",
+    "oof_path": "models/round6_tabpfn/results/R6TP_noY_nofingerprint_s42_oof.csv",
+    "oof_sha256": "34e6ded073f5cbada14fbd48062bf9a5eb092a246be184613612e9e60ea7166c",
+    "test_path": "models/round6_tabpfn/results/R6TP_noY_nofingerprint_s42_test_logs.csv",
+    "test_sha256": "e95d60208062ba4667fd3c305cae93e5d59b149807743237ad105c78ffae0277",
+    "test_fit": "original preserved full-data fit"
+  },
+  {
+    "id": "R4T_v2_log_n32_s42_domain",
+    "oof_path": "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_oof.csv",
+    "oof_sha256": "2ed4dad6d4dce56502421eda48a6b2106683ad00fe3ea46247a7f29c151c4c1f",
+    "test_path": "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_test_logs.csv",
+    "test_sha256": "63a16581d29ced3f88a753a30d2de45491ef4a06d86441114a4fb10ea0a60e2d",
+    "test_fit": "original preserved full-data fit"
+  },
+  {
+    "id": "R5E08_noY_domain20",
+    "oof_path": "models/round5_ensembles/extension/results/R5E08_noY_domain20_oof.csv",
+    "oof_sha256": "077297a3099677f77add277d981b7fed514460cbc344de983a746a3ce0d0f285",
+    "test_path": "models/round5_ensembles/extension/results/R5E08_noY_domain20_test_logs.csv",
+    "test_sha256": "77e70164bc453deb25f97c6f378783fd3390c1b3b05eddd691fa0d63a789f2b0",
+    "test_fit": "original preserved full-data fit"
+  }
+]

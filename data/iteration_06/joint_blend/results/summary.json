@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "experiment_id": "R6E05_joint_noFP_domain20",
+  "weights": {
+    "R6TP_noY_nofingerprint_s42": 0.8,
+    "R4T_v2_log_n32_s42_domain": 0.2
+  },
+  "pooled_oof_log_rmse": 0.11650769473906515,
+  "cv_mean": 0.11511408465115928,
+  "cv_std": 0.020087012232314447,
+  "fold_scores": [
+    0.11748230996918035,
+    0.10274921786104216,
+    0.14872359288508302,
+    0.10815899323449843,
+    0.0984563093059925
+  ],
+  "baseline": {
+    "pooled_oof_log_rmse": 0.11681646600019883,
+    "cv_mean": 0.1153611156686984,
+    "cv_std": 0.02055175541312716,
+    "fold_scores": [
+      0.11768503899090146,
+      0.10245859624451112,
+      0.14983318165515191,
+      0.1080968314849112,
+      0.09873192996801629
+    ]
+  },
+  "delta_pooled_vs_e08": -0.00030877126113368347,
+  "folds_improved_vs_e08": 3,
+  "training_rows": 1460,
+  "training_rows_removed": 0,
+  "test_rows": 1459,
+  "public_score": null,
+  "selection_limitation": "One explicitly adaptive follow-up chosen after the joint noY/no-fingerprint model scored 0.11065 online versus the existing E08 mixture's 0.11064. Reuse the established 80/20 weights with the new raw-feature component; no weight search. Reused seed42 OOF is development evidence, not an independent holdout or a public-score prediction.",
+  "submission_path": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+  "submission_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+  "total_squared_error_reduction": 0.10518394123205904,
+  "id1299_and_524_squared_error_reduction": 0.11221741160860854,
+  "largest_squared_error_reductions": [
+    {
+      "Id": 1299,
+      "reduction": 0.10715185450636722
+    },
+    {
+      "Id": 1183,
+      "reduction": 0.014918628560687708
+    },
+    {
+      "Id": 748,
+      "reduction": 0.008086166484780735
+    },
+    {
+      "Id": 667,
+      "reduction": 0.007977115121996989
+    },
+    {
+      "Id": 1280,
+      "reduction": 0.007059536458521365
+    }
+  ],
+  "largest_squared_error_increases": [
+    {
+      "Id": 496,
+      "increase": 0.016252504522882183
+    },
+    {
+      "Id": 89,
+      "increase": 0.012392471800896365
+    },
+    {
+      "Id": 971,
+      "increase": 0.010848009569939837
+    },
+    {
+      "Id": 1388,
+      "increase": 0.006054911986079978
+    },
+    {
+      "Id": 1063,
+      "increase": 0.005558428542045579
+    }
+  ]
+}

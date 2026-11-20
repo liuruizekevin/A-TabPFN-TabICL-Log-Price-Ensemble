@@ -1,0 +1,98 @@
+{
+  "metric": "sqrt(mean((log(y_true) - log(y_pred))**2)); natural logarithm, not log1p",
+  "validation": {
+    "type": "KFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "train_rows_per_fold": 1168,
+    "validation_rows_per_fold": 292,
+    "reported_cv_std_ddof": 1,
+    "all_training_rows_retained": true,
+    "selection_limitation": "The same five development folds select features/hyperparameters/model. Reported CV is a development estimate and may be optimistic after selection; no independent held-out test or Kaggle score has been measured."
+  },
+  "data": {
+    "training_rows": 1460,
+    "competition_test_rows": 1459,
+    "raw_predictors_excluding_id": 79,
+    "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+    "read_csv": {
+      "keep_default_na": false,
+      "na_values": [
+        "NA",
+        ""
+      ]
+    }
+  },
+  "experiment_count": 21,
+  "best_experiment": "E11_catboost_depth5",
+  "best_model": "CatBoost",
+  "best_cv_mean": 0.12354188616262751,
+  "best_cv_std": 0.020691323551667477,
+  "best_pooled_oof_log_rmse": 0.1249203839766571,
+  "best_components": [
+    "E11_catboost_depth5"
+  ],
+  "best_parameters": {
+    "allow_writing_files": false,
+    "depth": 5,
+    "iterations": 1100,
+    "l2_leaf_reg": 5.0,
+    "learning_rate": 0.035,
+    "loss_function": "RMSE",
+    "random_seed": 42,
+    "thread_count": 4,
+    "verbose": false
+  },
+  "baseline": {
+    "experiment_id": "E01_raw_ridge",
+    "cv_mean": 0.1517986380654999,
+    "cv_std": 0.020890753898866025,
+    "pooled_oof_log_rmse": 0.15294432123263363,
+    "raw_predictions_clipped": 0
+  },
+  "absolute_improvement_over_baseline": 0.028256751902872385,
+  "relative_improvement_over_baseline_pct": 18.614628077677363,
+  "largest_pathway_improvement": {
+    "to_experiment": "E05_skew",
+    "from_cv_mean": 0.14494061396450872,
+    "to_cv_mean": 0.1316554580622657,
+    "absolute_improvement": 0.013285155902243023,
+    "scope": "Largest consecutive local CV decrease within E01-E05; not a Kaggle submission improvement."
+  },
+  "most_helpful_group": {
+    "group": "area",
+    "full_cv_mean": 0.1316554580622657,
+    "without_group_cv_mean": 0.13313343866412364,
+    "removal_penalty": 0.0014779806018579422,
+    "folds_helped": 5,
+    "scope": "Largest positive paired removal penalty among five predefined groups with E05 Ridge alpha20; model-specific development evidence, not causal or statistical proof."
+  },
+  "serialization_max_absolute_prediction_difference": 0.0,
+  "test_prediction_summary": {
+    "min": 39199.4320146312,
+    "median": 156899.52752282502,
+    "max": 512372.40849869093
+  },
+  "kaggle": {
+    "submitted": false,
+    "team_name": "",
+    "baseline_score": null,
+    "final_score": null,
+    "rank": null
+  },
+  "runtime_seconds": 55.60575166600756,
+  "environment": {
+    "python": "3.12.7",
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "joblib": "1.6.0"
+    }
+  }
+}

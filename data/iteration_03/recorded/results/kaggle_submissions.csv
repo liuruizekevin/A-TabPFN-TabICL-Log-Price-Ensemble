@@ -1,0 +1,9 @@
+experiment_id,public_score,description,selected_for_delivery,evidence_source
+E01_raw_ridge,0.14638,Raw-target Ridge baseline,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+E11_catboost_depth5,0.12371,Phase-one selected CatBoost,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+O26_cat_svr_xgb,0.11844,Phase-two selected blend,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+O23_native_train_filter,0.12091,Training-only outlier filter sensitivity,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+O27_conservative_phase1_svr,0.12053,Conservative phase-one/SVR blend,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+F06_blend_robust_c10_scale,0.11872,Lowest development-CV follow-up,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+F05_blend_robust_c10_g001,0.11923,RobustScaler C10 fixed-gamma blend,False,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"
+F07_blend_robust_c20_g0003,0.11842,Final selected public-leaderboard candidate,True,"Observed Kaggle submission results, confirmed by the coordinating browser workflow"

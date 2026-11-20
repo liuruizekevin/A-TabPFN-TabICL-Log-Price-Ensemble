@@ -1,0 +1,20 @@
+{
+  "all1460_OOF_rows_retained": true,
+  "all1459_test_rows_retained": true,
+  "official_Id_order_and_seed42folds_verified": true,
+  "source_script_sha256": "8e4f60255e8b3c0118c57c0872767b788bbf4eff1d0346fcfe3c0b2022e6c62e",
+  "original_manifests_preserved": true,
+  "generated_file_sha256": {
+    "results/experiment_results.csv": "b2b7fe544a3807da80d096c293138d5351da4e3588b9299fc67da0c0ce873e67",
+    "results/oof_predictions.csv": "46ad5543a42e6764c37473978b19d2c3bc3ae8bcf1082aa805f210f45b4965ca",
+    "results/R5E08_noY_domain20_oof.csv": "077297a3099677f77add277d981b7fed514460cbc344de983a746a3ce0d0f285",
+    "results/R5E08_noY_domain20_test_logs.csv": "77e70164bc453deb25f97c6f378783fd3390c1b3b05eddd691fa0d63a789f2b0",
+    "results/fold_scores.csv": "55168b22c46401a3a7de13c46639a8801ac9256ba94fac144878821dbc63c6a8",
+    "submissions/R5E08_noY_domain20.csv": "ba6bd95069cea3697e3af58c9c07e377ee3e4d06b48617030dd879d1a75f3d44",
+    "results/candidate_manifests.json": "5fb1dd029d58f10eac42dd6daa2aca09fc684e384597f308f39ac0402ae7cef3",
+    "results/integration_candidates.json": "2736394affd50b938c55ea014ea252c965b3c810441b41dc4131dd0e1096d1cb",
+    "results/source_manifest.json": "6e24c08379125ed45e3a9db6a9efca4c9f8fb4097b8b7b8f51d3baabb0f5a77f",
+    "results/plan.json": "f1124aac513f0539ddb3c24dbd7581b62929d517da48eeb1f2e2abf3f73d5dfb",
+    "results/summary.json": "dbd67fe5a0d713f536b055dc81434c449cbcff25950f46818d7793a369522dda"
+  }
+}

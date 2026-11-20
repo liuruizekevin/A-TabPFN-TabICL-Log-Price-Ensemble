@@ -1,0 +1,61 @@
+{
+  "comparison_scope": "7 simple convex recipes and six calibration diagnostics; no optimized-weight search.",
+  "include_new_seed_ensembles": true,
+  "seed_extension_chronology": "The pure equal-seed ensemble was requested before new public scores. The seedbag-domain20 combination was requested after observing the original anchor-domain20 submission improve the public score; its choice is leaderboard-adaptive.",
+  "chronology": "Recipes were inspected interactively before this saved script; this is not a preregistered experiment.",
+  "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+  "training_rows": 1460,
+  "test_rows": 1459,
+  "fold_seed": 42,
+  "n_splits": 5,
+  "recipes": {
+    "R5E01_n16_n32_equal": {
+      "R4TC_v2_three_log_n16_s42": 0.5,
+      "R4TC_v2_three_log_n32_s42": 0.5
+    },
+    "R5E02_anchor_raw20": {
+      "R4TC_v2_three_log_n16_s42": 0.8,
+      "R4T_v2_raw_n32_s42": 0.2
+    },
+    "R5E03_anchor_classical15": {
+      "R4TC_v2_three_log_n16_s42": 0.85,
+      "B14_cat_mae_d6_blend": 0.15
+    },
+    "R5E04_anchor_domain20": {
+      "R4TC_v2_three_log_n16_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "R5E05_bagged_classical15": {
+      "R4TC_v2_three_log_n16_s42": 0.425,
+      "R4TC_v2_three_log_n32_s42": 0.425,
+      "B14_cat_mae_d6_blend": 0.15
+    },
+    "R5E06_seed42_17_2026_equal": {
+      "R4TC_v2_three_log_n16_s42": 0.3333333333333333,
+      "R5TP_log_s17": 0.3333333333333333,
+      "R5TP_log_s2026": 0.3333333333333333
+    },
+    "R5E07_seedbag_domain20": {
+      "R4TC_v2_three_log_n16_s42": 0.26666666666666666,
+      "R5TP_log_s17": 0.26666666666666666,
+      "R5TP_log_s2026": 0.26666666666666666,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    }
+  },
+  "calibration_diagnostics": {
+    "input_ids": [
+      "R4TC_v2_three_log_n16_s42",
+      "R5E04_anchor_domain20",
+      "R5E05_bagged_classical15"
+    ],
+    "methods": [
+      "half_bias",
+      "affine_identity_ridge100"
+    ],
+    "outer_operation": "Fit calibration on four saved OOF folds; apply to the fifth.",
+    "limitation": "The calibrator is cross-fitted on saved base OOF predictions. This is calibrator-level validation rather than fully nested validation."
+  },
+  "external_test_labels_used": false,
+  "training_rows_removed": 0,
+  "source_sha256": "aece885daee44ead11464b4e2e74f7e9714176e17e43311527009e9b28b2773f"
+}

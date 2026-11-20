@@ -1,0 +1,19 @@
+{
+  "experiment_count": 46,
+  "base_specification_count": 23,
+  "best": {
+    "experiment_id": "B14_cat_mae_d6_blend",
+    "model": "Fixed log blend",
+    "stage": "round4_boosting",
+    "target": "log",
+    "cv_mean": 0.11728349795320589,
+    "cv_std": 0.01270032635799985,
+    "pooled_oof_log_rmse": 0.11783232800814647,
+    "runtime_seconds": 0.0,
+    "params_json": "{\"components\": [\"B14_cat_mae_d6\", \"F03_robust_c20_g0003\", \"O22_xgboost_d3\"], \"weights\": [0.4, 0.4, 0.2]}"
+  },
+  "reference_F07_cv_mean": 0.11833420818530142,
+  "runtime_seconds": 1204.0686056249542,
+  "failures": [],
+  "promoted": false
+}

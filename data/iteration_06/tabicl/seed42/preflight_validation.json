@@ -1,0 +1,12 @@
+{
+  "source_sha256": "8af0cc406ce5c79f06c51671c9e8a1159a9bcf2dcb4b326167f8386c6e63489d",
+  "syntax_valid": true,
+  "five_disjoint_training_validation_pairs": true,
+  "validation_ids_cover_all1460_exactly_once": true,
+  "input_hashes_valid": true,
+  "anchor_source_hashes_valid": true,
+  "api_constructor_check": "constructor API check passed",
+  "checkpoint_hash_check": "passed separately",
+  "mps_inference_executed": false,
+  "full_experiment_status": "ready, waiting for GPU queue"
+}

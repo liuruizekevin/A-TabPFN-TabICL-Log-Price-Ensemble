@@ -1,0 +1,16 @@
+{
+  "experiment_id": "R6E05_joint_noFP_domain20",
+  "weights": {
+    "R6TP_noY_nofingerprint_s42": 0.8,
+    "R4T_v2_log_n32_s42_domain": 0.2
+  },
+  "candidate_count": 1,
+  "weight_search": false,
+  "selection_limitation": "One explicitly adaptive follow-up chosen after the joint noY/no-fingerprint model scored 0.11065 online versus the existing E08 mixture's 0.11064. Reuse the established 80/20 weights with the new raw-feature component; no weight search. Reused seed42 OOF is development evidence, not an independent holdout or a public-score prediction.",
+  "source_sha256": "abde7a39533cc0ab73f15d20333f5c9103b872bd0ccaf328cf7c047856dccf95",
+  "joint_model_summary_path": "models/round6_tabpfn/results/R6TP_noY_nofingerprint_s42_summary.json",
+  "joint_model_summary_sha256": "72a9d5c215ce9272a0f7b17a45ec69392e50404c559ca9ea08ac73c67680d8a8",
+  "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+  "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+  "fold_seed": 42
+}

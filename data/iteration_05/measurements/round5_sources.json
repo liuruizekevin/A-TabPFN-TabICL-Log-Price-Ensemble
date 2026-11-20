@@ -1,0 +1,182 @@
+{
+  "scope": "Primary-source evidence for a bounded follow-up to the selected original-v2 TabPFN recipe",
+  "local_tabpfn_package_version": "9.2.0",
+  "checkpoint_generation": "TabPFN-v2, three previously hash-verified public checkpoints",
+  "external_test_targets_retrieved": false,
+  "new_experiments_executed_by_research_task": false,
+  "starting_project_observation": {
+    "candidate": "R4TC_v2_three_log_n16_s42",
+    "public_score": 0.11074,
+    "local_evidence": "submissions/Kaggle_Submission_Log.csv",
+    "submission_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2",
+    "rank": 81,
+    "rank_evidence_boundary": "Fresh authenticated-browser observation reported by the parent coordinator; research task did not independently control the browser"
+  },
+  "sources": [
+    {
+      "id": "tabpfn_v2_paper",
+      "author": "Hollmann and colleagues",
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "url": "https://www.nature.com/articles/s41586-024-08328-6",
+      "type": "original_research_paper",
+      "verified_sections": [
+        "Inference details",
+        "Regression details",
+        "TabPFN (PHE)"
+      ],
+      "supports": [
+        "Diversity in inference transformations and feature ordering",
+        "Optional sample subsampling",
+        "Held-out prediction based post hoc ensemble selection"
+      ],
+      "limitations": [
+        "Benchmark results are not House Prices gains",
+        "Does not justify choosing parameters from hidden test targets"
+      ]
+    },
+    {
+      "id": "inference_config_920",
+      "author": "Prior Labs",
+      "url": "https://github.com/PriorLabs/TabPFN/blob/v9.2.0/src/tabpfn/inference_config.py",
+      "type": "versioned_official_implementation",
+      "supports": [
+        "v2 target transform defaults",
+        "Fingerprint feature toggle",
+        "Polynomial feature and sample subsampling options",
+        "Dictionary overrides preserve unspecified defaults"
+      ],
+      "verified_locally": true,
+      "limitations": [
+        "Exposed options are hypotheses to test, not guaranteed improvements"
+      ]
+    },
+    {
+      "id": "ensemble_920",
+      "author": "Prior Labs",
+      "url": "https://github.com/PriorLabs/TabPFN/blob/v9.2.0/src/tabpfn/preprocessing/ensemble.py",
+      "type": "versioned_official_implementation",
+      "supports": [
+        "Cyclic assignment of checkpoint indices",
+        "Pairing of preprocessing and target transformation configurations"
+      ],
+      "verified_locally": true,
+      "project_inference": "16 estimators with three checkpoints creates checkpoint occurrence counts 6, 5 and 5; 24 balances all three counts"
+    },
+    {
+      "id": "regression_docs",
+      "author": "Prior Labs",
+      "url": "https://docs.priorlabs.ai/capabilities/regression",
+      "type": "official_software_documentation",
+      "supports": [
+        "Mean, median and quantile prediction outputs",
+        "main and full predictive-distribution outputs",
+        "Loss-aware posterior point prediction"
+      ],
+      "limitations": [
+        "A posterior median is not automatically optimal for squared log error",
+        "Live documentation may describe capabilities beyond original v2 weights"
+      ]
+    },
+    {
+      "id": "regressor_920",
+      "author": "Prior Labs",
+      "url": "https://github.com/PriorLabs/TabPFN/blob/v9.2.0/src/tabpfn/regressor.py",
+      "type": "versioned_official_implementation",
+      "supports": [
+        "Explicit previous-version constructor",
+        "softmax_temperature and average_before_softmax",
+        "Numerical reproducibility is not unconditional"
+      ],
+      "verified_locally": true
+    },
+    {
+      "id": "inference_tuning_920",
+      "author": "Prior Labs",
+      "url": "https://github.com/PriorLabs/TabPFN/blob/v9.2.0/src/tabpfn/inference_tuning.py",
+      "type": "versioned_official_implementation",
+      "supports": [
+        "RegressorEvalMetrics exposes NLL and CRPS"
+      ],
+      "verified_locally": true,
+      "limitation": "Do not pass rmse to this enum or claim its automatic calibration minimizes House Prices log RMSE"
+    },
+    {
+      "id": "extensions_changelog",
+      "author": "Prior Labs",
+      "url": "https://github.com/PriorLabs/tabpfn-extensions/blob/main/CHANGELOG.md",
+      "type": "official_software_changelog",
+      "supports": [
+        "AutoTabPFNRegressor and TunedTabPFNRegressor were removed in v0.5.0"
+      ],
+      "project_action": "Use explicit current estimator portfolio; do not adopt obsolete extension import paths"
+    },
+    {
+      "id": "nested_cv",
+      "author": "scikit-learn developers",
+      "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html",
+      "type": "official_software_documentation",
+      "supports": [
+        "Selection bias from tuning and evaluating on the same data",
+        "Outer validation for the complete tuning process"
+      ],
+      "limitation": "A second shuffled split of the same dataset is sensitivity analysis, not a new independent dataset"
+    },
+    {
+      "id": "ellis_house_prices",
+      "author": "Carl McBride Ellis",
+      "url": "https://www.kaggle.com/code/carlmcbrideellis/house-prices-using-tabpfn",
+      "type": "original_author_notebook_metadata",
+      "displayed_public_score": 0.11064,
+      "displayed_best_score": 0.11064,
+      "access": "Indexed original-page metadata rechecked; rendered recipe inspection remains documented in Round 4",
+      "limitation": "External result, not independently reproduced in this research task"
+    },
+    {
+      "id": "gunawan_house_prices",
+      "author": "Benedictus Ryu Gunawan",
+      "url": "https://www.kaggle.com/code/benedictusryugunawan/top-1-tf-idf-tabpfn-regressor-guide",
+      "type": "original_author_notebook_metadata",
+      "displayed_public_score": 0.10857,
+      "displayed_public_version": 7,
+      "displayed_best_score": 0.10854,
+      "displayed_best_version": 6,
+      "access": "Indexed original-page metadata rechecked; rendered recipe inspection remains documented in Round 4",
+      "limitations": [
+        "External result, not independently reproduced here",
+        "Uses later checkpoint generation",
+        "Earlier audit found supervised feature selection before CV"
+      ]
+    }
+  ],
+  "access_limitations": [
+    "The official competition evaluation URL returned no extractable body through the web tool; no new metric claim is based on that response",
+    "Targeted CSDN discovery did not establish a new stronger independently attributable House Prices recipe",
+    "No official first- or second-place final winner solution was established for this ongoing Getting Started competition",
+    "Current live documentation and historical notebook package versions must not be treated as interchangeable"
+  ],
+  "local_source_hashes": {
+    "inference_config.py": "9861965d5082b55be5f1182563b7043a4c413783ce87db57a0925fc3ea05cf38",
+    "preprocessing/ensemble.py": "6c795ffa8715aa1a6692eaa99c745cc1209c8cf46564b9fc16b0cb427fa9ebff",
+    "preprocessing/presets.py": "784351f354f2b78601099d5ad64957f9e0fb485c6c30e9c0dac9c52852b04413",
+    "regressor.py": "ba55e8db5fb0ad2e215ed4fabf0992c70accdfbbf955810a9a720f1e66cc8a99",
+    "inference_tuning.py": "0cf2c680f4643c986d1902a503dc50364da8b81ad78af9cebb4ea8b622dbfdf9"
+  },
+  "execution_extension": {
+    "candidate": "three-checkpoint n_estimators=24",
+    "rationale": "Versioned cyclic checkpoint assignment yields 8/8/8 occurrences",
+    "chronology": "Added after the initial eight-candidate portfolio, not part of its original plan",
+    "evidence_status": "Experiment outcome belongs in execution artifacts; research task did not execute the model"
+  },
+  "final_project_observation": {
+    "experiment_id": "R5E08_noY_domain20",
+    "public_score": 0.11064,
+    "prior_public_score": 0.11074,
+    "rank": 79,
+    "primary_evaluations_added": 17,
+    "total_primary_evaluations": 338,
+    "completed_submissions": 28,
+    "source": "docs/kaggle_submissions.json and models/results/summary.json",
+    "status": "Final selected authentic uploaded CSV associated with the recorded Kaggle score",
+    "external_result": false
+  }
+}

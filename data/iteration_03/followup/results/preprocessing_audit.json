@@ -1,0 +1,182 @@
+[
+  {
+    "experiment_id": "F01_robust_c10_g001",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.001
+  },
+  {
+    "experiment_id": "F01_robust_c10_g001",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.001
+  },
+  {
+    "experiment_id": "F01_robust_c10_g001",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.001
+  },
+  {
+    "experiment_id": "F01_robust_c10_g001",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.001
+  },
+  {
+    "experiment_id": "F01_robust_c10_g001",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.001
+  },
+  {
+    "experiment_id": "F02_robust_c10_scale",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.000543067125016893
+  },
+  {
+    "experiment_id": "F02_robust_c10_scale",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0006649051562371763
+  },
+  {
+    "experiment_id": "F02_robust_c10_scale",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0005206086872736951
+  },
+  {
+    "experiment_id": "F02_robust_c10_scale",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.00047042628914584027
+  },
+  {
+    "experiment_id": "F02_robust_c10_scale",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0008297970576781946
+  },
+  {
+    "experiment_id": "F03_robust_c20_g0003",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0003
+  },
+  {
+    "experiment_id": "F03_robust_c20_g0003",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0003
+  },
+  {
+    "experiment_id": "F03_robust_c20_g0003",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0003
+  },
+  {
+    "experiment_id": "F03_robust_c20_g0003",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0003
+  },
+  {
+    "experiment_id": "F03_robust_c20_g0003",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "RobustScaler",
+    "effective_gamma": 0.0003
+  },
+  {
+    "experiment_id": "F04_standard_c10_scale",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "StandardScaler",
+    "effective_gamma": 0.008658256880733949
+  },
+  {
+    "experiment_id": "F04_standard_c10_scale",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "StandardScaler",
+    "effective_gamma": 0.008656529415114756
+  },
+  {
+    "experiment_id": "F04_standard_c10_scale",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "StandardScaler",
+    "effective_gamma": 0.008658692436926525
+  },
+  {
+    "experiment_id": "F04_standard_c10_scale",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "StandardScaler",
+    "effective_gamma": 0.008658256880733947
+  },
+  {
+    "experiment_id": "F04_standard_c10_scale",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "train_validation_disjoint": true,
+    "scaler_class": "StandardScaler",
+    "effective_gamma": 0.008654402733266507
+  }
+]

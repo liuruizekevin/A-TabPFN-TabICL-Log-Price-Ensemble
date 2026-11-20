@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "experiment_count": 8,
+  "all_1460_rows_retained": true,
+  "oof_metrics_recomputed": true,
+  "all_8_candidate_submissions_valid": true,
+  "all_8_reloaded_models_exactly_match_in_memory_predictions": true
+}

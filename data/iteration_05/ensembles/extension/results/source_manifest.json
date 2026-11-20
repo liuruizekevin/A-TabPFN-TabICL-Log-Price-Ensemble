@@ -1,0 +1,32 @@
+[
+  {
+    "source_id": "R5TP_log_noYtransform_s42",
+    "role": "OOF",
+    "path": "models/round5_tabpfn/results/R5TP_log_noYtransform_s42_oof.csv",
+    "sha256": "887fdde52f334ad16adf5dbe1cd8fbfba4491506f26e9461044ca2b4ba7b5d5e"
+  },
+  {
+    "source_id": "R5TP_log_noYtransform_s42",
+    "role": "full-fit test logs",
+    "path": "models/round5_tabpfn/results/R5TP_log_noYtransform_s42_test_logs.csv",
+    "sha256": "8e52f32b6cfe32c765d6080057c8f894a402568f110603091811c00ae30664d4"
+  },
+  {
+    "source_id": "R4T_v2_log_n32_s42_domain",
+    "role": "OOF",
+    "path": "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_oof.csv",
+    "sha256": "2ed4dad6d4dce56502421eda48a6b2106683ad00fe3ea46247a7f29c151c4c1f"
+  },
+  {
+    "source_id": "R4T_v2_log_n32_s42_domain",
+    "role": "full-fit test logs",
+    "path": "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_test_logs.csv",
+    "sha256": "63a16581d29ced3f88a753a30d2de45491ef4a06d86441114a4fb10ea0a60e2d"
+  },
+  {
+    "source_id": "R4TC_v2_three_log_n16_s42",
+    "role": "OOF",
+    "path": "models/round4_tabpfn_checkpoints/results/R4TC_v2_three_log_n16_s42_oof.csv",
+    "sha256": "fbcf0daf672e35958e773f4732894718428db5e0163c0efc68ff596bab44615a"
+  }
+]

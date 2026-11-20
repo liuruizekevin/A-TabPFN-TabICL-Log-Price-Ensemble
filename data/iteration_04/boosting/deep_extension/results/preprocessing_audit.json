@@ -1,0 +1,47 @@
+[
+  {
+    "experiment_id": "B28_cat_mae_d7",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B28_cat_mae_d7",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B28_cat_mae_d7",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B28_cat_mae_d7",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B28_cat_mae_d7",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  }
+]

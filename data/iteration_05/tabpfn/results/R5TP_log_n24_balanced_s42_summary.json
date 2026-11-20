@@ -1,0 +1,131 @@
+{
+  "model": "TabPFN-v2 three-checkpoint ensemble",
+  "n_estimators": 24,
+  "device": "mps",
+  "n_preprocessing_jobs": 2,
+  "torch_num_threads": 12,
+  "fold_seed": 42,
+  "n_splits": 5,
+  "rows": 1460,
+  "features": 79,
+  "feature_recipe": "raw",
+  "filter_train": false,
+  "target_scale": 100000.0,
+  "inference_config": {},
+  "checkpoint_manifest": [
+    {
+      "filename": "tabpfn-v2-regressor.ckpt",
+      "bytes": 44390977,
+      "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-09gpqh39.ckpt",
+      "bytes": 44398487,
+      "sha256": "86a5b6832fdaeae3bb50eb2fbc349198b43baa965dcda9ef3b8e10fb809c1551",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-09gpqh39.ckpt"
+    },
+    {
+      "filename": "tabpfn-v2-regressor-2noar4o2.ckpt",
+      "bytes": 44398487,
+      "sha256": "e2d4a06eeb4521dee71fc68d819e277ffb97614cc3695dc9ac3030dd9da36c21",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg/resolve/main/tabpfn-v2-regressor-2noar4o2.ckpt"
+    }
+  ],
+  "library_version": "9.2.0",
+  "torch_version": "2.14.1",
+  "python_version": "3.12.7",
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "source_sha256": "4aca59057f19fb525bd4a7d27e6a81a271a01aed379bee7d110bf9b1e8fbc74d",
+  "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+  "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+  },
+  "target_summary": "predict default mean in the chosen transformed target space",
+  "predictive_summary": "mean",
+  "secondary_summary": "Median and 50/50 mean-median log predictions are saved as diagnostic comparisons from the same forward pass.",
+  "preprocessing": "A fresh TabPFN model fits internal preprocessing on each training fold only.",
+  "selection_limitation": "Frozen development folds reused after round4; candidate selection is not an unbiased generalization estimate.",
+  "source": "https://github.com/PriorLabs/TabPFN",
+  "attribution": "Built with PriorLabs-TabPFN.",
+  "id": "R5TP_log_n24_balanced_s42",
+  "target": "log",
+  "random_state": 42,
+  "hypothesis": "Twenty-four total inference members balance the three checkpoints at 8:8:8 rather than the baseline 6:5:5 allocation, while retaining log targets and seed 42.",
+  "extension_launcher_sha256": "700f5714d4d91c98dbeb510b4a746e49091a0feeb9328d5822d31c0ee0fcfe95",
+  "planned_checkpoint_member_counts": [
+    8,
+    8,
+    8
+  ],
+  "follow_up_status": "One adaptive follow-up declared after the initial eight completed configurations; not part of their frozen plan.",
+  "status": "complete",
+  "fold_scores": [
+    {
+      "fold": 1,
+      "log_rmse": 0.11728194942879137,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 23.912799500045367
+    },
+    {
+      "fold": 2,
+      "log_rmse": 0.10310005873492294,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 23.584564583026804
+    },
+    {
+      "fold": 3,
+      "log_rmse": 0.15666648428596666,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 23.396214042091742
+    },
+    {
+      "fold": 4,
+      "log_rmse": 0.10856713609165865,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 23.258241709088907
+    },
+    {
+      "fold": 5,
+      "log_rmse": 0.0986906454445338,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "seconds": 26.363564874976873
+    }
+  ],
+  "cv_mean": 0.11686125479717469,
+  "cv_std": 0.023307548375149142,
+  "pooled_oof_log_rmse": 0.11870613430559568,
+  "runtime_seconds": 174.5736254591029,
+  "submission_sha256": "fd2fb5a58585328b2ab980eeb42e06733699627e190b295cc61ac7f22626fdf2",
+  "artifact_sha256": {
+    "results/R5TP_log_n24_balanced_s42_fold_scores.csv": "3171c85c9a195b1e06e27f5aa67967e296b5967ab5c7c6894ae1b3118cb19ee6",
+    "results/R5TP_log_n24_balanced_s42_oof.csv": "4bfe7b47d2a73511909036dfe206db79b5b93f4046009442461c61dbd0121b57",
+    "results/R5TP_log_n24_balanced_s42_test_logs.csv": "448505030ecba8e5ec7a949b210ebffb7dfa61239bd3711fffa09915a7c6df08",
+    "submissions/R5TP_log_n24_balanced_s42.csv": "fd2fb5a58585328b2ab980eeb42e06733699627e190b295cc61ac7f22626fdf2"
+  },
+  "secondary_metrics": {
+    "median": {
+      "cv_mean": 0.12180157589759251,
+      "cv_std": 0.03395360695876955,
+      "pooled_oof_log_rmse": 0.12553048168291822
+    },
+    "mean_median": {
+      "cv_mean": 0.11911304679334264,
+      "cv_std": 0.028312880932330635,
+      "pooled_oof_log_rmse": 0.12177525732981927
+    }
+  }
+}

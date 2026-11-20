@@ -1,0 +1,90 @@
+{
+  "status": "complete",
+  "selected_anchor": "R4TC_v2_three_log_n16_s42",
+  "anchor_public_score_pre_round5": 0.11074,
+  "new_fixed_recipes": 7,
+  "calibration_diagnostics": 6,
+  "candidate_ids_in_local_priority_order": [
+    "R5E05_bagged_classical15",
+    "R5E03_anchor_classical15",
+    "R5E04_anchor_domain20",
+    "R5E06_seed42_17_2026_equal",
+    "R5E07_seedbag_domain20"
+  ],
+  "local_best_candidate": {
+    "experiment_id": "R5E05_bagged_classical15",
+    "weights": {
+      "R4TC_v2_three_log_n16_s42": 0.425,
+      "R4TC_v2_three_log_n32_s42": 0.425,
+      "B14_cat_mae_d6_blend": 0.15
+    },
+    "expanded_weights": {
+      "R4TC_v2_three_log_n16_s42": 0.425,
+      "R4TC_v2_three_log_n32_s42": 0.425,
+      "B14_cat_mae_d6": 0.06,
+      "F03_robust_c20_g0003": 0.06,
+      "O22_xgboost_d3": 0.03
+    },
+    "cv_mean": 0.1156900731975659,
+    "cv_std": 0.021644644822669864,
+    "pooled_oof_log_rmse": 0.11729870227780774,
+    "fold_scores": [
+      0.11743121669355557,
+      0.10275668539681983,
+      0.15218001895899,
+      0.10814786060762542,
+      0.0979345843308387
+    ],
+    "public_score": null,
+    "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+    "largest_squared_error_reductions": [
+      {
+        "Id": 1299,
+        "squared_error_reduction": 0.2177135291237453
+      },
+      {
+        "Id": 524,
+        "squared_error_reduction": 0.1482162625740231
+      },
+      {
+        "Id": 1424,
+        "squared_error_reduction": 0.021406572494663545
+      },
+      {
+        "Id": 969,
+        "squared_error_reduction": 0.017434434666619536
+      },
+      {
+        "Id": 589,
+        "squared_error_reduction": 0.015199980256235313
+      }
+    ],
+    "largest_squared_error_increases": [
+      {
+        "Id": 1183,
+        "squared_error_increase": 0.04459062732460842
+      },
+      {
+        "Id": 496,
+        "squared_error_increase": 0.03282378742475145
+      },
+      {
+        "Id": 917,
+        "squared_error_increase": 0.02577747233980704
+      },
+      {
+        "Id": 1387,
+        "squared_error_increase": 0.01587451749030114
+      },
+      {
+        "Id": 198,
+        "squared_error_increase": 0.012606195221183959
+      }
+    ],
+    "submission_path": "models/round5_ensembles/submissions/R5E05_bagged_classical15.csv",
+    "submission_sha256": "bd7c7810c3b677946e7d8ceb64f0b2ec98a6e740ef393970a3156ee10d09c9de"
+  },
+  "all_calibrations_failed_to_improve_their_uncalibrated_source": true,
+  "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+  "attribution": "Built with PriorLabs-TabPFN."
+}

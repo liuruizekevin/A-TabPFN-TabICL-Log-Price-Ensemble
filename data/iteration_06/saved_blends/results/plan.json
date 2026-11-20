@@ -1,0 +1,68 @@
+{
+  "recipes": {
+    "R6E01_e08_classical15": {
+      "R5E08_noY_domain20": 0.85,
+      "B14_cat_mae_d6_blend": 0.15
+    },
+    "R6E02_noY_domain50": {
+      "R5TP_log_noYtransform_s42": 0.5,
+      "R4T_v2_log_n32_s42_domain": 0.5
+    },
+    "R6E03_e08_boxcox01520": {
+      "R5E08_noY_domain20": 0.8,
+      "R5TP_boxcox015_s42": 0.2
+    },
+    "R6E04_e08_nofingerprint20": {
+      "R5E08_noY_domain20": 0.8,
+      "R5TP_log_nofingerprint_s42": 0.2
+    }
+  },
+  "shortlist": [
+    "R6E01_e08_classical15",
+    "R6E02_noY_domain50"
+  ],
+  "chronology": "Four recipes were inspected during the round6 audit before saving this reproduction script; not preregistration.",
+  "baseline": "R5E08_noY_domain20",
+  "baseline_recorded_public_score_before_round6": 0.11064,
+  "baseline_development_metrics": {
+    "pooled_oof_log_rmse": 0.11681646600019883,
+    "cv_mean": 0.1153611156686984,
+    "cv_std": 0.02055175541312716,
+    "fold_scores": [
+      0.11768503899090146,
+      0.10245859624451112,
+      0.14983318165515191,
+      0.1080968314849112,
+      0.09873192996801629
+    ]
+  },
+  "source_sha256": "c79dc69efafc60ba7cee980818ae216a2634d42577614d3b8ca3e12620e6968a",
+  "data_manifest_path": "data/source_manifest.json",
+  "data_manifest_sha256": "5b148d8a97c396ad0e92ae2f9e6817fcbba95f99dac2c9475b89d0c4ca84868e",
+  "train_sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+  "test_sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e",
+  "fold_seed": 42,
+  "classical_decomposition_oof_verified": [
+    {
+      "id": "B14_cat_mae_d6",
+      "weight": 0.4,
+      "path": "models/round4_boosting/results/oof_predictions.csv",
+      "sha256": "4c276a1a7a1b41cfff9d2c1d691c4ebc6d76ea9862ad4db6c881e0eae7e1bce3"
+    },
+    {
+      "id": "F03_robust_c20_g0003",
+      "weight": 0.4,
+      "path": "models/followup/results/oof_predictions.csv",
+      "sha256": "4ead66dfa8636cab4f32d67801f11c4ed286c35e030eca1cdf4cabe49ce9ee28"
+    },
+    {
+      "id": "O22_xgboost_d3",
+      "weight": 0.2,
+      "path": "models/optimization/results/oof_predictions.csv",
+      "sha256": "31eff90ed5126632c306f3c7eb8c21fedf46554384020dead62b0eadc5bf7f71"
+    }
+  ],
+  "weight_grid": false,
+  "training_rows_removed": 0,
+  "external_test_labels_used": false
+}

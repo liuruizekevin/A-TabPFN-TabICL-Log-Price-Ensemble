@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "candidate_count": 4,
+  "checks": [
+    {
+      "id": "R6TP_noY_domain_s42",
+      "rows_oof": 1460,
+      "rows_submission": 1459,
+      "fold_coverage": "all1460 exactly once",
+      "metrics_recomputed": true,
+      "artifact_hashes_match": true,
+      "six_fitted_configs_audited": true
+    },
+    {
+      "id": "R6TP_noY_nofingerprint_s42",
+      "rows_oof": 1460,
+      "rows_submission": 1459,
+      "fold_coverage": "all1460 exactly once",
+      "metrics_recomputed": true,
+      "artifact_hashes_match": true,
+      "six_fitted_configs_audited": true
+    },
+    {
+      "id": "R6TP_noY_poly50_s42",
+      "rows_oof": 1460,
+      "rows_submission": 1459,
+      "fold_coverage": "all1460 exactly once",
+      "metrics_recomputed": true,
+      "artifact_hashes_match": true,
+      "six_fitted_configs_audited": true
+    },
+    {
+      "id": "R6TP_noY_subsample090_s42",
+      "rows_oof": 1460,
+      "rows_submission": 1459,
+      "fold_coverage": "all1460 exactly once",
+      "metrics_recomputed": true,
+      "artifact_hashes_match": true,
+      "six_fitted_configs_audited": true
+    }
+  ],
+  "completed_candidate_reentry_verified": true
+}

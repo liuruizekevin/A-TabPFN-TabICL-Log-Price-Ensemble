@@ -1,0 +1,22 @@
+{
+  "source_sha256": "fc0db9a51f20650465dd90effe4b236e9300789895362cae6d66ba97006d9dc2",
+  "evaluation_count": 12,
+  "upload_count": 8,
+  "all_scores_bound_to_exact_scored_files": true,
+  "output_sha256": {
+    "online_best_submission.csv": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "final_submission.csv": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "reproducible_improvement_submission.csv": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+    "online_best_summary.json": "8de6beafb0015b289ca72423f8a4d27c9d6e22aed7b64f717ad2cac5fe6e64d8",
+    "validated_alternative_summary.json": "7c84ba72a573dfc2d68c4ac429e392404a990f1d75e197b0208519aad5a323df",
+    "experiment_comparison.csv": "f35d6e914150493cbddbc5408a165b467e0b229a9cdfafda145ee9dea4b7920b",
+    "selection_comparison.csv": "b2ff65135f964d587ac7367ddc12ee5355901a0e67008cf056fe61734441a30f",
+    "online_results.json": "da666386eed9d3815314361bc133f6bc5a0e2b52c4c8f69f16db1db3611ee9f0",
+    "online_results.csv": "52e38fb372c1845512deb4c3c42f4073b7ef30a614a46b9c50dbd67507f7f6a0",
+    "round6_research_sources.md": "4ecf3d35920b744992559421caa413dc6123a10a6594526dace2a26312285cc6",
+    "round6_existing_artifact_audit.md": "a7b954032801cf7d59e6057695a477ba0153735702a1663eb680ad40c3888237",
+    "round6_code_review.md": "6e3a5830b6d27a3f4d3833da1e02269681f48397eb9365d5f7f211e00175b8df",
+    "summary.json": "5e42184d779ed708d882741e627006965a56e52fd8846eb4122ffc39ec5479c0",
+    "source_manifest.json": "be6fac765025b89c73d8dfdac85da6bff557a2935adde723bc6f409863303b5e"
+  }
+}

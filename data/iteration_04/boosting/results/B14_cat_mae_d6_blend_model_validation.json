@@ -1,0 +1,17 @@
+{
+  "experiment_id": "B14_cat_mae_d6_blend",
+  "model_path": "models/round4_boosting/candidate_models/B14_cat_mae_d6_blend.joblib",
+  "model_sha256": "82ce90e2bd42f09e212630a29b5e9bef2d996cc1faf3dfb707dd43d3a21512af",
+  "components": [
+    "models/round4_boosting/candidate_models/B14_cat_mae_d6.joblib",
+    "models/followup/candidate_models/F03_robust_c20_g0003.joblib",
+    "models/optimization/candidate_models/O22_xgboost_d3.joblib"
+  ],
+  "weights": [
+    0.4,
+    0.4,
+    0.2
+  ],
+  "arithmetic": "Termwise scalar multiplication, then left-to-right addition, preserving the exported arithmetic dtypes.",
+  "reload_max_absolute_price_difference": 5.820766091346741e-11
+}

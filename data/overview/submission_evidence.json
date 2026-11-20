@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "original_path": "submissions/kaggle_evidence/01_baseline_submission.jpg",
+      "sha256": "e1b6303fe993804584d3885e8d4550359a45c5f439082a426acee9106b1bfbc5",
+      "width": 601,
+      "height": 914,
+      "iteration": 1,
+      "submission_order": 1,
+      "experiment_id": "E01_raw_ridge",
+      "score": 0.14638,
+      "aliases": [
+        "submissions/kaggle_evidence/01_baseline_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/02_phase1_submission.jpg",
+      "sha256": "1e2819f112ce70feedb544879b03155cee279a73287a4aa343e7c3a273f920f5",
+      "width": 601,
+      "height": 914,
+      "iteration": 1,
+      "submission_order": 2,
+      "experiment_id": "E11_catboost_depth5",
+      "score": 0.12371,
+      "aliases": [
+        "submissions/kaggle_evidence/02_phase1_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/03_phase2_blend_submission.jpg",
+      "sha256": "ce733c34dae48f0de7056087838179ccd068a4369c0b1bd93187844d22974111",
+      "width": 601,
+      "height": 914,
+      "iteration": 2,
+      "submission_order": 3,
+      "experiment_id": "O26_cat_svr_xgb",
+      "score": 0.11844,
+      "aliases": [
+        "submissions/kaggle_evidence/03_phase2_blend_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/04_train_filter_submission.jpg",
+      "sha256": "97256cf10d871f9b06374dcd258c3b1fa6a0c9f8714171fe70b8d391b01961f7",
+      "width": 601,
+      "height": 914,
+      "iteration": 2,
+      "submission_order": 4,
+      "experiment_id": "O23_native_train_filter",
+      "score": 0.12091,
+      "aliases": [
+        "submissions/kaggle_evidence/04_train_filter_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/08_conservative_submission.jpg",
+      "sha256": "de1605ffd5c65d22387f0831a929149eca51b9e8d642957bc3236b659b1f4e64",
+      "width": 601,
+      "height": 914,
+      "iteration": 2,
+      "submission_order": 8,
+      "experiment_id": "O27_conservative_phase1_svr",
+      "score": 0.12053,
+      "aliases": [
+        "submissions/kaggle_evidence/08_conservative_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/05_F06_submission.jpg",
+      "sha256": "4d1c29f2d1e03a42a3591c84fc9c2d6c656e9ece1d067f809fde1eca44a67b3b",
+      "width": 601,
+      "height": 914,
+      "iteration": 3,
+      "submission_order": 5,
+      "experiment_id": "F06_blend_robust_c10_scale",
+      "score": 0.11872,
+      "aliases": [
+        "submissions/kaggle_evidence/05_F06_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/06_F05_submission.jpg",
+      "sha256": "308fb07907de563d97d93869c1e1bf96d0d1487333a61b7ceb681d8a12ad4094",
+      "width": 601,
+      "height": 914,
+      "iteration": 3,
+      "submission_order": 6,
+      "experiment_id": "F05_blend_robust_c10_g001",
+      "score": 0.11923,
+      "aliases": [
+        "submissions/kaggle_evidence/06_F05_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/07_F07_submission.jpg",
+      "sha256": "ac0a5327b956bc196e8cac3ef927f4a091674488ac5844378404140e4eaf7119",
+      "width": 601,
+      "height": 914,
+      "iteration": 3,
+      "submission_order": 7,
+      "experiment_id": "F07_blend_robust_c20_g0003",
+      "score": 0.11842,
+      "aliases": [
+        "submissions/kaggle_evidence/07_F07_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/10_R4L20_submission.jpg",
+      "sha256": "690627bde79041203c0a88f52f8e6244b54dc7f6ef792a95d02ea8aa14668cdf",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 9,
+      "experiment_id": "R4L20_poweryeo-johnson_gscale_blend",
+      "score": 0.11928,
+      "aliases": [
+        "submissions/kaggle_evidence/10_R4L20_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/11_R4L24_submission.jpg",
+      "sha256": "90a2f04ee631a82a108f7bcd9b0f6235419eaee25985c78e62c9a71b8b5544da",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 10,
+      "experiment_id": "R4L24_quantile10_blend",
+      "score": 0.11839,
+      "aliases": [
+        "submissions/kaggle_evidence/11_R4L24_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/12_TabPFN_log8_submission.jpg",
+      "sha256": "895d65c17de7c063d4870cfbf6ac49d037fa7b3af5d0d64aa12a677f8b4c2430",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 11,
+      "experiment_id": "R4T_v2_log_n8_s42",
+      "score": 0.11173,
+      "aliases": [
+        "submissions/kaggle_evidence/12_TabPFN_log8_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/13_TabPFN_raw32_submission.jpg",
+      "sha256": "6c12c1875fd5969750a24812deeb90ace08982c718cb6341c686f6e6b5a005e7",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 12,
+      "experiment_id": "R4T_v2_raw_n32_s42",
+      "score": 0.11176,
+      "aliases": [
+        "submissions/kaggle_evidence/13_TabPFN_raw32_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/14_TabPFN_log32_submission.jpg",
+      "sha256": "92d4a10be22eb89c90d7cd4f0eca113582bdc5e7897ab30c5e31b0a45fc46934",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 13,
+      "experiment_id": "R4T_v2_log_n32_s42",
+      "score": 0.11123,
+      "aliases": [
+        "submissions/kaggle_evidence/14_TabPFN_log32_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/15_TabPFN_boost_blend_submission.jpg",
+      "sha256": "e1aa7429947361aaefafcf728929e0b6b728f9c18cec13bf8fe30380fdd0287f",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 14,
+      "experiment_id": "BP_R4T_v2_log_n32_s42_B14_cat_mae_d6_blend_w25",
+      "score": 0.11139,
+      "aliases": [
+        "submissions/kaggle_evidence/15_TabPFN_boost_blend_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/16_TabPFN_domain32_submission.jpg",
+      "sha256": "d9fd034fe1c41c1b8102286e1744f58759723b6c97bb679516f5cb6050448c13",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 15,
+      "experiment_id": "R4T_v2_log_n32_s42_domain",
+      "score": 0.11153,
+      "aliases": [
+        "submissions/kaggle_evidence/16_TabPFN_domain32_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/17_TabPFN_three16_submission.jpg",
+      "sha256": "deba0d33528adfefd8aeb08c8a0dd18b2d978a26c64db22aece3b19369edb4a9",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 16,
+      "experiment_id": "R4TC_v2_three_log_n16_s42",
+      "score": 0.11074,
+      "aliases": [
+        "submissions/kaggle_evidence/17_TabPFN_three16_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/18_TabPFN_log64_submission.jpg",
+      "sha256": "679425c7b74fa4dd825a95fd14a1e3e332c26a14bc3b75a486e623f2e791b9c5",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 17,
+      "experiment_id": "R4T_v2_log_n64_s42",
+      "score": 0.11111,
+      "aliases": [
+        "submissions/kaggle_evidence/18_TabPFN_log64_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/19_TabPFN_three32_submission.jpg",
+      "sha256": "3041b23ebfbe24d08aaa020cca4fec9253037835c8baf2e4a04738deaa157f8a",
+      "width": 1280,
+      "height": 720,
+      "iteration": 4,
+      "submission_order": 18,
+      "experiment_id": "R4TC_v2_three_log_n32_s42",
+      "score": 0.11087,
+      "aliases": [
+        "submissions/kaggle_evidence/19_TabPFN_three32_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/21_R5E03_submission.jpg",
+      "sha256": "8196f862d1a2b319ef296d78e348ca64fafb255bcfb628fbb0d9f21c013d1539",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 19,
+      "experiment_id": "R5E03_anchor_classical15",
+      "score": 0.1108,
+      "aliases": [
+        "submissions/kaggle_evidence/21_R5E03_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/22_R5E04_submission.jpg",
+      "sha256": "fdb66389385a75cea36496f30296dbd28fa96879ba538c022a815d991d0d5b04",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 20,
+      "experiment_id": "R5E04_anchor_domain20",
+      "score": 0.11066,
+      "aliases": [
+        "submissions/kaggle_evidence/22_R5E04_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/24_R5TP_s2026_submission.jpg",
+      "sha256": "401909e06d3318819bf14bac7a86d270251e8eec1645e4d783e8eec1d1b5bb33",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 21,
+      "experiment_id": "R5TP_log_s2026",
+      "score": 0.11112,
+      "aliases": [
+        "submissions/kaggle_evidence/24_R5TP_s2026_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/25_R5E06_submission.jpg",
+      "sha256": "1906f4d598687fca776938dca01311702e96041e5cfb4d4601e8c9896eb75405",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 22,
+      "experiment_id": "R5E06_seed42_17_2026_equal",
+      "score": 0.11096,
+      "aliases": [
+        "submissions/kaggle_evidence/25_R5E06_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/26_R5TP_boxcox015_submission.jpg",
+      "sha256": "ff7185268ea3d36e53dfb315abe40c6264bd000dc5e29ac0ad8896cd7804e254",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 23,
+      "experiment_id": "R5TP_boxcox015_s42",
+      "score": 0.11074,
+      "aliases": [
+        "submissions/kaggle_evidence/26_R5TP_boxcox015_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/27_R5TP_boxcox050_submission.jpg",
+      "sha256": "5533a7a197d5c6b73de0f86e47b6c7522b4155eb081d46422a5b6a361d70ccd2",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 24,
+      "experiment_id": "R5TP_boxcox050_s42",
+      "score": 0.11092,
+      "aliases": [
+        "submissions/kaggle_evidence/27_R5TP_boxcox050_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/28_R5TP_noYtransform_submission.jpg",
+      "sha256": "5f3ea7b7b291c586a707f8a21a0bd9a819ba5984dc5a8c4e02288982ef203db7",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 25,
+      "experiment_id": "R5TP_log_noYtransform_s42",
+      "score": 0.11071,
+      "aliases": [
+        "submissions/kaggle_evidence/28_R5TP_noYtransform_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/29_R5TP_nofingerprint_submission.jpg",
+      "sha256": "2da83d1f9af17d79ac717262928f78d1046785bb33d0ae1dfe3e2fe5cd849d0f",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 26,
+      "experiment_id": "R5TP_log_nofingerprint_s42",
+      "score": 0.11074,
+      "aliases": [
+        "submissions/kaggle_evidence/29_R5TP_nofingerprint_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/30_R5E08_submission.jpg",
+      "sha256": "ddfa3bba0d161949126173456febf692405dcc629220af9d4f6ef916ddae29e2",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 27,
+      "experiment_id": "R5E08_noY_domain20",
+      "score": 0.11064,
+      "aliases": [
+        "submissions/kaggle_evidence/30_R5E08_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/kaggle_evidence/31_R5TP_n24_submission.jpg",
+      "sha256": "d5b63fc4886cec42e3ee3803f012f4ac2646bd37e294c59656f346019e15bda3",
+      "width": 1280,
+      "height": 720,
+      "iteration": 5,
+      "submission_order": 28,
+      "experiment_id": "R5TP_log_n24_balanced_s42",
+      "score": 0.11072,
+      "aliases": [
+        "submissions/kaggle_evidence/31_R5TP_n24_submission.jpg"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/01_R6E01_score.png",
+      "sha256": "6610a7a3a5e3d469b3197f0d87a6b711dc883eaa5e1c9dcbbf18ed9ae7cf1bce",
+      "width": 1280,
+      "height": 720,
+      "iteration": 6,
+      "submission_order": 29,
+      "experiment_id": "R6E01_e08_classical15",
+      "score": 0.11075,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/01_R6E01_score.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/02_R6E02_score.png",
+      "sha256": "2c8ad4f1cec80c7b227c35d786ccd4aa0e03b0b3896d4c8dd6211f34668b5fa6",
+      "width": 1280,
+      "height": 720,
+      "iteration": 6,
+      "submission_order": 30,
+      "experiment_id": "R6E02_noY_domain50",
+      "score": 0.11075,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/02_R6E02_score.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/03_R6TP_noFP_score.png",
+      "sha256": "be161b1c374a6c93ff62e2e47922b857b1220515b34c8af2c4dcd58dfe8d7136",
+      "width": 1280,
+      "height": 720,
+      "iteration": 6,
+      "submission_order": 31,
+      "experiment_id": "R6TP_noY_nofingerprint_s42",
+      "score": 0.11065,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/03_R6TP_noFP_score.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/04_R6E05_improvement.png",
+      "sha256": "226030e2a54868dc42546c4063e574f8ba870c92753fd8f3ec6ca363045c5452",
+      "width": 1280,
+      "height": 720,
+      "iteration": 6,
+      "submission_order": 32,
+      "experiment_id": "R6E05_joint_noFP_domain20",
+      "score": 0.1106,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/04_R6E05_improvement.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/05_R6TP_domain_score.png",
+      "sha256": "520817a8472efe8e30e0f59a36420544e3dd0ea9d77d85c2de8d4fbdb492bf6f",
+      "width": 668,
+      "height": 929,
+      "iteration": 6,
+      "submission_order": 33,
+      "experiment_id": "R6TP_noY_domain_s42",
+      "score": 0.11111,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/05_R6TP_domain_score.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/06_R6TP_subsample_improvement.png",
+      "sha256": "6ad0fb67194a617ee1c29ee9bf9c8dae6d6f00e0b9dda1e8eb6a1552106f278d",
+      "width": 668,
+      "height": 929,
+      "iteration": 6,
+      "submission_order": 34,
+      "experiment_id": "R6TP_noY_subsample090_s42",
+      "score": 0.11054,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/06_R6TP_subsample_improvement.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/07_R6ICL_improvement.png",
+      "sha256": "507195ecf2457e986acf6f0146668869bfc3ca51c594bfe4140d7067beef4134",
+      "width": 668,
+      "height": 929,
+      "iteration": 6,
+      "submission_order": 35,
+      "experiment_id": "R6ICL_anchor80_tabicl20",
+      "score": 0.1097,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/07_R6ICL_improvement.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/08_R6E06_score.png",
+      "sha256": "94da9d0b290508896430ab2641f564291c00dd3c1f18d2b49d6ac9ed54b650df",
+      "width": 668,
+      "height": 929,
+      "iteration": 6,
+      "submission_order": 36,
+      "experiment_id": "R6E06_subsample_domain20",
+      "score": 0.11048,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/08_R6E06_score.png"
+      ]
+    },
+    {
+      "original_path": "submissions/round6_optimization/kaggle_evidence/00_start_leaderboard.png",
+      "sha256": "928f07d8858d24e729e8cbb738edb3b53f5bfc77312c70f953857aa0a0768189",
+      "width": 1280,
+      "height": 720,
+      "iteration": 6,
+      "submission_order": 99,
+      "experiment_id": "Leaderboard record",
+      "score": null,
+      "aliases": [
+        "submissions/round6_optimization/kaggle_evidence/00_start_leaderboard.png"
+      ]
+    },
+    {
+      "original_path": "submissions/report_assets/09_final_leaderboard.png",
+      "sha256": "78bf34123a85c98c391337a9f6e2cc888789ca50e95c40ba71bfb81e2be4d2b1",
+      "width": 668,
+      "height": 929,
+      "iteration": 6,
+      "submission_order": 99,
+      "experiment_id": "Leaderboard record",
+      "score": null,
+      "aliases": [
+        "submissions/report_assets/09_final_leaderboard.png",
+        "submissions/round6_optimization/kaggle_evidence/09_final_leaderboard.png"
+      ]
+    },
+    {
+      "original_path": "submissions/report_assets/final_leaderboard.png",
+      "sha256": "d6edbd90a191f9c415fbecf098d1d5a75c7255089ea846575394841849fffe02",
+      "width": 3372,
+      "height": 1248,
+      "iteration": 6,
+      "submission_order": 99,
+      "experiment_id": "Leaderboard record",
+      "score": null,
+      "aliases": [
+        "submissions/report_assets/final_leaderboard.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "complete",
+  "spec": {
+    "id": "R6ICL_v2_raw79_log_n8_s42",
+    "model": "TabICLv2",
+    "target": "natural-log SalePrice",
+    "prediction_summary": "mean",
+    "feature_recipe": "79 original predictors, excluding Id",
+    "model_parameters": {
+      "n_estimators": 8,
+      "norm_methods": [
+        "none",
+        "power"
+      ],
+      "feat_shuffle_method": "latin",
+      "outlier_threshold": 4.0,
+      "batch_size": 8,
+      "kv_cache": false,
+      "model_path": "build/tabicl-checkpoints/tabicl-regressor-v2-20260212.ckpt",
+      "allow_auto_download": false,
+      "checkpoint_version": "tabicl-regressor-v2-20260212.ckpt",
+      "device": "mps",
+      "use_amp": false,
+      "use_fa3": false,
+      "offload_mode": "auto",
+      "random_state": 42,
+      "n_jobs": 12,
+      "verbose": false
+    },
+    "torch_num_threads": 12,
+    "training_rows": 1460,
+    "n_splits": 5,
+    "fold_seed": 42,
+    "checkpoint": {
+      "local_path": "build/tabicl-checkpoints/tabicl-regressor-v2-20260212.ckpt",
+      "filename": "tabicl-regressor-v2-20260212.ckpt",
+      "repository": "jingang/TabICL",
+      "revision": "4dcd344ece2c00be9e831fdd35bed57b5ad83e19",
+      "url": "https://huggingface.co/jingang/TabICL/resolve/4dcd344ece2c00be9e831fdd35bed57b5ad83e19/tabicl-regressor-v2-20260212.ckpt",
+      "sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+      "bytes": 114324594,
+      "license": "BSD-3-Clause",
+      "license_source": "https://huggingface.co/jingang/TabICL"
+    },
+    "versions": {
+      "tabicl": "2.2.0",
+      "psutil": "7.2.2",
+      "torch": "2.14.1",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "einops": "0.8.2",
+      "tqdm": "4.70.1",
+      "huggingface-hub": "2.2.0",
+      "pandas": "3.0.6"
+    },
+    "python_version": "3.12.7",
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "source_sha256": "8af0cc406ce5c79f06c51671c9e8a1159a9bcf2dcb4b326167f8386c6e63489d",
+    "input_sha256": {
+      "data/raw/train.csv": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+      "data/raw/test.csv": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    },
+    "external_labels_used": false,
+    "preprocessing_fit_within_fold": true,
+    "validation_rows_removed": false,
+    "training_rows_removed": false,
+    "fixed_blend": {
+      "id": "R6ICL_anchor80_tabicl20",
+      "space": "natural-log price",
+      "weights": {
+        "R5E08_noY_domain20": 0.8,
+        "R6ICL_v2_raw79_log_n8_s42": 0.2
+      },
+      "anchor_sources": {
+        "models/round5_ensembles/extension/results/R5E08_noY_domain20_oof.csv": "077297a3099677f77add277d981b7fed514460cbc344de983a746a3ce0d0f285",
+        "models/round5_ensembles/extension/results/R5E08_noY_domain20_test_logs.csv": "77e70164bc453deb25f97c6f378783fd3390c1b3b05eddd691fa0d63a789f2b0"
+      }
+    },
+    "selection_limitation": "Reused development folds and a fixed alternative split are sensitivity evidence on the same houses, not untouched holdout evaluation.",
+    "source_notebook": "https://www.kaggle.com/code/carlmcbrideellis/house-prices-using-tabicl-v2",
+    "implementation_source": "https://github.com/soda-inria/tabicl"
+  },
+  "results": {
+    "R6ICL_v2_raw79_log_n8_s42": {
+      "cv_mean": 0.11996225022449085,
+      "cv_std": 0.024828722782215963,
+      "pooled_oof_log_rmse": 0.12200046663402668,
+      "fold_scores": [
+        0.12372598919776145,
+        0.1012691669896902,
+        0.1611386682424444,
+        0.112420512649622,
+        0.10125691404293614
+      ]
+    },
+    "R6ICL_anchor80_tabicl20": {
+      "cv_mean": 0.11530821221058025,
+      "cv_std": 0.021422483771774165,
+      "pooled_oof_log_rmse": 0.11688935816387115,
+      "fold_scores": [
+        0.11820414525845005,
+        0.1012107644846645,
+        0.1510642394054455,
+        0.10796102998689751,
+        0.0981008819174437
+      ]
+    },
+    "R5E08_noY_domain20": {
+      "cv_mean": 0.1153611156686984,
+      "cv_std": 0.02055175541312716,
+      "pooled_oof_log_rmse": 0.11681646600019883,
+      "fold_scores": [
+        0.11768503899090146,
+        0.10245859624451112,
+        0.14983318165515191,
+        0.1080968314849112,
+        0.09873192996801629
+      ]
+    }
+  },
+  "fold_execution": [
+    {
+      "fold": 1,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "log_rmse": 0.12372598919776145,
+      "seconds": 7.479738124995492
+    },
+    {
+      "fold": 2,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "log_rmse": 0.1012691669896902,
+      "seconds": 3.386352707981132
+    },
+    {
+      "fold": 3,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "log_rmse": 0.1611386682424444,
+      "seconds": 3.1491712080314755
+    },
+    {
+      "fold": 4,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "log_rmse": 0.112420512649622,
+      "seconds": 3.3417024170048535
+    },
+    {
+      "fold": 5,
+      "n_train": 1168,
+      "n_valid": 292,
+      "train_validation_disjoint": true,
+      "log_rmse": 0.10125691404293614,
+      "seconds": 3.165608874987811
+    }
+  ],
+  "final_fit_seconds": 7.2609068339224905,
+  "runtime_seconds": 28.278679915936664,
+  "residual_correlation_vs_anchor": 0.9503775886906782,
+  "artifact_sha256": {
+    "preregistered_plan.json": "e9abd0a70cec162185f45403e029fe4ba2601ef3a987bf3fecd6d730a14613ce",
+    "fold_manifest.json": "d4c67df921c83fd8c7db2c1e50e5b4814abfebffc4619fc903735c20ccbe4402",
+    "fold_assignments.csv": "839303b5ca3272eec75083c18c8a11a44db95f64a797d8e17b52a47e4c0dbcec",
+    "results/R6ICL_v2_raw79_log_n8_s42_oof.csv": "eebcfc2fb736569957b67ef3b4056ae77433d558873718c9af95ae27b9e8a2f6",
+    "results/R6ICL_anchor80_tabicl20_oof.csv": "a4e1d9f38f6fc64f81db901259395e0d39813c7e917336157833572639bce552",
+    "results/R6ICL_v2_raw79_log_n8_s42_test_logs.csv": "34bb984df9a87ea01327829c6900f09992686458da6b20f86e831ec6f394e4fc",
+    "submissions/R6ICL_v2_raw79_log_n8_s42.csv": "68f6799cf679b093f8a8d1129740e872da510b728ae913064b05b3aa83529556",
+    "results/R6ICL_anchor80_tabicl20_test_logs.csv": "81129dba451e1d94371f2cbd85e1ed490ec387447977c8fb5d2352678189d14c",
+    "submissions/R6ICL_anchor80_tabicl20.csv": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "comparison.csv": "99a4ae9790298055514916386df074855d0099dab45bd9b74b595b9ab9faa82a",
+    "results/fold_execution.csv": "28ba4b8c2c0def54b184c183e24832f3189cc17db018668e6a2b26a868356eaa"
+  },
+  "public_score_observed": null
+}

@@ -1,0 +1,99 @@
+{
+  "status": "complete",
+  "experiment_id": "R6E06_subsample_domain20",
+  "weights": {
+    "R6TP_noY_subsample090_s42": 0.8,
+    "R4T_v2_log_n32_s42_domain": 0.2
+  },
+  "pooled_oof_log_rmse": 0.11648571890865625,
+  "cv_mean": 0.1150919181958165,
+  "cv_std": 0.020086471681020887,
+  "fold_scores": [
+    0.1183266033075598,
+    0.10275234513457868,
+    0.14831585434218714,
+    0.1083447829783022,
+    0.09772000521645463
+  ],
+  "baseline": {
+    "pooled_oof_log_rmse": 0.11681646600019883,
+    "cv_mean": 0.1153611156686984,
+    "cv_std": 0.02055175541312716,
+    "fold_scores": [
+      0.11768503899090146,
+      0.10245859624451112,
+      0.14983318165515191,
+      0.1080968314849112,
+      0.09873192996801629
+    ]
+  },
+  "delta_pooled_vs_e08": -0.0003307470915425853,
+  "subsample_only": {
+    "pooled_oof_log_rmse": 0.11711984897203964,
+    "cv_mean": 0.11568259066814512,
+    "cv_std": 0.02045107697469,
+    "fold_scores": [
+      0.11857615690424354,
+      0.10322153278995828,
+      0.1496379235008821,
+      0.108919484097462,
+      0.09805785604817968
+    ]
+  },
+  "delta_pooled_vs_subsample": -0.0006341300633833924,
+  "folds_improved_vs_subsample": 5,
+  "folds_improved_vs_e08": 2,
+  "training_rows": 1460,
+  "training_rows_removed": 0,
+  "test_rows": 1459,
+  "public_score": null,
+  "selection_limitation": "One explicitly adaptive follow-up chosen after R6TP_noY_subsample090_s42 scored 0.11054 online, improving on E05 at 0.11060 and E08 at 0.11064. Reuse the established 80/20 weights with the new 90-percent-context-subsampling component and original domain model; no weight search. Reused seed42 OOF is development evidence, not an independent holdout or a public-score prediction. All 1460 validation rows remain.",
+  "submission_path": "models/round6_subsample_blend/submissions/R6E06_subsample_domain20.csv",
+  "submission_sha256": "6ca524590594ba74fb2c2e7420e31ef63067d314ff0e6e16ded3c2243054cd29",
+  "total_squared_error_reduction": 0.11265946789933211,
+  "id1299_and_524_squared_error_reduction": 0.12229616680145772,
+  "largest_squared_error_reductions": [
+    {
+      "Id": 1299,
+      "reduction": 0.07482604216552047
+    },
+    {
+      "Id": 524,
+      "reduction": 0.04747012463593725
+    },
+    {
+      "Id": 411,
+      "reduction": 0.01792550790299252
+    },
+    {
+      "Id": 711,
+      "reduction": 0.014867236956268542
+    },
+    {
+      "Id": 969,
+      "reduction": 0.012684627782864999
+    }
+  ],
+  "largest_squared_error_increases": [
+    {
+      "Id": 89,
+      "increase": 0.03077390643797684
+    },
+    {
+      "Id": 496,
+      "increase": 0.017691790280466024
+    },
+    {
+      "Id": 917,
+      "increase": 0.016994577760091528
+    },
+    {
+      "Id": 49,
+      "increase": 0.013905281185286202
+    },
+    {
+      "Id": 692,
+      "increase": 0.009843527523801191
+    }
+  ]
+}

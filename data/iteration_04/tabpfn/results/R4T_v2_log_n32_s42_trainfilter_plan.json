@@ -1,0 +1,20 @@
+{
+  "id": "R4T_v2_log_n32_s42_trainfilter",
+  "model": "TabPFN-v2",
+  "target": "log",
+  "n_estimators": 32,
+  "random_state": 42,
+  "device": "mps",
+  "fold_seed": 42,
+  "n_splits": 5,
+  "rows": 1460,
+  "features": 79,
+  "feature_recipe": "raw",
+  "filter_train": true,
+  "filter_rule": "GrLivArea>4000 and SalePrice<300000, training partitions only",
+  "source": "https://www.kaggle.com/code/carlmcbrideellis/house-prices-using-tabpfn",
+  "weight_license": "Prior Labs License (Apache 2.0 with additional attribution)",
+  "library_version": "9.2.0",
+  "torch_version": "2.14.1",
+  "selection_limitation": "Adaptive development CV; no external test targets used."
+}

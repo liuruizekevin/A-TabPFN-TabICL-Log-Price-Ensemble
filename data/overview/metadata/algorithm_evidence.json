@@ -1,0 +1,392 @@
+{
+  "scope": "Current Round 6 explanation and saved-prediction algebra audit.",
+  "selected_experiment": "R6ICL_anchor80_tabicl20",
+  "claims": [
+    {
+      "claim": "Current nested final predictor and target",
+      "math": "z=ln(y); g_E08=0.8*f_A+0.2*f_B; zhat=0.8*g_E08+0.2*f_C=0.64*f_A+0.16*f_B+0.20*f_C; yhat=exp(zhat)",
+      "project_sources": [
+        "scripts/round6_tabicl.py",
+        "models/round6_tabicl/seed42/results/summary.json"
+      ],
+      "notes": "E08 is the preserved historical anchor. No arithmetic dollar-price averaging, log1p, residual adjustment or smearing correction."
+    },
+    {
+      "claim": "Raw component",
+      "id": "R5TP_log_noYtransform_s42",
+      "input_features": 79,
+      "inference_estimators_total": 16,
+      "checkpoint_allocation": [
+        6,
+        5,
+        5
+      ],
+      "checkpoint_files": [
+        "tabpfn-v2-regressor.ckpt",
+        "tabpfn-v2-regressor-09gpqh39.ckpt",
+        "tabpfn-v2-regressor-2noar4o2.ckpt"
+      ],
+      "target_transform_override": [
+        null
+      ],
+      "source": [
+        "scripts/round5_tabpfn.py:33-34,52-54,130-167",
+        "models/round5_tabpfn/results/R5TP_log_noYtransform_s42_summary.json",
+        "preprocessing/ensemble.py:1421-1454"
+      ],
+      "notes": "Sixteen prompts in total, not sixteen per checkpoint. noY disables only additional nonlinear target preprocessing; target z-normalization and feature preprocessing remain enabled.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Domain component",
+      "id": "R4T_v2_log_n32_s42_domain",
+      "input_features": 98,
+      "feature_arithmetic": "79 original predictors + 10 deterministic engineered predictors + 9 missing indicators",
+      "inference_estimators_total": 32,
+      "checkpoint_allocation": [
+        32
+      ],
+      "checkpoint_files": [
+        "tabpfn-v2-regressor.ckpt"
+      ],
+      "target_transforms": [
+        null,
+        "safepower"
+      ],
+      "target_transform_counts": [
+        16,
+        16
+      ],
+      "sources": [
+        "scripts/round4_tabpfn.py:23-39",
+        "src/house_prices/preprocessing.py:28-83",
+        "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_summary.json",
+        "regressor.py:653-659",
+        "inference_config.py:507-526",
+        "preprocessing/ensemble.py:1421-1454"
+      ],
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Target normalization per training partition",
+      "math": "mu=mean(z_train); sigma=std(z_train,ddof=0)+10^{-20}; u_i=(z_i-mu)/sigma",
+      "sources": [
+        "regressor.py:1366-1382"
+      ],
+      "notes": "Applied even for the noY component. The transform is fitted on training-partition targets.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Prompt-specific distributions and pooling",
+      "math": "ell_je(x)=F_{theta_c(e)}(P_je(X_train),T_je(u_train),P_je(x)); p_je=softmax(ell_je/0.9); ptilde_je=R_{T_je^{-1}(b)->b}(p_je); pbar_jk=M_j^{-1}sum_e ptilde_jek; f_j(x)=mu+sigma sum_k pbar_jk m_k",
+      "sources": [
+        "regressor.py:291,1366-1382,1683-1806,2218-2265,2427-2461",
+        "inference_config.py:24,101",
+        "utils.py:514-629",
+        "architectures/shared/bar_distribution.py:750-758"
+      ],
+      "notes": "R denotes the implemented probability remap to the shared normalized-target grid after inverse-transforming the source borders; invalid borders are repaired/cancelled. Probability averaging occurs after softmax (average_before_softmax=False). m_k is each common bin conditional mean, including half-normal tails, rather than treating every bin as finite uniform. The mean of a transformed scalar is not simply inverse-transformed.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Conditional bin means including unbounded tails",
+      "math": "For borders b_0,...,b_K: m_k=(b_{k-1}+b_k)/2 for 2<=k<=K-1; s_L=(b_1-b_0)/Phi^{-1}(0.75); s_R=(b_K-b_{K-1})/Phi^{-1}(0.75); m_1=b_1-s_L sqrt(2/pi); m_K=b_{K-1}+s_R sqrt(2/pi).",
+      "sources": [
+        "architectures/shared/bar_distribution.py:523-543,750-758"
+      ],
+      "notes": "Phi is the standard normal CDF. HalfNormal(1) median is Phi^{-1}(0.75). This describes the library common-grid mean; nonlinear inverse transforms plus rebinning are an implementation approximation, not an exact analytic pushforward density.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Released checkpoints and labeled training context",
+      "math": "theta remains fixed during project fit and predict; D_train supplies context and fitted preprocessing.",
+      "sources": [
+        "scripts/round5_tabpfn.py:130-144,200-229",
+        "scripts/round4_tabpfn.py:39-59",
+        "regressor.py:1298-1384,1683-1749"
+      ],
+      "notes": "The project loads released transformer checkpoints. fit creates fold-specific preprocessing and inference context.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Upstream PFN theory, not a project experiment",
+      "math": "theta*=argmin_theta E_{(D_context,D_query)~p(D)}[-sum_{(x,y) in D_query} log q_theta(y|x,D_context)]; q_theta(y|x,D) approximately int p(y|x,omega)p(omega|D)domega",
+      "sources": [
+        "https://www.nature.com/articles/s41586-024-08328-6#Sec15",
+        "https://arxiv.org/abs/2112.10510"
+      ],
+      "notes": "Conceptual restatement of prior-data-fitted pretraining: synthetic tasks train conditional predictions; at inference a labelled real dataset becomes context. The prior approximation is not proof that real house prices follow the assumed prior, nor an assertion that the project discovers a causal housing graph.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Feature preprocessing remains active",
+      "sources": [
+        "preprocessing/presets.py:34-44",
+        "inference_config.py:507-526"
+      ],
+      "details": [
+        "quantile-uniform branch with original features retained, ordinal category handling and appended SVD features",
+        "safe-power feature branch with one-hot category handling",
+        "feature-order shuffling and fingerprint feature remain active; polynomial features and sample subsampling are disabled"
+      ],
+      "notes": "79/98 refer to inputs before internal feature expansion, not final transformer token counts. Avoid claiming a single shared sklearn median/one-hot/scaler pipeline is the winning predictor.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "Evaluation and selection boundary",
+      "math": "RMSE_log=sqrt(n^{-1}sum_i(ln y_i-zhat_i)^2); OOF predictions use training indices excluding each row; CVmean=5^{-1}sum_k RMSE_k; CVstd=sqrt(sum_k(RMSE_k-CVmean)^2/4).",
+      "sources": [
+        "scripts/round5_tabpfn.py:186-246",
+        "scripts/round4_tabpfn.py:47-60"
+      ],
+      "notes": "Fixed development folds were reused and final selection also saw public Kaggle scores. The .8/.2 weight was a chosen fixed candidate, not a derived globally optimal coefficient.",
+      "inherited_scope": "Historical A/B TabPFN branches and their original audits; not the TabICL internal architecture."
+    },
+    {
+      "claim": "TabICLv2 leaf C",
+      "id": "R6ICL_v2_raw79_log_n8_s42",
+      "input_features": 79,
+      "package_version": "2.2.0",
+      "inference_estimators_total": 8,
+      "model_seed": 42,
+      "normalization_views": [
+        "none",
+        "power"
+      ],
+      "feature_shuffle_method": "latin",
+      "mean_target_restoration": "f_C(x)=mu_C+s_C*(1/8)*sum_e E_q_Ce[U | x,D_train]",
+      "training_boundary": "Float32 supplied log target; StandardScaler, categorical encoding and ensemble transforms fitted only on each training subset. Released neural checkpoints provide the prediction model.",
+      "sources": [
+        "scripts/round6_tabicl.py",
+        "build/tabicl-deps/tabicl/_sklearn/regressor.py",
+        "models/round6_tabicl/provenance/acquisition_manifest.json"
+      ],
+      "notes": "TabPFN bar-bin remapping and half-normal equations describe A/B only; they are not asserted for TabICL."
+    }
+  ],
+  "engineered_features": {
+    "TotalSF": "TotalBsmtSF + 1stFlrSF + 2ndFlrSF",
+    "TotalFinishedSF": "GrLivArea + BsmtFinSF1 + BsmtFinSF2",
+    "HouseAge": "max(YrSold - YearBuilt, 0)",
+    "RemodelAge": "max(YrSold - YearRemodAdd, 0)",
+    "GarageAge": "max(YrSold - GarageYrBlt, 0) if GarageYrBlt > 0 else 0",
+    "WasRemodeled": "1[YearRemodAdd != YearBuilt]",
+    "TotalBath": "FullBath + 0.5*HalfBath + BsmtFullBath + 0.5*BsmtHalfBath",
+    "TotalPorchSF": "OpenPorchSF + EnclosedPorch + 3SsnPorch + ScreenPorch + WoodDeckSF",
+    "QualityLivingArea": "OverallQual * GrLivArea",
+    "QualityTotalSF": "OverallQual * TotalSF"
+  },
+  "missing_indicator_features": [
+    "MasVnrArea",
+    "BsmtFinSF1",
+    "BsmtFinSF2",
+    "BsmtUnfSF",
+    "TotalBsmtSF",
+    "BsmtFullBath",
+    "BsmtHalfBath",
+    "GarageCars",
+    "GarageArea"
+  ],
+  "domain_rules": {
+    "MSSubClass": "Converted to a categorical string before the internal model pipeline.",
+    "numeric_helpers": "Missing or nonnumeric values are zero only in deterministic numeric helper calculations.",
+    "Alley_and_Fence": "Missing values become the None category.",
+    "semantic_absence": "Missing PoolQC, FireplaceQu, MiscFeature, garage, basement and masonry categorical fields become Unknown when the related size/count is positive and None otherwise.",
+    "nine_numeric_fields": "Each receives its own missing indicator and then a zero fill. Other original missing entries remain available to the model."
+  },
+  "primary_urls": [
+    "https://www.nature.com/articles/s41586-024-08328-6",
+    "https://arxiv.org/abs/2112.10510",
+    "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+    "https://github.com/PriorLabs/TabPFN/tree/v9.2.0",
+    "https://arxiv.org/abs/2602.11139",
+    "https://github.com/soda-inria/tabicl",
+    "https://tabicl.readthedocs.io/en/latest/api.html",
+    "https://pypi.org/project/tabicl/2.2.0/",
+    "https://huggingface.co/jingang/TabICL"
+  ],
+  "upstream_source_verification": [
+    {
+      "file": "regressor.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/regressor.py",
+      "local_sha256": "ba55e8db5fb0ad2e215ed4fabf0992c70accdfbbf955810a9a720f1e66cc8a99",
+      "remote_sha256": "ba55e8db5fb0ad2e215ed4fabf0992c70accdfbbf955810a9a720f1e66cc8a99",
+      "byte_identical": true
+    },
+    {
+      "file": "inference_config.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/inference_config.py",
+      "local_sha256": "9861965d5082b55be5f1182563b7043a4c413783ce87db57a0925fc3ea05cf38",
+      "remote_sha256": "9861965d5082b55be5f1182563b7043a4c413783ce87db57a0925fc3ea05cf38",
+      "byte_identical": true
+    },
+    {
+      "file": "preprocessing/ensemble.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/preprocessing/ensemble.py",
+      "local_sha256": "6c795ffa8715aa1a6692eaa99c745cc1209c8cf46564b9fc16b0cb427fa9ebff",
+      "remote_sha256": "6c795ffa8715aa1a6692eaa99c745cc1209c8cf46564b9fc16b0cb427fa9ebff",
+      "byte_identical": true
+    },
+    {
+      "file": "preprocessing/presets.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/preprocessing/presets.py",
+      "local_sha256": "784351f354f2b78601099d5ad64957f9e0fb485c6c30e9c0dac9c52852b04413",
+      "remote_sha256": "784351f354f2b78601099d5ad64957f9e0fb485c6c30e9c0dac9c52852b04413",
+      "byte_identical": true
+    },
+    {
+      "file": "preprocessing/transform.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/preprocessing/transform.py",
+      "local_sha256": "020425d7d8f814d9a6bce1c496cf066c651e4aab3a9fd8c7cd397927eec8db28",
+      "remote_sha256": "020425d7d8f814d9a6bce1c496cf066c651e4aab3a9fd8c7cd397927eec8db28",
+      "byte_identical": true
+    },
+    {
+      "file": "architectures/shared/bar_distribution.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/architectures/shared/bar_distribution.py",
+      "local_sha256": "d36583139f7984df9a37297cf6e706a22db01a97871203af421d840c9f38d49b",
+      "remote_sha256": "d36583139f7984df9a37297cf6e706a22db01a97871203af421d840c9f38d49b",
+      "byte_identical": true
+    },
+    {
+      "file": "utils.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/utils.py",
+      "local_sha256": "e0192dc98d0fe6470ba781f61808e7b79eae2ddb58fa29ded67498f607544c01",
+      "remote_sha256": "e0192dc98d0fe6470ba781f61808e7b79eae2ddb58fa29ded67498f607544c01",
+      "byte_identical": true
+    },
+    {
+      "file": "preprocessing/steps/safe_power_transformer.py",
+      "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/v9.2.0/src/tabpfn/preprocessing/steps/safe_power_transformer.py",
+      "local_sha256": "8be493d4a9697edbbfaaad624577493194cdcfb120ec3d5ad2aa4e52c149b416",
+      "remote_sha256": "8be493d4a9697edbbfaaad624577493194cdcfb120ec3d5ad2aa4e52c149b416",
+      "byte_identical": true
+    }
+  ],
+  "project_source_sha256": {
+    "scripts/round5_tabpfn.py": "4aca59057f19fb525bd4a7d27e6a81a271a01aed379bee7d110bf9b1e8fbc74d",
+    "src/house_prices/preprocessing.py": "0fcb956b1394497d8a2bd4357bd6a9abe482087db4c398ca6b110a8358ec9688",
+    "models/round5_tabpfn/results/R5TP_log_noYtransform_s42_summary.json": "40bb1bc99d7a4751257c9a8548b30274b475b6e1dd62985ddbce927a8dd8950f",
+    "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_summary.json": "682090dfa85bd7487610facbc4e7e4719ce659791460b1ca59cbc19edde84744",
+    "models/round5_ensembles/extension/results/candidate_manifests.json": "5fb1dd029d58f10eac42dd6daa2aca09fc684e384597f308f39ac0402ae7cef3",
+    "submissions/final_submission.csv": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "scripts/round6_tabicl.py": "8af0cc406ce5c79f06c51671c9e8a1159a9bcf2dcb4b326167f8386c6e63489d",
+    "models/round6_tabicl/seed42/results/summary.json": "b6d35de30779a9b8a9324710946ac8a467cc2248567346980535b76ecf8bee43",
+    "project.py": "e37b87653b4a43c13261117ea676493487981d4d91117894bca11492011708d6",
+    "docs/current_leaderboard.json": "178a9523d5b956d2dfbccc28a1b3c164a22648898ddad9d7d572719ac19e4d1b",
+    "docs/code_retention.json": "22f35ed3ae244ebf5a85d8241922b1a201571f9a6cca78c300080e98c72bc788"
+  },
+  "not_claims": [
+    "Conventional baselines and stacks are not leaves of the selected three-leaf predictor.",
+    "Raw TabPFN has 16 members total, allocated 6/5/5, not 16 members per checkpoint.",
+    "noY disables additional target power transformations, not all preprocessing or target standardization.",
+    "The passing fixed-anchor mixture gate does not mean the standalone TabICL component or full selected pipeline passes.",
+    "Rank 106 is a new observation of the same score; the rank-84 screenshot remains historical evidence.",
+    "The all-component execution failed its original numerical gate; matching domain/TabICL in that run does not erase the separate earlier observations.",
+    "The adaptive CV and leaderboard search does not provide an untouched holdout, causal effect or universally optimal blend.",
+    "Weighted geometric dollar-price blending is not arithmetic dollar-price averaging.",
+    "79 and 98 are input columns before internal expansion, not final neural token counts."
+  ],
+  "saved_component_formula_check": {
+    "scope": "Algebraic check of the original saved predictions.",
+    "rows": 1459,
+    "ids_aligned": true,
+    "formula": "exp(0.8*(0.8*A_original_log+0.2*B_original_log)+0.2*C_original_log)",
+    "expanded_formula": "exp(0.64*A_original_log+0.16*B_original_log+0.20*C_original_log)",
+    "max_abs_log_difference": 3.552713678800501e-15,
+    "max_abs_price_difference": 1.862645149230957e-09,
+    "nested_vs_expanded_max_abs_log_difference": 3.552713678800501e-15,
+    "final_csv_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "sources": {
+      "models/round5_tabpfn/results/R5TP_log_noYtransform_s42_test_logs.csv": "8e52f32b6cfe32c765d6080057c8f894a402568f110603091811c00ae30664d4",
+      "models/round4_tabpfn/results/R4T_v2_log_n32_s42_domain_test_logs.csv": "63a16581d29ced3f88a753a30d2de45491ef4a06d86441114a4fb10ea0a60e2d",
+      "models/round6_tabicl/seed42/results/R6ICL_v2_raw79_log_n8_s42_test_logs.csv": "34bb984df9a87ea01327829c6900f09992686458da6b20f86e831ec6f394e4fc"
+    }
+  },
+  "inherited_round5_audit": {
+    "selected_experiment": "R5E08_noY_domain20",
+    "saved_component_formula_check": {
+      "scope": "Algebraic verification from the original stored component predictions.",
+      "rows": 1459,
+      "ids_aligned": true,
+      "max_abs_price_difference": 5.820766091346741e-11,
+      "max_abs_log_difference": 0.0,
+      "formula": "exp(0.8*A_original_test_log+0.2*B_original_test_log)",
+      "final_csv_sha256": "ba6bd95069cea3697e3af58c9c07e377ee3e4d06b48617030dd879d1a75f3d44"
+    },
+    "notes": "Original TabPFN source checks and A/B mathematical claims retained below; selected outer blend is now Round 6."
+  },
+  "tabicl_provenance": {
+    "path": "models/round6_tabicl/provenance/acquisition_manifest.json",
+    "sha256": "633f82688056352fe997886a29a84310a5efbce1faeb2261490ee30382bed66a",
+    "checkpoint": {
+      "source_repository": "https://huggingface.co/jingang/TabICL",
+      "revision": "4dcd344ece2c00be9e831fdd35bed57b5ad83e19",
+      "metadata_api": "https://huggingface.co/api/models/jingang/TabICL/tree/main",
+      "url": "https://huggingface.co/jingang/TabICL/resolve/4dcd344ece2c00be9e831fdd35bed57b5ad83e19/tabicl-regressor-v2-20260212.ckpt",
+      "path": "build/tabicl-checkpoints/tabicl-regressor-v2-20260212.ckpt",
+      "sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+      "bytes": 114324594,
+      "license": "BSD-3-Clause",
+      "model_card_license_source": "https://huggingface.co/jingang/TabICL",
+      "code_license_source": "tabicl-2.2.0 wheel: tabicl-2.2.0.dist-info/licenses/LICENSE"
+    },
+    "package": {
+      "name": "tabicl",
+      "version": "2.2.0",
+      "url": "https://files.pythonhosted.org/packages/77/22/bbac2df399b8ed5a699bde38496ebb129a045c5d160fe52786727de932f3/tabicl-2.2.0-py3-none-any.whl",
+      "hashes": {
+        "sha256": "c80b8ec2719be26bc0bf1dd758a2361f58019d8f7877038b785529a425789ce4"
+      }
+    },
+    "source_hash_scope": "Published package files and executed local source hashes preserved in the original acquisition manifest."
+  },
+  "archived_project_sources": {
+    "scripts/round4_tabpfn.py": {
+      "sha256": "5f3d02f0e9c67cef1952b442367876d1941b796ae5d5e40f5532b54f79c45542",
+      "public_url": "https://github.com/liuruizekevin/A-TabPFN-TabICL-Log-Price-Ensemble/blob/main/code/iteration_04/round4_tabpfn.py",
+      "public_sha256": "5f3d02f0e9c67cef1952b442367876d1941b796ae5d5e40f5532b54f79c45542"
+    },
+    "scripts/round5_blend_predict.py": {
+      "sha256": "98d713c28c92a010965b27720294f020146f670941dfafbffde5ddfc3eeaa3fc",
+      "public_url": "https://github.com/liuruizekevin/A-TabPFN-TabICL-Log-Price-Ensemble/blob/main/code/iteration_05/round5_blend_predict.py",
+      "public_sha256": "98d713c28c92a010965b27720294f020146f670941dfafbffde5ddfc3eeaa3fc"
+    },
+    "scripts/round5_ensemble_extension.py": {
+      "sha256": "8e4f60255e8b3c0118c57c0872767b788bbf4eff1d0346fcfe3c0b2022e6c62e",
+      "public_url": "https://github.com/liuruizekevin/A-TabPFN-TabICL-Log-Price-Ensemble/blob/main/code/iteration_05/round5_ensemble_extension.py",
+      "public_sha256": "8e4f60255e8b3c0118c57c0872767b788bbf4eff1d0346fcfe3c0b2022e6c62e"
+    }
+  },
+  "current_leaderboard_observation": {
+    "schema_version": 1,
+    "source_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/leaderboard?search=kkkkeviiiinnnn",
+    "submissions_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/submissions",
+    "evidence_method": "Read-only inspection of the authenticated Kaggle leaderboard and submissions UI in Google Chrome; leaderboard refreshed before reading. Visible screenshot and accessibility text were inspected in the audit conversation.",
+    "account_display_name": "kkkkeviiiinnnn",
+    "leaderboard_team_display_name": "kkkkeviiiinnnn",
+    "rank": 106,
+    "teams_shown": null,
+    "best_score": 0.1097,
+    "completed_entries": 36,
+    "best_submission_filename": "R6ICL_anchor80_tabicl20.csv",
+    "best_experiment_id": "R6ICL_anchor80_tabicl20",
+    "best_submission_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+    "latest_submission_filename": "R6E06_subsample_domain20.csv",
+    "latest_submission_score": 0.11048,
+    "visible_leaderboard_text": [
+      "106 kkkkeviiiinnnn",
+      "0.10970 36",
+      "Your latest submission scored 0.11048. Your best score remains 0.10970.",
+      "This leaderboard is calculated with all of the test data."
+    ],
+    "visible_best_submission_text": "Success R6ICL_anchor80_tabicl20.csv Complete; R6ICL fixed architecture-diversity test: .80 priorE08 + .20 TabICLv2 in log space; public score: 0.10970",
+    "historical_observation": {
+      "rank": 84,
+      "teams_shown": 4338,
+      "record": "docs/kaggle_submissions.json",
+      "screenshot": "submissions/round6_optimization/kaggle_evidence/09_final_leaderboard.png"
+    },
+    "scope": "A new leaderboard observation of the same scored file, not a new model or upload. The current total team count was not observed. Historical experiment records and screenshots remain unchanged. This observation does not verify the three students' Kaggle-team membership; the user handles team evidence."
+  }
+}

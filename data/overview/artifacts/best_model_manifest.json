@@ -1,0 +1,60 @@
+{
+  "experiment_id": "R6ICL_anchor80_tabicl20",
+  "submission_sha256": "799c2a553735fe49989fdf6cb1eb3869a28a2898fc03171e6a008d0ab55acaf8",
+  "artifact_type": "Exact scored CSV with saved component predictions",
+  "model_source": {
+    "model": "Fixed TabPFN and TabICL log-space blend",
+    "prediction_type": "round6_fixed_anchor_tabicl",
+    "combination_space": "natural logarithm of price",
+    "weights": [
+      0.8,
+      0.2
+    ],
+    "components": [
+      "R5E08_noY_domain20",
+      "R6ICL_v2_raw79_log_n8_s42"
+    ],
+    "leaf_weights": {
+      "R5TP_log_noYtransform_s42": 0.64,
+      "R4T_v2_log_n32_s42_domain": 0.16,
+      "R6ICL_v2_raw79_log_n8_s42": 0.2
+    },
+    "manifest": "submissions/round6_optimization/online_best_summary.json",
+    "scope": "Selected log-price ensemble from the original component predictions."
+  },
+  "validated_alternative": {
+    "role": "validated_alternative",
+    "experiment_id": "R6E05_joint_noFP_domain20",
+    "public_score": 0.1106,
+    "prior_score": 0.11064,
+    "absolute_score_reduction": 3.999999999999837e-05,
+    "relative_score_reduction_percent": 0.03615328994938392,
+    "seed42_development_cv": {
+      "cv_mean": 0.11511408465115928,
+      "cv_std": 0.02008701223231444,
+      "pooled_oof_log_rmse": 0.11650769473906515
+    },
+    "recipe": {
+      "R6TP_noY_nofingerprint_s42": 0.8,
+      "R4T_v2_log_n32_s42_domain": 0.2
+    },
+    "original_path": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+    "delivered_path": "submissions/round6_optimization/reproducible_improvement_submission.csv",
+    "submission_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+    "online_evidence": {
+      "round_submission_order": 4,
+      "experiment_id": "R6E05_joint_noFP_domain20",
+      "local_artifact": "models/round6_joint_blend/submissions/R6E05_joint_noFP_domain20.csv",
+      "uploaded_filename": "R6E05_joint_noFP_domain20.csv",
+      "file_sha256": "f64135493cd5edf5b855c1e10b5cd60c37f378f09fae3d9f6d8ae025bae85185",
+      "rows": 1459,
+      "public_score": 0.1106,
+      "status": "complete",
+      "rank_at_observation": null,
+      "screenshot": "submissions/round6_optimization/kaggle_evidence/04_R6E05_improvement.png",
+      "screenshot_sha256": "226030e2a54868dc42546c4063e574f8ba870c92753fd8f3ec6ca363045c5452",
+      "kaggle_submission_id": null
+    }
+  },
+  "serialization_max_absolute_difference": null
+}

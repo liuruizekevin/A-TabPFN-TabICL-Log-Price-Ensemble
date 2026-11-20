@@ -1,0 +1,346 @@
+{
+  "starting_project_online_score": 0.11842,
+  "external_scores_are_not_project_replications": true,
+  "external_test_targets_retrieved": false,
+  "sources": [
+    {
+      "id": "serigne",
+      "author": "Serigne",
+      "title": "Stacked Regressions : Top 4% on LeaderBoard",
+      "url": "https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard",
+      "type": "original_notebook",
+      "access": "Original rendered notebook inspected through browser UI; page metadata also indexed by web search.",
+      "score_claims": [
+        {
+          "score": 0.1142,
+          "basis": "Author's notebook text"
+        },
+        {
+          "score": 0.11924,
+          "basis": "Current page best-score badge, version 1"
+        }
+      ],
+      "methods": [
+        "Box-Cox features",
+        "RobustScaler Lasso and ElasticNet",
+        "polynomial KernelRidge",
+        "Huber GradientBoosting",
+        "OOF stacking"
+      ],
+      "limitations": [
+        "Preprocessing before CV",
+        "Outliers removed before CV",
+        "CV helper passes get_n_splits integer rather than shuffled splitter",
+        "Historical rankings are not current rankings"
+      ]
+    },
+    {
+      "id": "nanashi",
+      "author": "Nanashi (jesucristo)",
+      "title": "House Prices Solution [top 1%]",
+      "url": "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/discussion/83751",
+      "notebook_url": "https://www.kaggle.com/code/jesucristo/1-house-prices-solution-top-1",
+      "type": "original_author_discussion_and_notebook_metadata",
+      "score_claims": [
+        {
+          "score": 0.10649,
+          "basis": "Author discussion and notebook best-score badge"
+        }
+      ],
+      "methods": [
+        "Lasso",
+        "Ridge",
+        "SVR",
+        "GradientBoosting",
+        "XGBoost",
+        "LightGBM",
+        "blending"
+      ],
+      "limitations": [
+        "Complete implementation was not reproduced",
+        "Notebook lists other notebook inputs and an unavailable dataset",
+        "Not an authenticated final champion solution"
+      ]
+    },
+    {
+      "id": "massquantity",
+      "author": "massquantity",
+      "title": "All You Need is PCA / Kaggle HousePrices",
+      "url": "https://github.com/massquantity/Kaggle-HousePrices",
+      "author_explanation_url": "https://www.cnblogs.com/massquantity/p/8640991.html",
+      "type": "original_repository_and_author_article",
+      "score_claims": [
+        {
+          "score": 0.11421,
+          "basis": "Author article and original notebook title"
+        }
+      ],
+      "methods": [
+        "ordinal mapping",
+        "feature interactions",
+        "PCA",
+        "weighted averaging",
+        "stacking"
+      ],
+      "limitations": [
+        "Preprocessing/PCA before model CV",
+        "Target-derived order needs fold-only fitting",
+        "No historical score reproduced"
+      ]
+    },
+    {
+      "id": "muntasir",
+      "author": "Muntasir Hossain",
+      "title": "Stacking ML Model for high prediction accuracy",
+      "url": "https://github.com/muntasirhsn/Stacking-ML-Model-for-high-prediction-accuracy",
+      "notebook_url": "https://www.kaggle.com/code/muntasirphy/house-prices-top-1",
+      "type": "original_repository",
+      "score_claims": [
+        {
+          "score": 0.11365,
+          "basis": "Repository README"
+        },
+        {
+          "score": 0.11405,
+          "basis": "Older Kaggle notebook version 1"
+        }
+      ],
+      "methods": [
+        "XGBoost",
+        "GradientBoosting",
+        "Ridge",
+        "ElasticNet",
+        "PCA",
+        "stacking"
+      ],
+      "limitations": [
+        "Different versions have different score claims",
+        "No independent replication here"
+      ]
+    },
+    {
+      "id": "carl_tabpfn",
+      "author": "Carl McBride Ellis",
+      "title": "House Prices using TabPFN",
+      "url": "https://www.kaggle.com/code/carlmcbrideellis/house-prices-using-tabpfn",
+      "type": "original_notebook",
+      "access": "Original rendered code and score inspected through browser UI.",
+      "score_claims": [
+        {
+          "score": 0.11064,
+          "basis": "Current public and best-score badges, version 1"
+        }
+      ],
+      "verified_recipe": {
+        "package": "tabpfn==2.2.1",
+        "model": "TabPFNRegressor defaults",
+        "target": "raw SalePrice",
+        "features": "raw columns excluding Id and SalePrice",
+        "runtime_seconds_displayed": 66.2
+      },
+      "limitations": [
+        "No independent reproduction of author's score",
+        "Default checkpoint provenance must be recorded in our run"
+      ]
+    },
+    {
+      "id": "gunawan_tabpfn",
+      "author": "Benedictus Ryu Gunawan",
+      "title": "TOP 1% | TF-IDF + TabPFN Regressor Guide",
+      "url": "https://www.kaggle.com/code/benedictusryugunawan/top-1-tf-idf-tabpfn-regressor-guide",
+      "type": "original_notebook",
+      "access": "Original rendered version 7 inspected through browser UI.",
+      "score_claims": [
+        {
+          "score": 0.10857,
+          "basis": "Version 7 public-score badge"
+        },
+        {
+          "score": 0.10854,
+          "basis": "Best-score badge, version 6"
+        }
+      ],
+      "verified_recipe": {
+        "weights": "TabPFN-2.5 Kaggle model input, revision 2",
+        "n_estimators": 128,
+        "device": [
+          "cuda:0",
+          "cuda:1"
+        ],
+        "target": "log1p SalePrice",
+        "encoding": "One-hot for cardinality below 10; per-column word TF-IDF capped at 15 terms for Neighborhood and Exterior1st/Exterior2nd",
+        "feature_count": 149,
+        "author_cv_mean": 0.12779,
+        "author_cv_pooled": 0.13325
+      },
+      "limitations": [
+        "LightGBM supervised feature selection uses all training targets before CV",
+        "Preprocessing before CV",
+        "Not the older v2 checkpoint",
+        "No independent replication here"
+      ]
+    },
+    {
+      "id": "tabpfn_official",
+      "author": "PriorLabs",
+      "title": "TabPFN official repository",
+      "url": "https://github.com/PriorLabs/TabPFN",
+      "type": "official_software_documentation",
+      "verified_topics": [
+        "regression",
+        "GPU recommendations",
+        "Apple Silicon MPS memory settings",
+        "authentication for newer model versions"
+      ],
+      "limitations": [
+        "Latest package behavior differs from historical notebooks",
+        "No House Prices score guaranteed"
+      ]
+    },
+    {
+      "id": "sklearn_stacking",
+      "author": "scikit-learn developers",
+      "title": "StackingRegressor",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingRegressor.html",
+      "type": "official_software_documentation",
+      "verified_topics": [
+        "cross-validated base predictions for fitting the meta estimator",
+        "prefit overfitting warning"
+      ]
+    },
+    {
+      "id": "sklearn_target_encoder",
+      "author": "scikit-learn developers",
+      "title": "TargetEncoder",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.TargetEncoder.html",
+      "type": "official_software_documentation",
+      "verified_topics": [
+        "internal cross-fitting in fit_transform",
+        "fit-transform equivalence does not hold",
+        "unseen-category handling"
+      ]
+    },
+    {
+      "id": "csdn_serigne_lead",
+      "author": "果小黑",
+      "title": "Stacked Regressions study notes",
+      "url": "https://gitcode.csdn.net/69d100f054b52172bc66eff8.html",
+      "type": "secondary_discovery_lead",
+      "primary_source_id": "serigne",
+      "limitations": [
+        "Used only for discovery; technical recipe checked against original notebook",
+        "In-sample prediction weight-fitting suggestion not adopted"
+      ]
+    },
+    {
+      "id": "csdn_translation_lead",
+      "author": "wizardforcel",
+      "title": "TowardsDataScience Chinese translation collection",
+      "url": "https://blog.csdn.net/wizardforcel/article/details/142503493",
+      "type": "secondary_discovery_lead",
+      "limitations": [
+        "Top-10 article concerns the distinct Housing Prices Competition for Kaggle Learn Users",
+        "Not used as a score benchmark for this competition"
+      ]
+    },
+    {
+      "id": "near_zero_discussion",
+      "author": "cryptic-mortal and Kaggle discussion participants",
+      "title": "How do some people have scores nearly 0.000?",
+      "url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/discussion/587297",
+      "type": "community_discussion",
+      "limitations": [
+        "Participants' observations and hypotheses, not official findings against named entrants",
+        "No external targets downloaded or used"
+      ]
+    },
+    {
+      "id": "tabpfn_nature_v2",
+      "author": "Noah Hollmann, Samuel Müller, Lennart Purucker and colleagues",
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "url": "https://www.nature.com/articles/s41586-024-08328-6",
+      "doi": "10.1038/s41586-024-08328-6",
+      "type": "original_research_paper",
+      "verified_topics": [
+        "Synthetic tabular task pretraining using structural causal models",
+        "In-context prediction from labeled examples",
+        "Synthetic pretraining generator not released with models"
+      ],
+      "limitations": [
+        "Later checkpoints require their own provenance; this paper is not a blanket guarantee for all models"
+      ]
+    },
+    {
+      "id": "priorlabs_v2_regression_weights",
+      "title": "Official TabPFN-v2 regression checkpoint repository",
+      "author": "Prior Labs",
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-reg",
+      "source_type": "Official model repository and downloaded license",
+      "verified_in_project": [
+        "Three distinct public v2 checkpoint files downloaded with HTTPS",
+        "SHA-256 and sizes matched official remote metadata",
+        "Prior Labs License v1.1 retained locally",
+        "Literal attribution: Built with PriorLabs-TabPFN"
+      ],
+      "local_evidence": [
+        "references/tabpfn/remote_file_manifest.json",
+        "references/tabpfn/LICENSE.txt",
+        "models/round4_tabpfn_checkpoints/results/R4TC_v2_three_log_n16_s42_plan.json"
+      ],
+      "limits": [
+        "Checkpoint provenance supports the exact recorded files, not any later model version",
+        "Synthetic-pretraining description is grounded in the original Nature paper; the generator was not released"
+      ]
+    },
+    {
+      "id": "priorlabs_numerical_reproducibility",
+      "title": "Official regressor reproducibility notes and interface tests",
+      "url": "https://github.com/PriorLabs/TabPFN/blob/main/src/tabpfn/regressor.py",
+      "related_url": "https://github.com/PriorLabs/TabPFN/blob/main/tests/test_regressor_interface.py",
+      "source_type": "Official implementation and tests",
+      "verified_claim": "Fixed random_state is not an unconditional numerical reproducibility guarantee; interface tests document sensitivity of fingerprint features to small preprocessing variation.",
+      "project_limitation": "This provides context for the preprocessing mechanism examined in the local replay diagnostics."
+    }
+  ],
+  "project_followup_observations": [
+    {
+      "experiment_id": "F07_blend_robust_c20_g0003",
+      "public_score": 0.11842,
+      "basis": "Canonical submission ledger",
+      "milestone": "Starting point"
+    },
+    {
+      "experiment_id": "R4T_v2_log_n8_s42",
+      "public_score": 0.11173,
+      "basis": "Canonical submission ledger order 11",
+      "milestone": "First substantial TabPFN gain"
+    },
+    {
+      "experiment_id": "R4T_v2_log_n32_s42",
+      "public_score": 0.11123,
+      "basis": "Canonical submission ledger order 13",
+      "milestone": "More estimators, default checkpoint"
+    },
+    {
+      "experiment_id": "R4TC_v2_three_log_n16_s42",
+      "public_score": 0.11074,
+      "basis": "Live Kaggle confirmation reported by browser coordinator",
+      "milestone": "Three distinct public v2 checkpoints"
+    },
+    {
+      "experiment_id": "R4TC_v2_three_log_n32_s42",
+      "public_score": 0.11087,
+      "basis": "Live Kaggle confirmation reported by browser coordinator",
+      "milestone": "More estimators did not improve the three-checkpoint candidate"
+    },
+    {
+      "experiment_id": "R4T_v2_log_n64_s42",
+      "public_score": 0.11111,
+      "basis": "Live Kaggle confirmation reported by browser coordinator",
+      "milestone": "More estimators did not improve the selected candidate"
+    }
+  ],
+  "final_selection_status": "Selected R4TC_v2_three_log_n16_s42, actual online score 0.11074",
+  "project_online_results_are_adaptive_development": true,
+  "selected_submission_sha256": "a23577d75a549e6bbfdde1ec3c49f5bd82438854643b457875e9a2c2591900c2"
+}

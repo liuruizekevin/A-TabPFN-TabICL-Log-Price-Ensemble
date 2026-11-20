@@ -1,0 +1,268 @@
+{
+  "scope": "Descriptive case analysis of the 1,460 retained seed-42 OOF predictions.",
+  "case_selection": "Three largest absolute log residuals; central-price control selected from Normal/WD sales, quality 5-6, living area 1,000-2,000 sqft, K absolute relative error <=5%, nearest observed sample median.",
+  "cases": [
+    {
+      "Id": 524,
+      "fold": 3,
+      "observed": 184750,
+      "attributes": {
+        "GrLivArea": 4676,
+        "TotalBsmtSF": 3138,
+        "LotArea": 40094,
+        "OverallQual": 10,
+        "OverallCond": 5,
+        "Neighborhood": "Edwards",
+        "YearBuilt": 2007,
+        "YrSold": 2007,
+        "SaleType": "New",
+        "SaleCondition": "Partial",
+        "GarageCars": 3
+      },
+      "predictions": {
+        "D": 1109577.332638083,
+        "E": 728749.5357235904,
+        "J": 805545.2533085361,
+        "K": 798985.3201549619,
+        "raw": 825367.2452972297,
+        "domain": 730904.7678807252,
+        "ICL": 773275.4610852812
+      },
+      "relative_error_pct": 332.46837356154936,
+      "squared_log_error_share_pct": 10.749306898064248,
+      "delta_squared_log_error_K_minus_J": -0.02401409989552583
+    },
+    {
+      "Id": 1299,
+      "fold": 3,
+      "observed": 160000,
+      "attributes": {
+        "GrLivArea": 5642,
+        "TotalBsmtSF": 6110,
+        "LotArea": 63887,
+        "OverallQual": 10,
+        "OverallCond": 5,
+        "Neighborhood": "Edwards",
+        "YearBuilt": 2008,
+        "YrSold": 2008,
+        "SaleType": "New",
+        "SaleCondition": "Partial",
+        "GarageCars": 2
+      },
+      "predictions": {
+        "D": 3141552.7588726813,
+        "E": 1348616.0015495208,
+        "J": 475886.36264795356,
+        "K": 521061.53005536564,
+        "raw": 489091.03629698814,
+        "domain": 426537.75983446836,
+        "ICL": 748914.1116771112
+      },
+      "relative_error_pct": 225.66345628460368,
+      "squared_log_error_share_pct": 6.988309709192162,
+      "delta_squared_log_error_K_minus_J": 0.20592757307087806
+    },
+    {
+      "Id": 31,
+      "fold": 1,
+      "observed": 40000,
+      "attributes": {
+        "GrLivArea": 1317,
+        "TotalBsmtSF": 649,
+        "LotArea": 8500,
+        "OverallQual": 4,
+        "OverallCond": 4,
+        "Neighborhood": "IDOTRR",
+        "YearBuilt": 1920,
+        "YrSold": 2008,
+        "SaleType": "WD",
+        "SaleCondition": "Normal",
+        "GarageCars": 1
+      },
+      "predictions": {
+        "D": 89680.81994181694,
+        "E": 93116.16336567004,
+        "J": 91508.12935759418,
+        "K": 91441.54625125587,
+        "raw": 91365.7350760897,
+        "domain": 92079.92917207922,
+        "ICL": 91175.69794523728
+      },
+      "relative_error_pct": 128.60386562813983,
+      "squared_log_error_share_pct": 3.4270436977795518,
+      "delta_squared_log_error_K_minus_J": -0.0012041893001848436
+    },
+    {
+      "Id": 1172,
+      "fold": 5,
+      "observed": 163000,
+      "attributes": {
+        "GrLivArea": 1261,
+        "TotalBsmtSF": 1261,
+        "LotArea": 9120,
+        "OverallQual": 6,
+        "OverallCond": 6,
+        "Neighborhood": "NAmes",
+        "YearBuilt": 1958,
+        "YrSold": 2008,
+        "SaleType": "WD",
+        "SaleCondition": "Normal",
+        "GarageCars": 2
+      },
+      "predictions": {
+        "D": 176780.10627379987,
+        "E": 167384.05830465935,
+        "J": 157448.9585823602,
+        "K": 157192.95323584398,
+        "raw": 157479.12786502892,
+        "domain": 157328.3392378357,
+        "ICL": 156173.0876258111
+      },
+      "relative_error_pct": -3.5626053767829,
+      "squared_log_error_share_pct": 0.0065968945175554,
+      "delta_squared_log_error_K_minus_J": 0.0001154149314031125
+    }
+  ],
+  "subgroups": {
+    "price": [
+      {
+        "group": "<100k",
+        "n": 114,
+        "J_rmse": 0.22384137559274989,
+        "K_rmse": 0.2226338472953567,
+        "delta_K_minus_J": -0.001207528297393179,
+        "median_abs_relative_error_pct": 8.419758753785125,
+        "median_relative_error_pct": 5.96579664878874,
+        "individual_log_errors_improved": 62,
+        "individual_log_errors_worsened": 52,
+        "squared_log_error_share_pct": 28.325946486559303
+      },
+      {
+        "group": "100k-<200k",
+        "n": 911,
+        "J_rmse": 0.10683440703946653,
+        "K_rmse": 0.10746051951686181,
+        "delta_K_minus_J": 0.0006261124773952742,
+        "median_abs_relative_error_pct": 4.326127773381003,
+        "median_relative_error_pct": -0.44395032424637737,
+        "individual_log_errors_improved": 466,
+        "individual_log_errors_worsened": 445,
+        "squared_log_error_share_pct": 52.73676006507078
+      },
+      {
+        "group": "200k-<300k",
+        "n": 320,
+        "J_rmse": 0.08529474440811309,
+        "K_rmse": 0.08506094086688576,
+        "delta_K_minus_J": -0.0002338035412273315,
+        "median_abs_relative_error_pct": 4.814569912351267,
+        "median_relative_error_pct": -0.8667825217212339,
+        "individual_log_errors_improved": 176,
+        "individual_log_errors_worsened": 144,
+        "squared_log_error_share_pct": 11.606667386722362
+      },
+      {
+        "group": ">=300k",
+        "n": 115,
+        "J_rmse": 0.11365386640871199,
+        "K_rmse": 0.11276466003313564,
+        "delta_K_minus_J": -0.0008892063755763513,
+        "median_abs_relative_error_pct": 5.829240221987454,
+        "median_relative_error_pct": -3.23382342076926,
+        "individual_log_errors_improved": 68,
+        "individual_log_errors_worsened": 47,
+        "squared_log_error_share_pct": 7.330626061647533
+      }
+    ],
+    "area": [
+      {
+        "group": "<=2,000",
+        "n": 1246,
+        "J_rmse": 0.10558340794588947,
+        "K_rmse": 0.10514795434738035,
+        "delta_K_minus_J": -0.0004354535985091196,
+        "median_abs_relative_error_pct": 4.515523713463058,
+        "median_relative_error_pct": -0.5120988266599001,
+        "individual_log_errors_improved": 656,
+        "individual_log_errors_worsened": 590,
+        "squared_log_error_share_pct": 69.0584608103864
+      },
+      {
+        "group": ">2,000-4,000",
+        "n": 210,
+        "J_rmse": 0.10931956408195714,
+        "K_rmse": 0.10911167824137354,
+        "delta_K_minus_J": -0.0002078858405836076,
+        "median_abs_relative_error_pct": 5.833747485807423,
+        "median_relative_error_pct": -0.2720199638254699,
+        "individual_log_errors_improved": 113,
+        "individual_log_errors_worsened": 97,
+        "squared_log_error_share_pct": 12.533113205080994
+      },
+      {
+        "group": ">4,000",
+        "n": 4,
+        "J_rmse": 0.938535683549992,
+        "K_rmse": 0.9581416827331859,
+        "delta_K_minus_J": 0.019605999183193945,
+        "median_abs_relative_error_pct": 127.19315862674023,
+        "median_relative_error_pct": 106.36715384614057,
+        "individual_log_errors_improved": 3,
+        "individual_log_errors_worsened": 1,
+        "squared_log_error_share_pct": 18.4084259845326
+      }
+    ],
+    "quality": [
+      {
+        "group": "<=4",
+        "n": 141,
+        "J_rmse": 0.17080686543419565,
+        "K_rmse": 0.16973370842416413,
+        "delta_K_minus_J": -0.0010731570100315224,
+        "median_abs_relative_error_pct": 7.565848233330151,
+        "median_relative_error_pct": -1.11243393914348,
+        "individual_log_errors_improved": 68,
+        "individual_log_errors_worsened": 73,
+        "squared_log_error_share_pct": 20.363503940811476
+      },
+      {
+        "group": "5-7",
+        "n": 1090,
+        "J_rmse": 0.0954208646497162,
+        "K_rmse": 0.09507673952942133,
+        "delta_K_minus_J": -0.00034412512029487197,
+        "median_abs_relative_error_pct": 4.426388526737233,
+        "median_relative_error_pct": -0.5392870772069774,
+        "individual_log_errors_improved": 568,
+        "individual_log_errors_worsened": 522,
+        "squared_log_error_share_pct": 49.393779008366664
+      },
+      {
+        "group": ">=8",
+        "n": 229,
+        "J_rmse": 0.1603082396900106,
+        "K_rmse": 0.16230954630295827,
+        "delta_K_minus_J": 0.002001306612947673,
+        "median_abs_relative_error_pct": 5.035340998017998,
+        "median_relative_error_pct": 0.13799461797014356,
+        "individual_log_errors_improved": 136,
+        "individual_log_errors_worsened": 93,
+        "squared_log_error_share_pct": 30.24271705082186
+      }
+    ]
+  },
+  "individual_log_errors_improved": 772,
+  "individual_log_errors_worsened": 688,
+  "fold3_training_max_living_area": 4476,
+  "pair_total_squared_error_share_pct": 17.73761660725641,
+  "pair_fold3_squared_error_share_pct": 53.099676955672585,
+  "fold3_rmse": 0.15106423940544547,
+  "fold3_median_abs_relative_error_pct": 4.738219616807501,
+  "fold3_rmse_excluding_pair_descriptive": 0.10381067435207059,
+  "source_sha256": {
+    "data/raw/train.csv": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41",
+    "data/raw/data_description.txt": "356a4670aa688afa8ba44b1365b633fbbac2dae535fe4638532630607d64070d",
+    "models/results/oof_predictions.csv": "bc1dd3cbf7ca5875f3e88b5e5e5483b733314525c157596853e34737bf316a2f",
+    "models/round6_tabicl/seed42/results/R6ICL_anchor80_tabicl20_oof.csv": "a4e1d9f38f6fc64f81db901259395e0d39813c7e917336157833572639bce552"
+  }
+}

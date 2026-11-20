@@ -1,0 +1,1037 @@
+[
+  {
+    "experiment_id": "B01_xgb_huber010",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B01_xgb_huber010",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B01_xgb_huber010",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B01_xgb_huber010",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B01_xgb_huber010",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B02_xgb_huber020",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B02_xgb_huber020",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B02_xgb_huber020",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B02_xgb_huber020",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B02_xgb_huber020",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B03_xgb_huber005",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B03_xgb_huber005",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B03_xgb_huber005",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B03_xgb_huber005",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B03_xgb_huber005",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B04_xgb_absolute",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B04_xgb_absolute",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B04_xgb_absolute",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B04_xgb_absolute",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B04_xgb_absolute",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B05_xgb_d2_long",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B05_xgb_d2_long",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B05_xgb_d2_long",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B05_xgb_d2_long",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B05_xgb_d2_long",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B06_xgb_d3_regularized",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B06_xgb_d3_regularized",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B06_xgb_d3_regularized",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B06_xgb_d3_regularized",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B06_xgb_d3_regularized",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B07_xgb_d4_regularized",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B07_xgb_d4_regularized",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B07_xgb_d4_regularized",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B07_xgb_d4_regularized",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B07_xgb_d4_regularized",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B08_lgb_fair010",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B08_lgb_fair010",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B08_lgb_fair010",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B08_lgb_fair010",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B08_lgb_fair010",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B09_lgb_fair020",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B09_lgb_fair020",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B09_lgb_fair020",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B09_lgb_fair020",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B09_lgb_fair020",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B10_lgb_huber",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B10_lgb_huber",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B10_lgb_huber",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B10_lgb_huber",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B10_lgb_huber",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B11_lgb_absolute",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B11_lgb_absolute",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B11_lgb_absolute",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B11_lgb_absolute",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B11_lgb_absolute",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B12_cat_mae_d3",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B12_cat_mae_d3",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B12_cat_mae_d3",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B12_cat_mae_d3",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B12_cat_mae_d3",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B13_cat_mae_d5",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B13_cat_mae_d5",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B13_cat_mae_d5",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B13_cat_mae_d5",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B13_cat_mae_d5",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B14_cat_mae_d6",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B14_cat_mae_d6",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B14_cat_mae_d6",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B14_cat_mae_d6",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B14_cat_mae_d6",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B15_cat_mae_seed13",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B15_cat_mae_seed13",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B15_cat_mae_seed13",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B15_cat_mae_seed13",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B15_cat_mae_seed13",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B16_cat_mae_seed2026",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B16_cat_mae_seed2026",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B16_cat_mae_seed2026",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B16_cat_mae_seed2026",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B16_cat_mae_seed2026",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B17_cat_mae_l2_3",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B17_cat_mae_l2_3",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B17_cat_mae_l2_3",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B17_cat_mae_l2_3",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B17_cat_mae_l2_3",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B18_cat_mae_l2_20",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B18_cat_mae_l2_20",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B18_cat_mae_l2_20",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B18_cat_mae_l2_20",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B18_cat_mae_l2_20",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B19_cat_huber010_center",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B19_cat_huber010_center",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B19_cat_huber010_center",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B19_cat_huber010_center",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B19_cat_huber010_center",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B20_cat_huber020_center",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B20_cat_huber020_center",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B20_cat_huber020_center",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B20_cat_huber020_center",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B20_cat_huber020_center",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": true
+  },
+  {
+    "experiment_id": "B21_cat_rmse_d5_l2_3",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B21_cat_rmse_d5_l2_3",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B21_cat_rmse_d5_l2_3",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B21_cat_rmse_d5_l2_3",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B21_cat_rmse_d5_l2_3",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B22_cat_ohe_mae_d3",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B22_cat_ohe_mae_d3",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B22_cat_ohe_mae_d3",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B22_cat_ohe_mae_d3",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B22_cat_ohe_mae_d3",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B23_cat_ohe_mae_d4",
+    "fold": 1,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B23_cat_ohe_mae_d4",
+    "fold": 2,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B23_cat_ohe_mae_d4",
+    "fold": 3,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B23_cat_ohe_mae_d4",
+    "fold": 4,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  },
+  {
+    "experiment_id": "B23_cat_ohe_mae_d4",
+    "fold": 5,
+    "training_rows": 1168,
+    "validation_rows": 292,
+    "all_validation_rows_retained": true,
+    "train_validation_disjoint": true,
+    "target_centering_training_only": false
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "round": 6,
+  "baseline_experiment": "R5E08_noY_domain20",
+  "baseline_submission_sha256": "ba6bd95069cea3697e3af58c9c07e377ee3e4d06b48617030dd879d1a75f3d44",
+  "baseline_online_score": 0.11064,
+  "baseline_current_rank": 86,
+  "baseline_entries": 28,
+  "baseline_observation": "Authenticated Kaggle leaderboard",
+  "baseline_evidence": "submissions/round6_optimization/kaggle_evidence/00_start_leaderboard.png",
+  "primary_metric": "RMSE of natural logarithmic SalePrice; lower is better",
+  "data_scope": "Official 1460 labeled houses and 1459 unlabeled competition test rows. No external target data or downloaded prediction vectors.",
+  "validation": "Shared seed42 shuffled 5-fold development split; all 1460 rows scored. Preprocessing fitted within training folds. Reused development folds and online feedback are explicitly adaptive.",
+  "initial_portfolio": [
+    "Four noY TabPFN-v2 changes: fingerprint disabled, 90% context subsampling, domain features, up to 50 polynomial products. Exact specifications recorded before model execution by round6_tabpfn.py.",
+    "Four saved fixed blends audited: E08+15% classical, noY/domain 50/50, E08+20% BoxCox0.15, E08+20% nofingerprint. The last two rejected on development OOF; first two exported. This decision is already adaptive to saved prediction analysis.",
+    "One additional architecture: official TabICL v2 regressor, raw79 features, log target, eight estimators, seed42, fixed MPS full precision; possible fixed 80% E08/20% TabICL log blend. No weight search."
+  ],
+  "online_budget": "At most 8 new submissions in this round; select candidates using local evidence, method diversity and available quota. Stop if no justified candidate remains.",
+  "publication_condition": "Only claim Kaggle improvement after a completed authenticated submission strictly below 0.11064; associate score with the exact uploaded SHA256. If improved, publish new source, evidence and result through the verified SSH origin without force push.",
+  "prior_artifacts": "Preserve the scored baseline and historical evidence. No correction of previous package implementation or hand-edited test-row predictions."
+}

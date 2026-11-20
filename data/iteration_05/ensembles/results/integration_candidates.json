@@ -1,0 +1,139 @@
+[
+  {
+    "experiment_id": "R5E01_n16_n32_equal",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.5,
+        "R4TC_v2_three_log_n32_s42": 0.5
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": false
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E01_n16_n32_equal__log_prediction",
+    "target": "log",
+    "cv_mean": 0.11670457680906174,
+    "cv_std": 0.023279571341976977,
+    "pooled_oof_log_rmse": 0.11854749681741555
+  },
+  {
+    "experiment_id": "R5E02_anchor_raw20",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.8,
+        "R4T_v2_raw_n32_s42": 0.2
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": false
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E02_anchor_raw20__log_prediction",
+    "target": "log",
+    "cv_mean": 0.11766582761555375,
+    "cv_std": 0.024446411833349044,
+    "pooled_oof_log_rmse": 0.11968019313852137
+  },
+  {
+    "experiment_id": "R5E03_anchor_classical15",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.85,
+        "B14_cat_mae_d6_blend": 0.15
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": true
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E03_anchor_classical15__log_prediction",
+    "target": "log",
+    "cv_mean": 0.11598072602019242,
+    "cv_std": 0.021737142938182616,
+    "pooled_oof_log_rmse": 0.1175990285447245
+  },
+  {
+    "experiment_id": "R5E04_anchor_domain20",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.8,
+        "R4T_v2_log_n32_s42_domain": 0.2
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": true
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E04_anchor_domain20__log_prediction",
+    "target": "log",
+    "cv_mean": 0.11617553435517361,
+    "cv_std": 0.02240018177007423,
+    "pooled_oof_log_rmse": 0.11789049706136628
+  },
+  {
+    "experiment_id": "R5E05_bagged_classical15",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.425,
+        "R4TC_v2_three_log_n32_s42": 0.425,
+        "B14_cat_mae_d6_blend": 0.15
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": true
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E05_bagged_classical15__log_prediction",
+    "target": "log",
+    "cv_mean": 0.1156900731975659,
+    "cv_std": 0.021644644822669864,
+    "pooled_oof_log_rmse": 0.11729870227780774
+  },
+  {
+    "experiment_id": "R5E06_seed42_17_2026_equal",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.3333333333333333,
+        "R5TP_log_s17": 0.3333333333333333,
+        "R5TP_log_s2026": 0.3333333333333333
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": true
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E06_seed42_17_2026_equal__log_prediction",
+    "target": "log",
+    "cv_mean": 0.11671864268154339,
+    "cv_std": 0.02309112734737614,
+    "pooled_oof_log_rmse": 0.11853185934237258
+  },
+  {
+    "experiment_id": "R5E07_seedbag_domain20",
+    "model": "Weighted log-space blend",
+    "params": {
+      "combination_space": "natural logarithm of price",
+      "weights": {
+        "R4TC_v2_three_log_n16_s42": 0.26666666666666666,
+        "R5TP_log_s17": 0.26666666666666666,
+        "R5TP_log_s2026": 0.26666666666666666,
+        "R4T_v2_log_n32_s42_domain": 0.2
+      },
+      "selection_limitation": "Adaptive comparison on previously reused fixed folds; this is development evidence, not an unbiased holdout estimate or a public leaderboard score.",
+      "submission_candidate": true
+    },
+    "oof_path": "models/round5_ensembles/results/oof_predictions.csv",
+    "oof_column": "R5E07_seedbag_domain20__log_prediction",
+    "target": "log",
+    "cv_mean": 0.1159248871896053,
+    "cv_std": 0.02216453412227584,
+    "pooled_oof_log_rmse": 0.1176077919536318
+  }
+]

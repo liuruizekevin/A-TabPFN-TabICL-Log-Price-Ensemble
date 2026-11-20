@@ -1,0 +1,14 @@
+{
+  "experiment_count": 2,
+  "best_experiment": "S02_nested_ridge10",
+  "best_cv_mean": 0.1191384173990565,
+  "best_pooled_oof_log_rmse": 0.12037515873283466,
+  "runtime_seconds": 546.7025286250282,
+  "reload_prediction_checks": {
+    "S01_nested_convex": 0.0,
+    "S02_nested_ridge10": 0.0
+  },
+  "outer_validation_rows": 1460,
+  "promoted": false,
+  "validation_scope": "Outer-fold targets are never used to fit their meta model. Base families and hyperparameters were chosen adaptively in earlier development on this same dataset, so this is not an untouched generalization test."
+}

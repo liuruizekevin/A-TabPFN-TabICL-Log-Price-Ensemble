@@ -1,0 +1,14 @@
+{
+  "id": "R5E08_noY_domain20",
+  "weights": {
+    "R5TP_log_noYtransform_s42": 0.8,
+    "R4T_v2_log_n32_s42_domain": 0.2
+  },
+  "new_recipes": 1,
+  "rationale": "Reuse the established 20 percent domain contribution with the independently evaluated configuration that omits the internal Y transform.",
+  "selection_limitation": "One explicitly adaptive follow-up chosen after reviewing noY and domain validation and public results. The established 80/20 weight is reused without a weight grid. These reused seed-42 folds are development evidence, not an independent holdout or a public-score prediction.",
+  "script_sha256": "8e4f60255e8b3c0118c57c0872767b788bbf4eff1d0346fcfe3c0b2022e6c62e",
+  "original_integration_manifest_sha256": "68c69aff66edebdd0442e6ba2a5e0c02567ac4b09a97004966a8bc388b945746",
+  "original_candidate_manifest_sha256": "f18ce653b37083ad5c938edbbbb84d0839db99e2ed72b74401117d209f08d494",
+  "original_source_manifest_sha256": "6ac6d89a6b4edb683d49c6d8f0ccb6e674da11980ffbe0791d29e6116bde08dc"
+}
